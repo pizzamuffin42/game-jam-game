@@ -1,0 +1,83 @@
+{
+	"name": "bullet_player",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bullet",
+					"sid": 282744497209825
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 524197687800018,
+					"parameters": {
+						"seconds": "4"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 641910650532665
+				}
+			],
+			"sid": 601694960460313
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 656493162662090,
+					"parameters": {
+						"object": "wall"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 582907454795157
+				}
+			],
+			"sid": 542845545486847
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 594240759281201,
+					"parameters": {
+						"object": "enemy"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "enemy",
+					"sid": 175240165737549,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 177338855799881
+				}
+			],
+			"sid": 115754461144614
+		}
+	],
+	"sid": 107066292320628
+}

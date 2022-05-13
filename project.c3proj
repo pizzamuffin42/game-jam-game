@@ -106,7 +106,10 @@
 	},
 	"eventSheets": {
 		"items": [
-			"Event sheet 1"
+			"player",
+			"enemy",
+			"bullet_player",
+			"bullet_enemies"
 		],
 		"subfolders": []
 	},
