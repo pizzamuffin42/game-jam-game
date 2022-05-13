@@ -18,7 +18,7 @@
 					"uid": 2,
 					"instanceVariables": {
 						"can_Shoot": true,
-						"health": 5
+						"health": 7.5
 					},
 					"behaviors": {
 						"8Direction": {
