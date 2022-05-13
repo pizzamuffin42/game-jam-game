@@ -1,0 +1,77 @@
+{
+	"name": "enemy",
+	"plugin-id": "Sprite",
+	"sid": 309736065404012,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 210521019179056
+		},
+		{
+			"name": "in_sight",
+			"type": "boolean",
+			"desc": "",
+			"sid": 515589331828757
+		},
+		{
+			"name": "can_shoot",
+			"type": "boolean",
+			"desc": "",
+			"sid": 112102596420903
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 116333084924224
+		},
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 844842764905575
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 280095649749114
+		},
+		{
+			"behaviorId": "bound",
+			"name": "BoundToLayout",
+			"sid": 973946148152176
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6510093,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 328154312681521,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
