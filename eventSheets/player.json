@@ -10,6 +10,10 @@
 			"includeSheet": "enemy"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "bullet_enemies"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
