@@ -1,44 +1,21 @@
 {
-	"name": "player",
+	"name": "door",
 	"plugin-id": "Sprite",
-	"sid": 793367118782844,
+	"sid": 754353741780694,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
-			"name": "can_Shoot",
+			"name": "open",
 			"type": "boolean",
 			"desc": "",
-			"sid": 133200873395191
-		},
-		{
-			"name": "health",
-			"type": "number",
-			"desc": "",
-			"sid": 106053814037578
-		},
-		{
-			"name": "dashing",
-			"type": "boolean",
-			"desc": "",
-			"sid": 655734652679929
-		},
-		{
-			"name": "can_dash",
-			"type": "boolean",
-			"desc": "",
-			"sid": 988704796174472
+			"sid": 903545853257039
 		}
 	],
 	"behaviorTypes": [
 		{
-			"behaviorId": "EightDir",
-			"name": "8Direction",
-			"sid": 384127285201068
-		},
-		{
-			"behaviorId": "bound",
-			"name": "BoundToLayout",
-			"sid": 411996692672113
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 347306205293392
 		}
 	],
 	"effectTypes": [],
@@ -54,13 +31,25 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 5247182,
+						"imageSpriteId": 5113742,
+						"collisionPoly": {
+							"points": [
+								0.004,
+								0.42200000000000015,
+								1,
+								0.4160000000000002,
+								1,
+								0.6779999999999997,
+								0,
+								0.6779999999999997
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 604988643790744,
-				"name": "idle",
+				"sid": 484957618895773,
+				"name": "open",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,
@@ -77,13 +66,13 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 2938807,
+						"imageSpriteId": 6791610,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 715110315015712,
-				"name": "dash",
+				"sid": 827313780492127,
+				"name": "closed",
 				"isLooping": false,
 				"isPingPong": false,
 				"repeatCount": 1,

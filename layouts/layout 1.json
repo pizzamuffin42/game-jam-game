@@ -10,7 +10,7 @@
 					"type": "player",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -18,7 +18,9 @@
 					"uid": 2,
 					"instanceVariables": {
 						"can_Shoot": true,
-						"health": 7.5
+						"health": 7.5,
+						"dashing": false,
+						"can_dash": true
 					},
 					"behaviors": {
 						"8Direction": {
@@ -285,6 +287,44 @@
 						"y": 277.1470012165844,
 						"width": 32,
 						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "door",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "open",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 11,
+					"instanceVariables": {
+						"open": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"world": {
+						"x": 474.76518308692073,
+						"y": -4.492400387513143,
+						"width": 250,
+						"height": 52.15188751615102,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

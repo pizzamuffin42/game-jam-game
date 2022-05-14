@@ -1,0 +1,123 @@
+{
+	"name": "door",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-on-screen",
+					"objectClass": "enemy",
+					"sid": 866075590443662
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "door",
+					"sid": 395117372723145,
+					"parameters": {
+						"instance-variable": "open",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 952034109232474
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 183434532897520
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "door",
+					"sid": 134328562305470,
+					"parameters": {
+						"instance-variable": "open",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 236158907126258
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "door",
+					"sid": 632813473351293,
+					"parameters": {
+						"instance-variable": "open"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "door",
+					"sid": 885345501651165,
+					"parameters": {
+						"animation": "\"open\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 793955944082107,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-collision-with-another-object",
+							"objectClass": "door",
+							"sid": 442122218199521,
+							"parameters": {
+								"object": "player"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 445507300207170,
+							"parameters": {
+								"layout": "main_menu"
+							}
+						}
+					],
+					"sid": 498383362377743
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 433047556464271
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "door",
+					"sid": 960698569431569,
+					"parameters": {
+						"animation": "\"closed\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 221339071977113
+		}
+	],
+	"sid": 753157940460362
+}

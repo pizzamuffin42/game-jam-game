@@ -58,6 +58,15 @@
 					"parameters": {
 						"object": "player"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 969469249818613,
+					"parameters": {
+						"instance-variable": "dashing"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
