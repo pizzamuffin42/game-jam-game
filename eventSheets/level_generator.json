@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "sceneCount",
 			"type": "number",
-			"initialValue": "5",
+			"initialValue": "2",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
@@ -85,10 +85,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 484337846413561,
+							"sid": 902146808582890,
 							"parameters": {
 								"variable": "curX",
-								"value": "Scene.BBoxRight"
+								"value": "Scene.BBoxRight + 10"
 							}
 						},
 						{
@@ -104,6 +104,7 @@
 							"id": "set-eventvar-value",
 							"objectClass": "System",
 							"sid": 474838953460125,
+							"disabled": true,
 							"parameters": {
 								"variable": "scrollStart",
 								"value": "Scene.BBoxLeft + ViewportWidth(\"Layer 0\") / 2"
@@ -128,9 +129,9 @@
 						{
 							"id": "repeat",
 							"objectClass": "System",
-							"sid": 763005563654680,
+							"sid": 440847928959166,
 							"parameters": {
-								"count": "min(Scene.PickedCount, sceneCount)"
+								"count": "min(sceneCount, Scene.PickedCount)"
 							}
 						}
 					],
@@ -171,10 +172,10 @@
 								{
 									"id": "add-to-eventvar",
 									"objectClass": "System",
-									"sid": 511986627914180,
+									"sid": 932396449044704,
 									"parameters": {
 										"variable": "curX",
-										"value": "Scene.Width"
+										"value": "Scene.Width + 10"
 									}
 								}
 							],
@@ -209,7 +210,8 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 999376457395723,
+							"sid": 281760253330421,
+							"disabled": true,
 							"parameters": {
 								"variable": "scrollEnd",
 								"value": "Scene.BBoxRight - ViewportWidth(\"Layer 0\") / 2"
@@ -220,7 +222,17 @@
 				},
 				{
 					"eventType": "block",
-					"conditions": [],
+					"conditions": [
+						{
+							"id": "compare-y",
+							"objectClass": "Scene",
+							"sid": 205595628389133,
+							"parameters": {
+								"comparison": 4,
+								"y-co-ordinate": "1000"
+							}
+						}
+					],
 					"actions": [
 						{
 							"id": "destroy",
@@ -378,6 +390,7 @@
 							"sid": 460194195747151
 						},
 						{
+							"breakpoint": true,
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
