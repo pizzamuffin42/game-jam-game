@@ -92,7 +92,8 @@
 			"play",
 			"door",
 			"health",
-			"Scene"
+			"Scene",
+			"Sprite"
 		],
 		"subfolders": []
 	},
@@ -273,7 +274,7 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https"
 	},
-	"viewportWidth": 640,
-	"viewportHeight": 360,
+	"viewportWidth": 3000,
+	"viewportHeight": 2000,
 	"firstLayout": null
 }

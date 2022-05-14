@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "sceneCount",
 			"type": "number",
-			"initialValue": "3",
+			"initialValue": "5",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": true,
@@ -44,16 +44,7 @@
 					"sid": 410863510580676
 				}
 			],
-			"actions": [
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 353271705126368,
-					"parameters": {
-						"seconds": "0"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 281773385714937,
 			"children": [
 				{
@@ -122,7 +113,6 @@
 					"sid": 238004499814937
 				},
 				{
-					"breakpoint": true,
 					"eventType": "block",
 					"conditions": [
 						{
