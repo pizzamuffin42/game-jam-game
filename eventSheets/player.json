@@ -649,13 +649,37 @@
 					}
 				},
 				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 958749146312139,
+					"parameters": {
+						"time-scale": "0.001"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 300500287707630,
+					"parameters": {
+						"seconds": "0.00005"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 818413731472024,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
 					"id": "shake",
 					"objectClass": "shaker",
-					"sid": 546740638970323,
+					"sid": 241651655118508,
 					"behaviorType": "ScrollTo",
 					"parameters": {
-						"magnitude": "20",
-						"duration": "0.4",
+						"magnitude": "10",
+						"duration": "0.7",
 						"mode": "reducing-magnitude"
 					}
 				},
