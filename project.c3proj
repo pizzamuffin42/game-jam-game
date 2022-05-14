@@ -91,14 +91,20 @@
 			"enemy_bullet",
 			"play",
 			"door",
-			"health"
+			"health",
+			"enemy_dammage_on_hit",
+			"enemy_grenade",
+			"enemy_grenade_proj"
 		],
 		"subfolders": []
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
-		"items": [],
+		"items": [
+			"enemies",
+			"enemy_bullets"
+		],
 		"subfolders": []
 	},
 	"layouts": {
@@ -116,7 +122,10 @@
 			"bullet_enemies",
 			"main menu",
 			"door",
-			"health"
+			"health",
+			"enemy_dmg_hit",
+			"enemy_grenade",
+			"enemy_grenade_proje"
 		],
 		"subfolders": []
 	},

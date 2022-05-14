@@ -1,0 +1,203 @@
+{
+	"name": "enemy_dmg_hit",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 868577696365716
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 568018107656141,
+					"parameters": {
+						"instance-variable": "can_move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 185132488085846,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 541229347230052,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 120740371858807
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 723443278438320
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 154340560738366,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 764800861220614,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				}
+			],
+			"sid": 693945119276999
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 660055269554686,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 666253101570067,
+					"parameters": {
+						"instance-variable": "can_move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 373308305848920,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 269852524059187
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 454862002500481,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 451379869478246
+				}
+			],
+			"sid": 166306834750139
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 994976918806360,
+					"parameters": {
+						"object": "player"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 528226168127376,
+					"parameters": {
+						"instance-variable": "dashing"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "player",
+					"sid": 641723247428693,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 602577359423328,
+					"parameters": {
+						"instance-variable": "can_move",
+						"value": "false"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 603411587436836,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 648163949357329,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 691201680992703,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 123808019615674,
+					"parameters": {
+						"instance-variable": "can_move",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 936853148550520
+		}
+	],
+	"sid": 479637642427429
+}

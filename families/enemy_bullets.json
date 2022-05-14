@@ -1,0 +1,19 @@
+{
+	"name": "enemy_bullets",
+	"plugin-id": "Sprite",
+	"sid": 268982699053276,
+	"instanceVariables": [
+		{
+			"name": "destroy_on_wall_collision",
+			"type": "boolean",
+			"desc": "",
+			"sid": 792083709189948
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"enemy_bullet",
+		"enemy_grenade_proj"
+	]
+}

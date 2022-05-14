@@ -5,15 +5,32 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "for",
-					"objectClass": "System",
-					"sid": 249350816077431,
+					"id": "compare-instance-variable",
+					"objectClass": "health",
+					"sid": 628572997060563,
 					"parameters": {
-						"name": "\"\"",
-						"start-index": "1",
-						"end-index": "10"
+						"instance-variable": "index",
+						"comparison": 3,
+						"value": "player.health+1"
 					}
-				},
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "health",
+					"sid": 434554364968498,
+					"parameters": {
+						"animation": "\"here\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 983638336071883
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
 					"id": "pick-nth-instance",
 					"objectClass": "System",
@@ -28,7 +45,7 @@
 				{
 					"id": "set-animation",
 					"objectClass": "health",
-					"sid": 473035366609657,
+					"sid": 696976575230349,
 					"parameters": {
 						"animation": "\"gone\"",
 						"from": "beginning"
@@ -36,6 +53,32 @@
 				}
 			],
 			"sid": 967767910425700
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "pick-nth-instance",
+					"objectClass": "System",
+					"sid": 171883583781409,
+					"parameters": {
+						"object": "health",
+						"instance": "player.health+1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "health",
+					"sid": 960570964300478,
+					"parameters": {
+						"animation": "\"gone\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 396992239528662
 		}
 	],
 	"sid": 827989286647512

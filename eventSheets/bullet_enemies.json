@@ -6,7 +6,7 @@
 			"conditions": [
 				{
 					"id": "on-created",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 872578881655157
 				}
 			],
@@ -21,8 +21,17 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 745803961042802
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullets",
+					"sid": 587017436796500,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "true"
+					}
 				}
 			],
 			"sid": 298390448172149
@@ -32,17 +41,25 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 486658009839281,
 					"parameters": {
 						"object": "wall"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_bullets",
+					"sid": 813940908225771,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 779394934079095
 				}
 			],
@@ -53,7 +70,7 @@
 			"conditions": [
 				{
 					"id": "on-collision-with-another-object",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 837886764761143,
 					"parameters": {
 						"object": "player"
@@ -81,7 +98,7 @@
 				},
 				{
 					"id": "destroy",
-					"objectClass": "enemy_bullet",
+					"objectClass": "enemy_bullets",
 					"sid": 925497917661454
 				}
 			],

@@ -22,6 +22,14 @@
 			"includeSheet": "health"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "enemy_dmg_hit"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "enemy_grenade"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -399,6 +407,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 383759650081185,
+					"parameters": {
+						"instance-variable": "can_Shoot",
+						"value": "true"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "player",
 					"sid": 572408483586169,
@@ -419,9 +436,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 816469975302870,
+					"sid": 554275811887730,
 					"parameters": {
-						"seconds": "0.4"
+						"seconds": "0.2"
 					}
 				},
 				{
@@ -435,6 +452,31 @@
 				}
 			],
 			"sid": 608279090249845
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 166273540437005,
+					"parameters": {
+						"instance-variable": "dashing"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 221693919364143,
+					"parameters": {
+						"instance-variable": "can_Shoot",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 758049619867864
 		}
 	],
 	"sid": 463042977011712

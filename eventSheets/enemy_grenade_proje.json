@@ -1,0 +1,134 @@
+{
+	"name": "enemy_grenade_proje",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 764938586753539
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 943380713360427,
+					"parameters": {
+						"instance-variable": "xtar",
+						"value": "player.X"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 386912136159937,
+					"parameters": {
+						"instance-variable": "ytar",
+						"value": "player.Y"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 345221472203509,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 469180767838026
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 365184741385913,
+					"parameters": {
+						"instance-variable": "xtar",
+						"comparison": 4,
+						"value": "enemy_grenade_proj.X-10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 762519378370489,
+					"parameters": {
+						"instance-variable": "xtar",
+						"comparison": 2,
+						"value": "enemy_grenade_proj.X+10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 135919300569624,
+					"parameters": {
+						"instance-variable": "ytar",
+						"comparison": 4,
+						"value": "enemy_grenade_proj.Y-10"
+					}
+				},
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 195426398241765,
+					"parameters": {
+						"instance-variable": "ytar",
+						"comparison": 2,
+						"value": "enemy_grenade_proj.Y+10"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 661289486117185,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 720096335821310,
+					"parameters": {
+						"animation": "\"explosion\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullets",
+					"sid": 692788606577513,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 163390462131772,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 476176204520225
+				}
+			],
+			"sid": 427152329583797
+		}
+	],
+	"sid": 263204537098625
+}

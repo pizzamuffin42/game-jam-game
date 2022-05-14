@@ -1,0 +1,91 @@
+{
+	"name": "enemy_grenade_proj",
+	"plugin-id": "Sprite",
+	"sid": 570569350497451,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "xtar",
+			"type": "number",
+			"desc": "",
+			"sid": 411571871636719
+		},
+		{
+			"name": "ytar",
+			"type": "number",
+			"desc": "",
+			"sid": 827856239162400
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 528767957031147
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.472,
+						"originY": 0.44,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 519769,
+						"collisionPoly": {
+							"points": [
+								0.4622499999999996,
+								0.43549999999999994,
+								0.6407499999999994,
+								0.4372499999999993,
+								0.6405000000000004,
+								0.44174999999999953,
+								0.446,
+								0.4399999999999993
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 291649292703013,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8047524,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 419115652804400,
+				"name": "explosion",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

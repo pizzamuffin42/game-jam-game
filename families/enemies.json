@@ -1,0 +1,32 @@
+{
+	"name": "enemies",
+	"plugin-id": "Sprite",
+	"sid": 464300228584686,
+	"instanceVariables": [
+		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 862302384529092
+		},
+		{
+			"name": "shooting_rate",
+			"type": "number",
+			"desc": "",
+			"sid": 989364966159879
+		},
+		{
+			"name": "bullet_speed",
+			"type": "number",
+			"desc": "",
+			"sid": 867528811915474
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"enemy",
+		"enemy_dammage_on_hit",
+		"enemy_grenade"
+	]
+}

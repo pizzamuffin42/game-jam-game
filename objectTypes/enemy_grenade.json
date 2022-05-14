@@ -1,42 +1,42 @@
 {
-	"name": "enemy",
+	"name": "enemy_grenade",
 	"plugin-id": "Sprite",
-	"sid": 309736065404012,
+	"sid": 945414220340676,
 	"isGlobal": false,
 	"instanceVariables": [
 		{
 			"name": "in_sight",
 			"type": "boolean",
 			"desc": "",
-			"sid": 515589331828757
+			"sid": 547326507651453
 		},
 		{
 			"name": "can_shoot",
 			"type": "boolean",
 			"desc": "",
-			"sid": 112102596420903
+			"sid": 284193387583934
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "solid",
 			"name": "Solid",
-			"sid": 116333084924224
+			"sid": 463168305464721
 		},
 		{
 			"behaviorId": "Pathfinding",
 			"name": "Pathfinding",
-			"sid": 844842764905575
+			"sid": 713920506789452
 		},
 		{
 			"behaviorId": "LOS",
 			"name": "LineOfSight",
-			"sid": 280095649749114
+			"sid": 724382370822772
 		},
 		{
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
-			"sid": 973946148152176
+			"sid": 178900134917901
 		}
 	],
 	"effectTypes": [],
@@ -52,12 +52,12 @@
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 6510093,
+						"imageSpriteId": 296901,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 328154312681521,
+				"sid": 591206732287646,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

@@ -105,20 +105,22 @@
 					"uid": 6,
 					"instanceVariables": {
 						"health": 10,
+						"shooting_rate": 1,
+						"bullet_speed": 400,
 						"in_sight": false,
 						"can_shoot": true
 					},
 					"behaviors": {
 						"Solid": {
 							"properties": {
-								"enabled": true,
+								"enabled": false,
 								"tags": ""
 							}
 						},
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": -1,
+								"cell-border": 1,
 								"obstacles": "custom",
 								"max-speed": 100,
 								"acceleration": 3000,
@@ -144,8 +146,8 @@
 						}
 					},
 					"world": {
-						"x": 243.63609043098162,
-						"y": 313.9864763335838,
+						"x": 112.11366472845143,
+						"y": 334.8720117455737,
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
@@ -220,73 +222,6 @@
 						"y": 31.945272656853547,
 						"width": 296.87264398133374,
 						"height": 73.78001837341407,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "enemy",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 7,
-					"instanceVariables": {
-						"health": 10,
-						"in_sight": false,
-						"can_shoot": true
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 16,
-								"cell-border": -1,
-								"obstacles": "custom",
-								"max-speed": 100,
-								"acceleration": 3000,
-								"deceleration": 3000,
-								"rotate-speed": 2000,
-								"rotate-object": false,
-								"diagonals": true,
-								"enabled": true
-							}
-						},
-						"LineOfSight": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 10000,
-								"cone-of-view": 360,
-								"use-collision-cells": true
-							}
-						},
-						"BoundToLayout": {
-							"properties": {
-								"bound-by": "edge"
-							}
-						}
-					},
-					"world": {
-						"x": 591.8396111214702,
-						"y": 277.1470012165844,
-						"width": 32,
-						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -581,6 +516,145 @@
 						"y": 25.645563292022295,
 						"width": 23.877563638576106,
 						"height": 23.877563638576106,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemy_dammage_on_hit",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 20,
+					"instanceVariables": {
+						"health": 5,
+						"shooting_rate": 1,
+						"bullet_speed": 400,
+						"in_sight": false,
+						"can_shoot": true,
+						"can_move": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 16,
+								"cell-border": 1,
+								"obstacles": "custom",
+								"max-speed": 200,
+								"acceleration": 3000,
+								"deceleration": 3000,
+								"rotate-speed": 1000,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
+					"world": {
+						"x": 75.25642566921542,
+						"y": 299.43062305110305,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "enemy_grenade",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 21,
+					"instanceVariables": {
+						"health": 10,
+						"shooting_rate": 2,
+						"bullet_speed": 300,
+						"in_sight": false,
+						"can_shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 16,
+								"cell-border": 1,
+								"obstacles": "custom",
+								"max-speed": 50,
+								"acceleration": 3000,
+								"deceleration": 3000,
+								"rotate-speed": 2000,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
+					"world": {
+						"x": 581.9368788260005,
+						"y": 235.0046076031648,
+						"width": 32,
+						"height": 32,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

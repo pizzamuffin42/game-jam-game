@@ -1,28 +1,32 @@
 {
-	"name": "enemy",
+	"name": "enemy_grenade",
 	"events": [
+		{
+			"eventType": "include",
+			"includeSheet": "enemy_grenade_proje"
+		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "every-tick",
 					"objectClass": "System",
-					"sid": 414691353227640
+					"sid": 211024335789009
 				}
 			],
 			"actions": [
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 248190561076171,
+					"sid": 106456569065037,
 					"parameters": {
 						"seconds": "0.3"
 					}
 				},
 				{
 					"id": "find-path",
-					"objectClass": "enemy",
-					"sid": 802948872925547,
+					"objectClass": "enemy_grenade",
+					"sid": 423067296473507,
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"x": "player.X",
@@ -30,67 +34,67 @@
 					}
 				}
 			],
-			"sid": 789203513934646
+			"sid": 765881663315573
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-created",
-					"objectClass": "enemy",
-					"sid": 373606147728989
+					"objectClass": "enemy_grenade",
+					"sid": 145562915555265
 				}
 			],
 			"actions": [
 				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 820802693618098,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				},
+				{
 					"id": "find-path",
-					"objectClass": "enemy",
-					"sid": 941520190018695,
+					"objectClass": "enemy_grenade",
+					"sid": 668369600531408,
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"x": "player.X",
 						"y": "player.Y"
 					}
-				},
-				{
-					"id": "add-obstacle",
-					"objectClass": "enemy",
-					"sid": 444097466646947,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"obstacle": "wall"
-					}
 				}
 			],
-			"sid": 960956584972932
+			"sid": 412800728584329
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "on-path-found",
-					"objectClass": "enemy",
-					"sid": 880416670424842,
+					"objectClass": "enemy_grenade",
+					"sid": 764353680035295,
 					"behaviorType": "Pathfinding"
 				}
 			],
 			"actions": [
 				{
 					"id": "move-along-path",
-					"objectClass": "enemy",
-					"sid": 115791468195705,
+					"objectClass": "enemy_grenade",
+					"sid": 746168733936472,
 					"behaviorType": "Pathfinding"
 				}
 			],
-			"sid": 488099109556166
+			"sid": 130651153814069
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "compare-instance-variable",
-					"objectClass": "enemy",
-					"sid": 421385375649891,
+					"objectClass": "enemy_grenade",
+					"sid": 388421095252169,
 					"parameters": {
 						"instance-variable": "health",
 						"comparison": 3,
@@ -101,19 +105,19 @@
 			"actions": [
 				{
 					"id": "destroy",
-					"objectClass": "enemy",
-					"sid": 418362557784263
+					"objectClass": "enemy_grenade",
+					"sid": 769603708630851
 				}
 			],
-			"sid": 424437905019039
+			"sid": 277734660899089
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "has-los-to-object",
-					"objectClass": "enemy",
-					"sid": 678427838945997,
+					"objectClass": "enemy_grenade",
+					"sid": 710367667351082,
 					"behaviorType": "LineOfSight",
 					"parameters": {
 						"object": "player",
@@ -125,21 +129,21 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 503071753387805,
+					"sid": 491292919340376,
 					"parameters": {
 						"seconds": "0.3"
 					}
 				},
 				{
 					"id": "stop",
-					"objectClass": "enemy",
-					"sid": 762834892060759,
+					"objectClass": "enemy_grenade",
+					"sid": 352055039999332,
 					"behaviorType": "Pathfinding"
 				},
 				{
 					"id": "set-speed",
-					"objectClass": "enemy",
-					"sid": 111014943332867,
+					"objectClass": "enemy_grenade",
+					"sid": 145121276338029,
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"speed": "0"
@@ -147,31 +151,31 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 114730005258238,
+					"objectClass": "enemy_grenade",
+					"sid": 341321272464668,
 					"parameters": {
 						"instance-variable": "in_sight",
 						"value": "true"
 					}
 				}
 			],
-			"sid": 596400175511825
+			"sid": 909585034561043
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "enemy",
-					"sid": 972046370781529,
+					"objectClass": "enemy_grenade",
+					"sid": 860887809945393,
 					"parameters": {
 						"instance-variable": "in_sight"
 					}
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
-					"objectClass": "enemy",
-					"sid": 573478954507131,
+					"objectClass": "enemy_grenade",
+					"sid": 102864546561237,
 					"parameters": {
 						"instance-variable": "can_shoot"
 					}
@@ -181,20 +185,20 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 478720809839547,
+					"sid": 127075321623906,
 					"parameters": {
-						"object-to-create": "enemy_bullet",
+						"object-to-create": "enemy_grenade_proj",
 						"layer": "0",
-						"x": "enemy.X",
-						"y": "enemy.Y",
+						"x": "enemy_grenade.X",
+						"y": "enemy_grenade.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
 				},
 				{
 					"id": "rotate-toward-position",
-					"objectClass": "enemy_bullet",
-					"sid": 110909755153421,
+					"objectClass": "enemy_grenade_proj",
+					"sid": 710200644062732,
 					"parameters": {
 						"degrees": "360",
 						"x": "player.X",
@@ -203,8 +207,8 @@
 				},
 				{
 					"id": "set-speed",
-					"objectClass": "enemy_bullet",
-					"sid": 432594246168954,
+					"objectClass": "enemy_grenade_proj",
+					"sid": 371886827196574,
 					"behaviorType": "Bullet",
 					"parameters": {
 						"speed": "enemies.bullet_speed"
@@ -212,17 +216,17 @@
 				},
 				{
 					"id": "set-angle-of-motion",
-					"objectClass": "enemy_bullet",
-					"sid": 444015246990010,
+					"objectClass": "enemy_grenade_proj",
+					"sid": 804043910764109,
 					"behaviorType": "Bullet",
 					"parameters": {
-						"angle": "enemy_bullet.Angle"
+						"angle": "enemy_grenade_proj.Angle"
 					}
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 434285220546585,
+					"objectClass": "enemy_grenade",
+					"sid": 543981040011605,
 					"parameters": {
 						"instance-variable": "can_shoot",
 						"value": "false"
@@ -231,22 +235,22 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 247336590263824,
+					"sid": 416239153206412,
 					"parameters": {
 						"seconds": "enemies.shooting_rate"
 					}
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 318571536001990,
+					"objectClass": "enemy_grenade",
+					"sid": 920357101072761,
 					"parameters": {
 						"instance-variable": "can_shoot",
 						"value": "true"
 					}
 				}
 			],
-			"sid": 617061832452798
+			"sid": 318905978079637
 		},
 		{
 			"eventType": "block",
@@ -254,22 +258,22 @@
 				{
 					"id": "else",
 					"objectClass": "System",
-					"sid": 488879168759173
+					"sid": 439845611110181
 				}
 			],
 			"actions": [
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 524259915564736,
+					"objectClass": "enemy_grenade",
+					"sid": 888290271943095,
 					"parameters": {
 						"instance-variable": "in_sight",
 						"value": "false"
 					}
 				}
 			],
-			"sid": 859962210720169
+			"sid": 459840040484447
 		}
 	],
-	"sid": 495478269261270
+	"sid": 391045078266819
 }
