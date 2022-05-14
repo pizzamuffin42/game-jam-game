@@ -48,14 +48,6 @@
 		},
 		{
 			"type": "behavior",
-			"id": "scrollto",
-			"name": "Scroll To",
-			"author": "Scirra",
-			"version": "r293.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -93,6 +85,14 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lukl710ujon",
@@ -112,7 +112,8 @@
 			"enemy_grenade",
 			"enemy_grenade_proj",
 			"Sprite",
-			"gun_arm"
+			"gun_arm",
+			"shaker"
 		],
 		"subfolders": []
 	},
@@ -296,6 +297,6 @@
 		"cordovaAndroidScheme": "https"
 	},
 	"viewportWidth": 640,
-	"viewportHeight": 360,
+	"viewportHeight": 352,
 	"firstLayout": "main_menu"
 }

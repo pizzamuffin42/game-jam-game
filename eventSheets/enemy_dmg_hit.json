@@ -142,6 +142,15 @@
 						"instance-variable": "dashing"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 937667103988388,
+					"parameters": {
+						"instance-variable": "invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [

@@ -89,6 +89,53 @@
 				}
 			],
 			"sid": 410775932048221
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 687946233651952,
+					"parameters": {
+						"instance-variable": "can_Shoot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "gun_arm",
+					"sid": 346868478097302,
+					"parameters": {
+						"animation": "\"ready\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 859779285068314
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 388940167992865
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "gun_arm",
+					"sid": 692401123346640,
+					"parameters": {
+						"animation": "\"not\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 636348540374422
 		}
 	],
 	"sid": 250172277664748

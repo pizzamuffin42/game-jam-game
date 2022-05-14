@@ -27,6 +27,18 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 988704796174472
+		},
+		{
+			"name": "invincible",
+			"type": "boolean",
+			"desc": "",
+			"sid": 965139188635942
+		},
+		{
+			"name": "pre_health",
+			"type": "number",
+			"desc": "",
+			"sid": 821473278821496
 		}
 	],
 	"behaviorTypes": [
@@ -39,11 +51,6 @@
 			"behaviorId": "bound",
 			"name": "BoundToLayout",
 			"sid": 411996692672113
-		},
-		{
-			"behaviorId": "scrollto",
-			"name": "ScrollTo",
-			"sid": 838969038142020
 		}
 	],
 	"effectTypes": [],

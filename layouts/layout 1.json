@@ -20,7 +20,9 @@
 						"can_Shoot": true,
 						"health": 8,
 						"dashing": false,
-						"can_dash": true
+						"can_dash": true,
+						"invincible": false,
+						"pre_health": 8
 					},
 					"behaviors": {
 						"8Direction": {
@@ -37,11 +39,6 @@
 						"BoundToLayout": {
 							"properties": {
 								"bound-by": "edge"
-							}
-						},
-						"ScrollTo": {
-							"properties": {
-								"enabled": false
 							}
 						}
 					},
@@ -66,7 +63,7 @@
 					"type": "gun_arm",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "ready",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -477,6 +474,41 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "shaker",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 24,
+					"instanceVariables": {},
+					"behaviors": {
+						"ScrollTo": {
+							"properties": {
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 330,
+						"y": 186,
+						"width": 1,
+						"height": 1,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 439867088941878,
@@ -801,8 +833,8 @@
 	"sid": 883654746363942,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 640,
-	"height": 360,
+	"width": 660,
+	"height": 372,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,

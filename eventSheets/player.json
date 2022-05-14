@@ -623,6 +623,70 @@
 				}
 			],
 			"sid": 421700668219823
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "player",
+					"sid": 959223275066844,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 1,
+						"value": "player.pre_health"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 221471154572854,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "shake",
+					"objectClass": "shaker",
+					"sid": 546740638970323,
+					"behaviorType": "ScrollTo",
+					"parameters": {
+						"magnitude": "20",
+						"duration": "0.4",
+						"mode": "reducing-magnitude"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 305498063104220,
+					"parameters": {
+						"instance-variable": "pre_health",
+						"value": "player.health"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 499903742527691,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 803574343348886,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 781770458306495
 		}
 	],
 	"sid": 463042977011712
