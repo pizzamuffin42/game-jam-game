@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -113,7 +121,9 @@
 			"enemy_grenade_proj",
 			"Sprite",
 			"gun_arm",
-			"shaker"
+			"shaker",
+			"MockTilemap",
+			"MockTilemap2"
 		],
 		"subfolders": []
 	},
@@ -129,7 +139,8 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"main_menu"
+			"main_menu",
+			"Mock Room"
 		],
 		"subfolders": []
 	},

@@ -1,0 +1,145 @@
+{
+	"name": "Mock Room",
+	"layers": [
+		{
+			"name": "Layer 0",
+			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "MockTilemap",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 25,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 20,
+							"height": 12,
+							"max-width": 20,
+							"max-height": 12,
+							"data": "4x29,60,2x29,2x30,4x29,59,80,69,80,29,2x30,29,69,80,2x29,59,69,3x29,30,29,30,4x29,59,80,2x29,3x69,80,69,3x29,59,70,30,3x29,48,58,80,3x29,59,80,29,30,2x29,49,59,69,3x29,59,69,4x29,49,59,69,3x29,59,70,30,3x29,50,60,79,3x29,59,70,2x29,70,79,2x80,69,3x29,59,70,30,2x29,3x30,29,30,2x29,59,80,2x29,30,2x29,2x30,3x29,59,69,2x29,79,80,70,2x80,3x29,59,69,4x29,48,58,70,3x29,59,70,4x29,49,59,70,3x29,59,80,4x29,49,59,80,3x29,59,70,4x29,50,60,79,3x29,59,80,2x29,79,70,80,70,80,3x29,59,69,10x29,59,69,80,69,4x29,2x69,5x29,58,7x29"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 640,
+						"height": 384,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "MockTilemap2",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 26,
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 20,
+							"height": 12,
+							"max-width": 40,
+							"max-height": 38,
+							"data": "4x0,6,3x0,26,30x0,5,2x15,1,3x0,21,15,25,28x0,6,8x0,26,28x0,6,2x0,23,2x17,3,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,21,2x15,1,2x0,26,28x0,6,8x0,26,28x0,6,8x0,26,28x0,6,2x0,23,2x17,3,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,26,2x0,6,2x0,26,28x0,6,2x0,21,2x15,1,2x0,26,28x0,6,8x0,26,28x0,7,2x17,3,3x0,23,17,27,31x0,6,3x0,26,789x0"
+						},
+						"tile-width": 32,
+						"tile-height": 32,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 640,
+						"height": 384,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 247982663039959,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": false,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "normal",
+			"zElevation": 0,
+			"global": false
+		}
+	],
+	"sid": 629520622716899,
+	"nonworld-instances": [],
+	"effectTypes": [],
+	"width": 640,
+	"height": 384,
+	"unboundedScrolling": false,
+	"vpX": 0.5,
+	"vpY": 0.5,
+	"projection": "perspective",
+	"eventSheet": null
+}
