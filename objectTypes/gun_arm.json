@@ -1,0 +1,64 @@
+{
+	"name": "gun_arm",
+	"plugin-id": "Sprite",
+	"sid": 655657914509675,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 15,
+						"height": 6,
+						"originX": 0,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1727406,
+						"collisionPoly": {
+							"points": [
+								0.06666666666666667,
+								0.16666666666666666,
+								0.5,
+								0.3333333333333333,
+								0.9333333333333333,
+								0,
+								0.6,
+								0.5,
+								0.6666666666666666,
+								0.16666666666666666,
+								0.5,
+								0.6666666666666666,
+								0.06666666666666667,
+								0.6666666666666666,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "Image Point 1",
+								"x": 1,
+								"y": 0.16666666666666666
+							}
+						],
+						"duration": 1
+					}
+				],
+				"sid": 982947940288497,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

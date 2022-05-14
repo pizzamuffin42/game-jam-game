@@ -54,17 +54,17 @@
 				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "bullet",
-					"sid": 594240759281201,
+					"sid": 626260392970692,
 					"parameters": {
-						"object": "enemy"
+						"object": "enemies"
 					}
 				}
 			],
 			"actions": [
 				{
 					"id": "subtract-from-instvar",
-					"objectClass": "enemy",
-					"sid": 175240165737549,
+					"objectClass": "enemies",
+					"sid": 884015876022194,
 					"parameters": {
 						"instance-variable": "health",
 						"value": "1"

@@ -5,9 +5,14 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-on-screen",
-					"objectClass": "enemy",
-					"sid": 866075590443662
+					"id": "pick-nearestfurthest",
+					"objectClass": "enemies",
+					"sid": 707753898506642,
+					"parameters": {
+						"which": "nearest",
+						"x": "0",
+						"y": "0"
+					}
 				}
 			],
 			"actions": [

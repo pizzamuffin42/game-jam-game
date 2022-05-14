@@ -22,6 +22,18 @@
 			"includeSheet": "health"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "enemy_dmg_hit"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "enemy_grenade"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "player_gun_arm"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -223,12 +235,12 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 978898997373786,
+					"sid": 906820416995170,
 					"parameters": {
 						"object-name": "\"bullet\"",
 						"layer": "0",
-						"x": "player.X",
-						"y": "player.Y",
+						"x": "gun_arm.X-gun_arm.ImagePointCount",
+						"y": "gun_arm.Y-gun_arm.ImagePointCount",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -399,6 +411,15 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 383759650081185,
+					"parameters": {
+						"instance-variable": "can_Shoot",
+						"value": "true"
+					}
+				},
+				{
 					"id": "set-animation",
 					"objectClass": "player",
 					"sid": 572408483586169,
@@ -419,9 +440,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 816469975302870,
+					"sid": 554275811887730,
 					"parameters": {
-						"seconds": "0.4"
+						"seconds": "0.2"
 					}
 				},
 				{
@@ -435,6 +456,173 @@
 				}
 			],
 			"sid": 608279090249845
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 166273540437005,
+					"parameters": {
+						"instance-variable": "dashing"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 221693919364143,
+					"parameters": {
+						"instance-variable": "can_Shoot",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 758049619867864
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 755029130038361
+				}
+			],
+			"actions": [],
+			"sid": 780084648937381,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-speed",
+							"objectClass": "player",
+							"sid": 324812136310712,
+							"behaviorType": "8Direction",
+							"parameters": {
+								"comparison": 4,
+								"speed": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 416674567419947,
+							"parameters": {
+								"animation": "\"run\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 918644153280478
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 901645658724490
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "player",
+							"sid": 995040200563512,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 358852339080567
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 480314175701881
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 626189509909682,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 164444196563612
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 223480213610130,
+					"parameters": {
+						"first-value": "gun_arm.Angle",
+						"comparison": 4,
+						"second-value": "90"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 343154307053175,
+					"parameters": {
+						"first-value": "gun_arm.Angle",
+						"comparison": 2,
+						"second-value": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 663353355381298,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 503901131362804
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 117628021299631
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "player",
+					"sid": 766440338795349,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 421700668219823
 		}
 	],
 	"sid": 463042977011712

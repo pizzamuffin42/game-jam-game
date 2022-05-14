@@ -33,6 +33,49 @@
 				}
 			],
 			"sid": 685930059239699
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 251396567022851
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-style",
+					"objectClass": "Mouse",
+					"sid": 807119760689764,
+					"parameters": {
+						"cursor-style": "none"
+					}
+				}
+			],
+			"sid": 524469856504083
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 668224921473860
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position",
+					"objectClass": "Sprite",
+					"sid": 641696516677312,
+					"parameters": {
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 857109649279302
 		}
 	],
 	"sid": 311289948218140

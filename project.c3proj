@@ -48,6 +48,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "scrollto",
+			"name": "Scroll To",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
 			"author": "Scirra",
@@ -77,6 +85,14 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Persist",
+			"name": "Persist",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lukl710ujon",
@@ -92,7 +108,11 @@
 			"play",
 			"door",
 			"health",
-			"Scene"
+			"enemy_dammage_on_hit",
+			"enemy_grenade",
+			"enemy_grenade_proj",
+			"Sprite",
+			"gun_arm"
 		],
 		"subfolders": []
 	},
@@ -100,16 +120,15 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"obstacles",
-			"doors"
+			"enemies",
+			"enemy_bullets"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"main_menu",
-			"LevelGen"
+			"main_menu"
 		],
 		"subfolders": []
 	},
@@ -122,7 +141,10 @@
 			"main menu",
 			"door",
 			"health",
-			"level_generator"
+			"enemy_dmg_hit",
+			"enemy_grenade",
+			"enemy_grenade_proje",
+			"player_gun_arm"
 		],
 		"subfolders": []
 	},
@@ -273,7 +295,7 @@
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https"
 	},
-	"viewportWidth": 3000,
-	"viewportHeight": 2000,
-	"firstLayout": null
+	"viewportWidth": 640,
+	"viewportHeight": 360,
+	"firstLayout": "main_menu"
 }

@@ -1,0 +1,95 @@
+{
+	"name": "player_gun_arm",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 515310973609831
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "gun_arm",
+					"sid": 101187571378082,
+					"parameters": {
+						"object": "player",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "gun_arm",
+					"sid": 291467303905472,
+					"parameters": {
+						"degrees": "360",
+						"x": "Mouse.X",
+						"y": "Mouse.Y"
+					}
+				}
+			],
+			"sid": 786964184836572
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 600771021023596,
+					"parameters": {
+						"first-value": "gun_arm.Angle",
+						"comparison": 4,
+						"second-value": "90"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 337283853386970,
+					"parameters": {
+						"first-value": "gun_arm.Angle",
+						"comparison": 2,
+						"second-value": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-flipped",
+					"objectClass": "gun_arm",
+					"sid": 946322493872195,
+					"parameters": {
+						"state": "flipped"
+					}
+				}
+			],
+			"sid": 702387037957636
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 155410525565791
+				}
+			],
+			"actions": [
+				{
+					"id": "set-flipped",
+					"objectClass": "gun_arm",
+					"sid": 871059229273955,
+					"parameters": {
+						"state": "not-flipped"
+					}
+				}
+			],
+			"sid": 410775932048221
+		}
+	],
+	"sid": 250172277664748
+}
