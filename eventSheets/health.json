@@ -1,0 +1,42 @@
+{
+	"name": "health",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 249350816077431,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "1",
+						"end-index": "10"
+					}
+				},
+				{
+					"id": "pick-nth-instance",
+					"objectClass": "System",
+					"sid": 232291402271558,
+					"parameters": {
+						"object": "health",
+						"instance": "player.health"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "health",
+					"sid": 473035366609657,
+					"parameters": {
+						"animation": "\"gone\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 967767910425700
+		}
+	],
+	"sid": 827989286647512
+}

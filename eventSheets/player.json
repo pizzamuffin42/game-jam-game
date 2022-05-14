@@ -18,6 +18,10 @@
 			"includeSheet": "door"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "health"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -431,21 +435,6 @@
 				}
 			],
 			"sid": 608279090249845
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "player",
-					"sid": 160505062183190,
-					"parameters": {
-						"instance-variable": "dashing"
-					}
-				}
-			],
-			"actions": [],
-			"sid": 955811549104538
 		}
 	],
 	"sid": 463042977011712

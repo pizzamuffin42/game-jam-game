@@ -31,14 +31,6 @@
 			"bundled": false
 		},
 		{
-			"type": "plugin",
-			"id": "Tilemap",
-			"name": "Tilemap",
-			"author": "Scirra",
-			"version": "r293.3",
-			"bundled": false
-		},
-		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -99,7 +91,7 @@
 			"enemy_bullet",
 			"play",
 			"door",
-			"Tilemap"
+			"health"
 		],
 		"subfolders": []
 	},
@@ -123,7 +115,8 @@
 			"bullet_player",
 			"bullet_enemies",
 			"main menu",
-			"door"
+			"door",
+			"health"
 		],
 		"subfolders": []
 	},

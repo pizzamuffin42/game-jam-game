@@ -1,0 +1,73 @@
+{
+	"name": "health",
+	"plugin-id": "Sprite",
+	"sid": 339527465371714,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "on",
+			"type": "boolean",
+			"desc": "",
+			"sid": 226680971612359
+		},
+		{
+			"name": "index",
+			"type": "number",
+			"desc": "",
+			"sid": 201104503530235
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1739175,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 477885538920372,
+				"name": "here",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 1812519,
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 808250841624491,
+				"name": "gone",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}
