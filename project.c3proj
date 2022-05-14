@@ -92,8 +92,7 @@
 			"play",
 			"door",
 			"health",
-			"Scene",
-			"Sprite"
+			"Scene"
 		],
 		"subfolders": []
 	},

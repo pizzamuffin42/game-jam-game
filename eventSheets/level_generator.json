@@ -143,9 +143,9 @@
 								{
 									"id": "compare-y",
 									"objectClass": "Scene",
-									"sid": 581399445529024,
+									"sid": 929742261267609,
 									"parameters": {
-										"comparison": 0,
+										"comparison": 4,
 										"y-co-ordinate": "1000"
 									}
 								},
