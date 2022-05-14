@@ -5,6 +5,12 @@
 	"isGlobal": false,
 	"instanceVariables": [
 		{
+			"name": "health",
+			"type": "number",
+			"desc": "",
+			"sid": 210521019179056
+		},
+		{
 			"name": "in_sight",
 			"type": "boolean",
 			"desc": "",

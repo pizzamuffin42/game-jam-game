@@ -92,9 +92,7 @@
 			"play",
 			"door",
 			"health",
-			"enemy_dammage_on_hit",
-			"enemy_grenade",
-			"enemy_grenade_proj"
+			"Scene"
 		],
 		"subfolders": []
 	},
@@ -102,15 +100,16 @@
 	"containers": [],
 	"families": {
 		"items": [
-			"enemies",
-			"enemy_bullets"
+			"obstacles",
+			"doors"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"main_menu"
+			"main_menu",
+			"LevelGen"
 		],
 		"subfolders": []
 	},
@@ -123,9 +122,7 @@
 			"main menu",
 			"door",
 			"health",
-			"enemy_dmg_hit",
-			"enemy_grenade",
-			"enemy_grenade_proje"
+			"level_generator"
 		],
 		"subfolders": []
 	},

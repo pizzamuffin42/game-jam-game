@@ -90,7 +90,7 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy",
-					"sid": 421385375649891,
+					"sid": 733218247044985,
 					"parameters": {
 						"instance-variable": "health",
 						"comparison": 3,
@@ -204,10 +204,10 @@
 				{
 					"id": "set-speed",
 					"objectClass": "enemy_bullet",
-					"sid": 432594246168954,
+					"sid": 569124737408620,
 					"behaviorType": "Bullet",
 					"parameters": {
-						"speed": "enemies.bullet_speed"
+						"speed": "600"
 					}
 				},
 				{
@@ -231,9 +231,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 247336590263824,
+					"sid": 988260615013067,
 					"parameters": {
-						"seconds": "enemies.shooting_rate"
+						"seconds": "1.0"
 					}
 				},
 				{

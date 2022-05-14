@@ -1,0 +1,412 @@
+{
+	"name": "level_generator",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "sceneCount",
+			"type": "number",
+			"initialValue": "3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 942612570918665
+		},
+		{
+			"eventType": "variable",
+			"name": "scrollStart",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 521629476735349
+		},
+		{
+			"eventType": "variable",
+			"name": "scrollEnd",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 410972108494923
+		},
+		{
+			"eventType": "comment",
+			"text": "Create Scenes"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 410863510580676
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 353271705126368,
+					"parameters": {
+						"seconds": "0"
+					}
+				}
+			],
+			"sid": 281773385714937,
+			"children": [
+				{
+					"eventType": "variable",
+					"name": "curX",
+					"type": "number",
+					"initialValue": "1320",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 887473773254561
+				},
+				{
+					"eventType": "variable",
+					"name": "curY",
+					"type": "number",
+					"initialValue": "720",
+					"comment": "",
+					"isStatic": false,
+					"isConstant": false,
+					"sid": 764002915020920
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Scene",
+							"sid": 861012103847649,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"start\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 484337846413561,
+							"parameters": {
+								"variable": "curX",
+								"value": "Scene.BBoxRight"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 648688049431186,
+							"parameters": {
+								"variable": "curY",
+								"value": "Scene.Y"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 474838953460125,
+							"parameters": {
+								"variable": "scrollStart",
+								"value": "Scene.BBoxLeft + ViewportWidth(\"Layer 0\") / 2"
+							}
+						}
+					],
+					"sid": 238004499814937
+				},
+				{
+					"breakpoint": true,
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Scene",
+							"sid": 369656290133495,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"\""
+							}
+						},
+						{
+							"id": "repeat",
+							"objectClass": "System",
+							"sid": 763005563654680,
+							"parameters": {
+								"count": "min(Scene.PickedCount, sceneCount)"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 447296435634164,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "Scene",
+									"sid": 581399445529024,
+									"parameters": {
+										"comparison": 0,
+										"y-co-ordinate": "1000"
+									}
+								},
+								{
+									"id": "pick-random-instance",
+									"objectClass": "System",
+									"sid": 546276784930803,
+									"parameters": {
+										"object": "Scene"
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "moveScene",
+									"sid": 986669002141019,
+									"parameters": [
+										"Scene.UID",
+										"curX",
+										"curY"
+									]
+								},
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 511986627914180,
+									"parameters": {
+										"variable": "curX",
+										"value": "Scene.Width"
+									}
+								}
+							],
+							"sid": 666672997545474
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "Scene",
+							"sid": 294233073619606,
+							"parameters": {
+								"instance-variable": "type",
+								"comparison": 0,
+								"value": "\"finish\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "moveScene",
+							"sid": 427375912431374,
+							"parameters": [
+								"Scene.UID",
+								"curX",
+								"curY"
+							]
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 999376457395723,
+							"parameters": {
+								"variable": "scrollEnd",
+								"value": "Scene.BBoxRight - ViewportWidth(\"Layer 0\") / 2"
+							}
+						}
+					],
+					"sid": 223361773847070
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "Scene",
+							"sid": 891311079747288
+						}
+					],
+					"sid": 855225670513638,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "doors",
+									"sid": 129269873554012,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "doors",
+									"sid": 675536658471778
+								}
+							],
+							"sid": 857390073310729
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-y",
+									"objectClass": "obstacles",
+									"sid": 151598445178912,
+									"parameters": {
+										"comparison": 4,
+										"y-co-ordinate": "1000"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "obstacles",
+									"sid": 633952015249082
+								}
+							],
+							"sid": 433062723036620
+						}
+					]
+				}
+			]
+		},
+		{
+			"functionName": "moveScene",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [
+				{
+					"name": "sceneUID",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 390574324611856
+				},
+				{
+					"name": "curX",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 160331982726947
+				},
+				{
+					"name": "curY",
+					"type": "number",
+					"initialValue": "0",
+					"comment": "",
+					"sid": 705243641712704
+				}
+			],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 440973706455458,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-by-unique-id",
+							"objectClass": "Scene",
+							"sid": 244732486648453,
+							"parameters": {
+								"unique-id": "sceneUID"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 750248670614845,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Scene",
+									"sid": 566861728219036,
+									"parameters": {
+										"object": "obstacles"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "obstacles",
+									"sid": 320350301544927,
+									"parameters": {
+										"x": "curX + Self.X - Scene.X",
+										"y": "curY + Self.Y - Scene.Y"
+									}
+								}
+							],
+							"sid": 976497347269715
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Scene",
+									"sid": 336654720657477,
+									"parameters": {
+										"object": "doors"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "doors",
+									"sid": 870245115758017,
+									"parameters": {
+										"x": "curX + Self.X - Scene.X",
+										"y": "curY + Self.Y - Scene.Y"
+									}
+								}
+							],
+							"sid": 460194195747151
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "Scene",
+									"sid": 735198574924689,
+									"parameters": {
+										"x": "curX",
+										"y": "curY"
+									}
+								}
+							],
+							"sid": 417058276794358
+						}
+					]
+				}
+			]
+		}
+	],
+	"sid": 139137988851812
+}

@@ -6,8 +6,8 @@
 			"conditions": [
 				{
 					"id": "is-on-screen",
-					"objectClass": "enemies",
-					"sid": 635294131770362
+					"objectClass": "enemy",
+					"sid": 866075590443662
 				}
 			],
 			"actions": [

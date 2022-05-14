@@ -1,0 +1,11 @@
+{
+	"name": "doors",
+	"plugin-id": "Sprite",
+	"sid": 400183156731214,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"door"
+	]
+}

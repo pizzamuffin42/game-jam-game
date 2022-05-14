@@ -1,0 +1,12 @@
+{
+	"name": "obstacles",
+	"plugin-id": "Sprite",
+	"sid": 887279529532326,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"wall",
+		"enemy"
+	]
+}
