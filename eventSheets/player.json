@@ -675,10 +675,10 @@
 				{
 					"id": "shake",
 					"objectClass": "shaker",
-					"sid": 241651655118508,
+					"sid": 776581240447697,
 					"behaviorType": "ScrollTo",
 					"parameters": {
-						"magnitude": "10",
+						"magnitude": "player.screen_shake_amount_on_dammaged",
 						"duration": "0.7",
 						"mode": "reducing-magnitude"
 					}

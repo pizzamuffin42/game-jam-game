@@ -39,6 +39,18 @@
 			"type": "number",
 			"desc": "",
 			"sid": 821473278821496
+		},
+		{
+			"name": "screen_shake_amount_on_dammaged",
+			"type": "number",
+			"desc": "",
+			"sid": 497220687562914
+		},
+		{
+			"name": "screen_shake_amount_on_dammaging",
+			"type": "number",
+			"desc": "",
+			"sid": 187194209247713
 		}
 	],
 	"behaviorTypes": [

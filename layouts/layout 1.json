@@ -22,7 +22,9 @@
 						"dashing": false,
 						"can_dash": true,
 						"invincible": false,
-						"pre_health": 8
+						"pre_health": 8,
+						"screen_shake_amount_on_dammaged": 10,
+						"screen_shake_amount_on_dammaging": 3
 					},
 					"behaviors": {
 						"8Direction": {
