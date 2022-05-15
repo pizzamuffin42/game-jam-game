@@ -12,6 +12,13 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 211024335789009
+				},
+				{
+					"id": "is-moving-along-path",
+					"objectClass": "enemy_grenade",
+					"sid": 761417578625839,
+					"behaviorType": "Pathfinding",
+					"isInverted": true
 				}
 			],
 			"actions": [
