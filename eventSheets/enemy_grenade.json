@@ -56,6 +56,24 @@
 					}
 				},
 				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 586710742320560,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 461232816112238,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
+				},
+				{
 					"id": "find-path",
 					"objectClass": "enemy_grenade",
 					"sid": 668369600531408,
@@ -64,6 +82,65 @@
 						"x": "player.X",
 						"y": "player.Y"
 					}
+<<<<<<< Updated upstream
+=======
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 508943885856338,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "shadow",
+					"sid": 321471685280031,
+					"parameters": {
+						"object": "enemy_grenade",
+						"image-point-optional": "2"
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 242847393217751,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 770148542275978,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 473981527208457,
+					"parameters": {
+						"opacity": "10"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 264968150195184,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+>>>>>>> Stashed changes
 				}
 			],
 			"sid": 412800728584329

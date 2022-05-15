@@ -122,8 +122,25 @@
 			"Sprite",
 			"gun_arm",
 			"shaker",
+<<<<<<< Updated upstream
 			"MockTilemap",
 			"MockTilemap2"
+=======
+			"Sprite2",
+			"ShadowLight",
+			"shadow",
+			"Cursor",
+			"Cursor_Clicked",
+			"Audio",
+			"plant_monster",
+			"sheild",
+			"laser_pickup",
+			"laser",
+			"dragon",
+			"dragon_fire",
+			"TM_dirt",
+			"S_grassBreeze3"
+>>>>>>> Stashed changes
 		],
 		"subfolders": []
 	},
@@ -140,7 +157,28 @@
 		"items": [
 			"Layout 1",
 			"main_menu",
+<<<<<<< Updated upstream
 			"Mock Room"
+=======
+			"medievalRoom1",
+			"medievalRoom2",
+			"medievalRoom3",
+			"medievalRoom4",
+			"medievalRoom5",
+			"medievalRoom6",
+			"medievalRoom7",
+			"medievalroom33232",
+			"medievalRoom8",
+			"medievalRoom9",
+			"Room Yum",
+			"Room You",
+			"Room Ree",
+			"SWmedievalRoom5",
+			"SWmedievalRoom4",
+			"SWmedievalRoom3",
+			"SWmedievalRoom2",
+			"SWmedievalRoom1"
+>>>>>>> Stashed changes
 		],
 		"subfolders": []
 	},

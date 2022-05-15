@@ -60,6 +60,33 @@
 					"parameters": {
 						"obstacle": "wall"
 					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 214457771663305,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 782121604416669,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 853463045759587,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
 				}
 			],
 			"sid": 960956584972932
