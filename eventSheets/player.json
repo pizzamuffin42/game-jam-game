@@ -34,6 +34,10 @@
 			"includeSheet": "player_gun_arm"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "enemy_proje"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

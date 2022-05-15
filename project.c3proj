@@ -146,7 +146,8 @@
 			"enemy_dmg_hit",
 			"enemy_grenade",
 			"enemy_grenade_proje",
-			"player_gun_arm"
+			"player_gun_arm",
+			"enemy_proje"
 		],
 		"subfolders": []
 	},

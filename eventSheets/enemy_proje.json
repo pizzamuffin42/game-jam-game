@@ -1,0 +1,46 @@
+{
+	"name": "enemy_proje",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemy_bullet",
+					"sid": 636995338746761
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullet",
+					"sid": 404698231190709,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullet",
+					"sid": 782828289608345,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullet",
+					"sid": 595634333530170,
+					"parameters": {
+						"instance-variable": "destroy_on_player_hit",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 625408395651972
+		}
+	],
+	"sid": 272704395387563
+}
