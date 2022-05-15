@@ -16,9 +16,9 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 968294232866144,
+					"sid": 366123565098031,
 					"parameters": {
-						"object": "play"
+						"object": "MenuItems"
 					}
 				}
 			],
@@ -45,11 +45,11 @@
 			],
 			"actions": [
 				{
-					"id": "set-cursor-style",
+					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
-					"sid": 807119760689764,
+					"sid": 717357764635178,
 					"parameters": {
-						"cursor-style": "none"
+						"sprite": "Cursor"
 					}
 				}
 			],
@@ -75,7 +75,253 @@
 					}
 				}
 			],
-			"sid": 857109649279302
+			"sid": 857109649279302,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 929545770389923,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 123207754925714,
+					"parameters": {
+						"sprite": "Cursor_Clicked"
+					}
+				}
+			],
+			"sid": 537075847435863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-button-released",
+					"objectClass": "Mouse",
+					"sid": 197894003469215,
+					"parameters": {
+						"mouse-button": "left"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-cursor-from-sprite",
+					"objectClass": "Mouse",
+					"sid": 472953474937651,
+					"parameters": {
+						"sprite": "Cursor"
+					}
+				}
+			],
+			"sid": 480420242002431
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 450437633687702,
+					"parameters": {
+						"object": "Start_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Start_Text",
+					"sid": 846117943722222,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 621715297757192
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 390549357907116
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Start_Text",
+					"sid": 317734289069645,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 536292461558825
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 103762450538018,
+					"parameters": {
+						"object": "Settings_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Settings_Text",
+					"sid": 605095065053993,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 986065544234604
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 742299012897781
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Settings_Text",
+					"sid": 522218360674275,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 960920361885717
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 736916254432158,
+					"parameters": {
+						"object": "Credits_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Credits_Text",
+					"sid": 767011478357529,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 740571671787465
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 783370323687979
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Credits_Text",
+					"sid": 552463555203936,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 256337167260184
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 560830937231124,
+					"parameters": {
+						"object": "Quit_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Quit_Text",
+					"sid": 458234704770521,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 758968896638352
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 151288262903871
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Quit_Text",
+					"sid": 289366002780315,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 751740886451957
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 180107062710007,
+					"parameters": {
+						"object": "MenuItems"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 814888075304309,
+			"disabled": true
 		}
 	],
 	"sid": 311289948218140
