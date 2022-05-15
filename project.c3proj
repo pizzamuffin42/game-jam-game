@@ -8,6 +8,14 @@
 	"usedAddons": [
 		{
 			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -40,6 +48,14 @@
 		},
 		{
 			"type": "behavior",
+			"id": "solid",
+			"name": "Solid",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
 			"author": "Scirra",
@@ -58,14 +74,6 @@
 			"type": "behavior",
 			"id": "Bullet",
 			"name": "Bullet",
-			"author": "Scirra",
-			"version": "r293.3",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "solid",
-			"name": "Solid",
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
@@ -126,7 +134,25 @@
 			"ShadowLight",
 			"shadow"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"TM_medievalProps",
+					"TM_dirtPath",
+					"TM_floorWallPlaceholder",
+					"TM_vegetation",
+					"TM_stoneFloor",
+					"TM_stoneWalls",
+					"TM_medievalWallProps",
+					"TM_grass",
+					"S_grassBreeze1",
+					"S_grassBreeze2",
+					"S_furnace"
+				],
+				"subfolders": [],
+				"name": "Tilemaps"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -140,7 +166,8 @@
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"main_menu"
+			"main_menu",
+			"medievalRoom1"
 		],
 		"subfolders": []
 	},
@@ -157,7 +184,8 @@
 			"enemy_grenade",
 			"enemy_grenade_proje",
 			"player_gun_arm",
-			"enemy_proje"
+			"enemy_proje",
+			"environmentalWind"
 		],
 		"subfolders": []
 	},
@@ -309,6 +337,6 @@
 		"cordovaAndroidScheme": "https"
 	},
 	"viewportWidth": 640,
-	"viewportHeight": 352,
+	"viewportHeight": 320,
 	"firstLayout": "main_menu"
 }
