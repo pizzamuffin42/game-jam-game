@@ -16,13 +16,6 @@
 					"parameters": {
 						"instance-variable": "can_move"
 					}
-				},
-				{
-					"id": "is-moving-along-path",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 897650947215934,
-					"behaviorType": "Pathfinding",
-					"isInverted": true
 				}
 			],
 			"actions": [

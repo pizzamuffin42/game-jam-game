@@ -8,13 +8,6 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 414691353227640
-				},
-				{
-					"id": "is-moving-along-path",
-					"objectClass": "enemy",
-					"sid": 644490012163880,
-					"behaviorType": "Pathfinding",
-					"isInverted": true
 				}
 			],
 			"actions": [
