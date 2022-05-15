@@ -143,7 +143,13 @@
 			"shadow",
 			"Cursor",
 			"Cursor_Clicked",
-			"Audio"
+			"Audio",
+			"plant_monster",
+			"sheild",
+			"laser_pickup",
+			"laser",
+			"dragon",
+			"dragon_fire"
 		],
 		"subfolders": [
 			{
@@ -186,7 +192,9 @@
 		"items": [
 			"enemies",
 			"enemy_bullets",
-			"MenuItems"
+			"MenuItems",
+			"pickups",
+			"tilemaps"
 		],
 		"subfolders": []
 	},
@@ -194,7 +202,19 @@
 		"items": [
 			"Layout 1",
 			"main_menu",
-			"medievalRoom1"
+			"medievalRoom1",
+			"medievalRoom2",
+			"medievalRoom3",
+			"medievalRoom4",
+			"medievalRoom5",
+			"medievalRoom6",
+			"medievalRoom7",
+			"medievalroom33232",
+			"medievalRoom8",
+			"medievalRoom9",
+			"Room Yum",
+			"Room You",
+			"Room Ree"
 		],
 		"subfolders": []
 	},
@@ -212,7 +232,10 @@
 			"enemy_grenade_proje",
 			"player_gun_arm",
 			"enemy_proje",
-			"environmentalWind"
+			"environmentalWind",
+			"plant_monst",
+			"lazer_player",
+			"dragon_"
 		],
 		"subfolders": []
 	},

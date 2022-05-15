@@ -10,17 +10,110 @@
 					"sid": 414691353227640
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 789203513934646,
+			"children": [
 				{
-					"id": "wait",
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 694643071636457,
+							"parameters": {
+								"which": "nearest",
+								"x": "enemy.X",
+								"y": "enemy.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 569583978470371,
+							"parameters": {
+								"object": "enemy",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "enemy",
+							"sid": 589211685498333,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 644810669119964
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
 					"objectClass": "System",
-					"sid": 248190561076171,
+					"sid": 132614971187745,
 					"parameters": {
-						"seconds": "0.3"
+						"angle": "enemy.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
 					}
 				}
 			],
-			"sid": 789203513934646
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy",
+					"sid": 761968623082912,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy",
+					"sid": 895539354354323,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 375807904076607
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 224775613741519
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy",
+					"sid": 851715790823621,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy",
+					"sid": 291296277716181,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 744337313846237
 		},
 		{
 			"eventType": "block",
@@ -182,6 +275,15 @@
 					}
 				},
 				{
+					"id": "set-position-to-another-object",
+					"objectClass": "enemy_bullet",
+					"sid": 664721187767017,
+					"parameters": {
+						"object": "enemy",
+						"image-point-optional": "1"
+					}
+				},
+				{
 					"id": "rotate-toward-position",
 					"objectClass": "enemy_bullet",
 					"sid": 110909755153421,
@@ -219,11 +321,29 @@
 					}
 				},
 				{
+					"id": "set-animation",
+					"objectClass": "enemy",
+					"sid": 883146737198032,
+					"parameters": {
+						"animation": "\"throw\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 247336590263824,
 					"parameters": {
 						"seconds": "enemies.shooting_rate"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "enemy",
+					"sid": 154679107152959,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
 					}
 				},
 				{
@@ -285,6 +405,112 @@
 				}
 			],
 			"sid": 226237204425000
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemy",
+					"sid": 708092622967881
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 463339053255308,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 619605020556067,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 681168282327799,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 756881401082986,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 165143316175102
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "enemy",
+					"sid": 895154158566135
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 133301661375324,
+					"parameters": {
+						"which": "nearest",
+						"x": "enemy.X",
+						"y": "enemy.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 838619331593473
+				}
+			],
+			"sid": 667484515915532
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "enemy",
+					"sid": 349982103672969,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "enemy",
+					"sid": 446210561609347,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 321363212417187
 		}
 	],
 	"sid": 495478269261270

@@ -1,0 +1,12 @@
+{
+	"name": "pickups",
+	"plugin-id": "Sprite",
+	"sid": 899398253768272,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"sheild",
+		"laser_pickup"
+	]
+}

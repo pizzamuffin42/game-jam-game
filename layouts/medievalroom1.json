@@ -881,7 +881,7 @@
 					"type": "enemy",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "idle",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -935,8 +935,8 @@
 						"y": 108.36329280806422,
 						"width": 32,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.484,
+						"originY": 0.988,
 						"color": [
 							1,
 							1,
@@ -951,7 +951,7 @@
 					"type": "enemy_dammage_on_hit",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "run",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -1007,7 +1007,7 @@
 						"width": 32,
 						"height": 32,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -1076,8 +1076,8 @@
 						"y": 183.03166591597437,
 						"width": 32,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"color": [
 							1,
 							1,
@@ -1222,7 +1222,10 @@
 						"invincible": false,
 						"pre_health": 8,
 						"screen_shake_amount_on_dammaged": 10,
-						"screen_shake_amount_on_dammaging": 3
+						"screen_shake_amount_on_dammaging": 3,
+						"special_ability_cooldown": 2,
+						"ability_can": true,
+						"ability": 0
 					},
 					"behaviors": {
 						"8Direction": {
@@ -1248,7 +1251,7 @@
 						"width": 32,
 						"height": 42,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.9285714285714286,
 						"color": [
 							1,
 							1,

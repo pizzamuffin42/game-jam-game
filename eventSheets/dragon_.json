@@ -1,0 +1,517 @@
+{
+	"name": "dragon_",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 593847272733565
+				}
+			],
+			"actions": [],
+			"sid": 774991307207205,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 407000544960625,
+							"parameters": {
+								"which": "nearest",
+								"x": "dragon.X",
+								"y": "dragon.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 269129876572628,
+							"parameters": {
+								"object": "dragon",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "dragon",
+							"sid": 916098836942938,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 249247979570778
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 852824646968313,
+					"parameters": {
+						"angle": "dragon.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "dragon",
+					"sid": 617588061774115,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "dragon",
+					"sid": 497840815502951,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 333068433111725
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 502222177623096
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "dragon",
+					"sid": 611213336164319,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "dragon",
+					"sid": 553282564092415,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 713835658431087
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "dragon",
+					"sid": 258529215863449
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "dragon",
+					"sid": 723125158068169,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "dragon",
+					"sid": 435929915276225,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				}
+			],
+			"sid": 970007302112630
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "dragon",
+					"sid": 275240683539772,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "dragon",
+					"sid": 955779256575126,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 780538601892524
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "dragon",
+					"sid": 301332009800514,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "dragon",
+					"sid": 443553190298958
+				}
+			],
+			"sid": 465712384734387
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "dragon",
+					"sid": 743473248137620,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 338257525221994,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "dragon",
+					"sid": 888292315381317,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "dragon",
+					"sid": 704332897798264,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon",
+					"sid": 507801478899085,
+					"parameters": {
+						"instance-variable": "in_sight",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 850795995015407
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "dragon",
+					"sid": 639948688475293,
+					"parameters": {
+						"instance-variable": "in_sight"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "dragon",
+					"sid": 831596432722311,
+					"parameters": {
+						"instance-variable": "can_shoot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 356096375242782,
+					"parameters": {
+						"object-to-create": "dragon_fire",
+						"layer": "0",
+						"x": "dragon.X",
+						"y": "dragon.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "dragon_fire",
+					"sid": 567451540067607,
+					"parameters": {
+						"object": "dragon",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "dragon_fire",
+					"sid": 215682722986715,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "dragon_fire",
+					"sid": 185918476936916,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "dragon_fire",
+					"sid": 563324071062123,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "dragon_fire.Angle"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon",
+					"sid": 908397203335810,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dragon",
+					"sid": 916340131380933,
+					"parameters": {
+						"animation": "\"attack\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 827429028231546,
+					"parameters": {
+						"seconds": "enemies.shooting_rate"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dragon",
+					"sid": 891349145717411,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon",
+					"sid": 557670651291940,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 509643672079465
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 559393976466881
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon",
+					"sid": 951412964805496,
+					"parameters": {
+						"instance-variable": "in_sight",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 161668657424289
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 499674964737202,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "dragon",
+					"sid": 851514812060442,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 225691005201567
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "dragon",
+					"sid": 172035533211056
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 514980601867669,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 252828240459683,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 231981223837954,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 116796692425044,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 331854736576306
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "dragon",
+					"sid": 458380897801371
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 670527115595586,
+					"parameters": {
+						"which": "nearest",
+						"x": "dragon.X",
+						"y": "dragon.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 677666196306449
+				}
+			],
+			"sid": 466574977978217
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "dragon",
+					"sid": 917319896583944,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "dragon",
+					"sid": 121509450725019,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 931382690114059
+		}
+	],
+	"sid": 490288446845127
+}

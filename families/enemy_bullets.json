@@ -26,6 +26,7 @@
 	"effectTypes": [],
 	"members": [
 		"enemy_bullet",
-		"enemy_grenade_proj"
+		"enemy_grenade_proj",
+		"dragon_fire"
 	]
 }

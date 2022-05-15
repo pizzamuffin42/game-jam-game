@@ -1,0 +1,436 @@
+{
+	"name": "plant_monst",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 824990897014884
+				}
+			],
+			"actions": [],
+			"sid": 860840812634219,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 227331834532884,
+							"parameters": {
+								"which": "nearest",
+								"x": "plant_monster.X",
+								"y": "plant_monster.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 495441379671865,
+							"parameters": {
+								"object": "plant_monster",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "plant_monster",
+							"sid": 663212987401197,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 552655272227168
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "plant_monster",
+					"sid": 393925243488177
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "plant_monster",
+					"sid": 162593424961350,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "plant_monster",
+					"sid": 104036156054011,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 535292017496156,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "plant_monster.X",
+						"y": "plant_monster.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 824280926948949,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 167337412218129,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 346306366716378,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 677624091488609
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "plant_monster",
+					"sid": 837025607042142,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "plant_monster",
+					"sid": 228753736774823,
+					"parameters": {
+						"instance-variable": "can_move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "plant_monster",
+					"sid": 571161614638907,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 674895632491782
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "plant_monster",
+					"sid": 451177842226244,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "plant_monster",
+					"sid": 422032194885535
+				}
+			],
+			"sid": 822485621395176
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "plant_monster",
+					"sid": 446089020039649,
+					"parameters": {
+						"object": "player"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 993658688962146,
+					"parameters": {
+						"instance-variable": "dashing"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 798621287602771,
+					"parameters": {
+						"instance-variable": "invincible"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "player",
+					"sid": 674824039180161,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "plant_monster",
+					"sid": 999736920651887,
+					"parameters": {
+						"instance-variable": "can_move",
+						"value": "false"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "plant_monster",
+					"sid": 506991150032598,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "plant_monster",
+					"sid": 484175873835586,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 868347247178738,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "plant_monster",
+					"sid": 554667416171705,
+					"parameters": {
+						"instance-variable": "can_move",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 919506715948230
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 560180888433918,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "plant_monster",
+					"sid": 263464304157218,
+					"parameters": {
+						"instance-variable": "can_move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "plant_monster",
+					"sid": 115517922495002,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 835794413368247
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "plant_monster",
+					"sid": 159663786077835
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 201522245349255,
+					"parameters": {
+						"which": "nearest",
+						"x": "plant_monster.X",
+						"y": "plant_monster.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 362742853977969
+				}
+			],
+			"sid": 887668848250529
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 944050234953719,
+					"parameters": {
+						"angle": "plant_monster.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "plant_monster",
+					"sid": 257494549148572,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "plant_monster",
+					"sid": 537534520344467,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 682745447736402
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 668774385773920
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "plant_monster",
+					"sid": 644969839567103,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "plant_monster",
+					"sid": 980053154665893,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 331977893098393
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "plant_monster",
+					"sid": 827546685464095,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "plant_monster",
+					"sid": 277921607992818,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 294374010465357
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 201912201709486
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "plant_monster",
+					"sid": 845740771221722,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 977265799990857
+		}
+	],
+	"sid": 583777518517058
+}

@@ -47,12 +47,12 @@
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 4838807,
+						"imageSpriteId": 4465833,
 						"collisionPoly": {
 							"points": [
 								0.34285714285714286,
@@ -74,13 +74,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -106,13 +118,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -138,13 +162,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -170,13 +206,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -202,13 +250,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -234,13 +294,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -266,13 +338,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -298,13 +382,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -330,13 +426,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -362,13 +470,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -394,13 +514,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -426,6 +558,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -442,8 +586,8 @@
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -469,13 +613,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -501,13 +657,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -533,13 +701,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -565,13 +745,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -597,13 +789,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -629,6 +833,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -645,8 +861,8 @@
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -672,13 +888,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -704,13 +932,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -736,13 +976,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -768,13 +1020,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -800,13 +1064,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -832,13 +1108,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -864,13 +1152,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -896,13 +1196,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -928,13 +1240,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -960,13 +1284,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -992,13 +1328,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1024,13 +1372,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1056,13 +1416,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1088,13 +1460,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1120,13 +1504,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1152,6 +1548,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
@@ -1168,8 +1576,8 @@
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1195,13 +1603,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1227,13 +1647,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1259,13 +1691,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1291,13 +1735,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1323,13 +1779,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1355,13 +1823,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1387,13 +1867,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1419,13 +1911,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1451,13 +1955,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1483,13 +1999,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1515,13 +2043,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1547,13 +2087,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1579,13 +2131,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1611,13 +2175,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1643,13 +2219,25 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					},
 					{
 						"width": 35,
 						"height": 32,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originX": 0.5142857142857142,
+						"originY": 1,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
@@ -1675,6 +2263,18 @@
 							]
 						},
 						"useCollisionPoly": true,
+						"imagePoints": [
+							{
+								"name": "2",
+								"x": 0.4857142857142857,
+								"y": 1
+							},
+							{
+								"name": "Image Point 2",
+								"x": 0.4857142857142857,
+								"y": 1
+							}
+						],
 						"duration": 1
 					}
 				],
