@@ -1,0 +1,27 @@
+{
+	"name": "Pitts",
+	"plugin-id": "Tilemap",
+	"sid": 671397043194863,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 611346745759526
+		}
+	],
+	"effectTypes": [],
+	"image": {
+		"width": 320,
+		"height": 320,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 4359731,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

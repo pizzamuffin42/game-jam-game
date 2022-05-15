@@ -138,6 +138,35 @@
 					"sid": 486880619274255
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "enemy_bullets",
+					"sid": 390205864108478,
+					"parameters": {
+						"object": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_bullets",
+					"sid": 167204238394975,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy_bullets",
+					"sid": 472813380832018
+				}
+			],
+			"sid": 657979090675979
 		}
 	],
 	"sid": 950996090175221

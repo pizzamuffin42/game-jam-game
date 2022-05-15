@@ -164,7 +164,8 @@
 					"TM_grass",
 					"S_grassBreeze1",
 					"S_grassBreeze2",
-					"S_furnace"
+					"S_furnace",
+					"Pitts"
 				],
 				"subfolders": [],
 				"name": "Tilemaps"
