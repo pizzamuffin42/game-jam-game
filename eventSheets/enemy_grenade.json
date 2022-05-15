@@ -32,16 +32,6 @@
 					"parameters": {
 						"seconds": "0.3"
 					}
-				},
-				{
-					"id": "find-path",
-					"objectClass": "enemy_grenade",
-					"sid": 423067296473507,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
 				}
 			],
 			"sid": 765881663315573
@@ -403,6 +393,32 @@
 				}
 			],
 			"sid": 669535365704120
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 921807449892224,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy_grenade",
+					"sid": 803130683503013,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 661333109821271
 		}
 	],
 	"sid": 391045078266819

@@ -26,16 +26,6 @@
 					"parameters": {
 						"seconds": "0.3"
 					}
-				},
-				{
-					"id": "find-path",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 541229347230052,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
 				}
 			],
 			"sid": 120740371858807
@@ -206,6 +196,32 @@
 				}
 			],
 			"sid": 936853148550520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 436546891409291,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 188964074267622,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 718363305322865
 		}
 	],
 	"sid": 479637642427429

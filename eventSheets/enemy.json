@@ -18,16 +18,6 @@
 					"parameters": {
 						"seconds": "0.3"
 					}
-				},
-				{
-					"id": "find-path",
-					"objectClass": "enemy",
-					"sid": 802948872925547,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
 				}
 			],
 			"sid": 789203513934646
@@ -269,6 +259,32 @@
 				}
 			],
 			"sid": 859962210720169
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 207424937053976,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy",
+					"sid": 802948872925547,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 226237204425000
 		}
 	],
 	"sid": 495478269261270
