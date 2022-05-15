@@ -1,0 +1,22 @@
+{
+	"name": "PathfindingFamily",
+	"plugin-id": "Sprite",
+	"sid": 155800307957840,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding",
+			"sid": 508333790092501
+		},
+		{
+			"behaviorId": "LOS",
+			"name": "LineOfSight",
+			"sid": 710996132190438
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"GeneralEnemy"
+	]
+}

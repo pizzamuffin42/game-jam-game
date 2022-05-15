@@ -8,37 +8,49 @@
 					"id": "every-tick",
 					"objectClass": "System",
 					"sid": 868577696365716
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 568018107656141,
-					"parameters": {
-						"instance-variable": "can_move"
-					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 120740371858807,
+			"children": [
 				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 185132488085846,
-					"parameters": {
-						"seconds": "0.3"
-					}
-				},
-				{
-					"id": "find-path",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 541229347230052,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 668460636415522,
+							"parameters": {
+								"which": "nearest",
+								"x": "enemy_dammage_on_hit.X",
+								"y": "enemy_dammage_on_hit.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 579393955930533,
+							"parameters": {
+								"object": "enemy_dammage_on_hit",
+								"image-point-optional": "2"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "enemy_dammage_on_hit",
+							"sid": 903603464607280,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 495938561582579
 				}
-			],
-			"sid": 120740371858807
+			]
 		},
 		{
 			"eventType": "block",
@@ -62,11 +74,49 @@
 				},
 				{
 					"id": "add-obstacle",
-					"objectClass": "enemy",
-					"sid": 764800861220614,
-					"behaviorType": "Pathfinding",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 232804060470927,
+					"behaviorType": "LineOfSight",
 					"parameters": {
 						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 395719743749247,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "enemy_dammage_on_hit.X",
+						"y": "enemy_dammage_on_hit.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 369168665402030,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 140335686210461,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 993874704828412,
+					"parameters": {
+						"opacity": "10"
 					}
 				}
 			],
@@ -206,6 +256,180 @@
 				}
 			],
 			"sid": 936853148550520
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 436546891409291,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 416046607880881,
+					"parameters": {
+						"instance-variable": "can_move"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 188964074267622,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 718363305322865
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 741982889895661
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 461572224607349,
+					"parameters": {
+						"which": "nearest",
+						"x": "enemy_dammage_on_hit.X",
+						"y": "enemy_dammage_on_hit.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 803209741906056
+				}
+			],
+			"sid": 785382297575654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 956589015772576,
+					"parameters": {
+						"angle": "enemy_dammage_on_hit.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 350950634635160,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 900358827998883,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 852436826039255
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 789522375572703
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 737470680477628,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 535383152635270,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 461963993886131
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 774762527263398,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 698946971326290,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 171513663376568
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 802780038181548
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 172499647639340,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 293153042933653
 		}
 	],
 	"sid": 479637642427429

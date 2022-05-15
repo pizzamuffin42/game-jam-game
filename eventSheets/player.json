@@ -2,6 +2,16 @@
 	"name": "player",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "ability",
+			"type": "string",
+			"initialValue": "\"bullet\"",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 506019580640564
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "bullet_player"
 		},
@@ -32,6 +42,26 @@
 		{
 			"eventType": "include",
 			"includeSheet": "player_gun_arm"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "enemy_proje"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "environmentalWind"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "plant_monst"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "lazer_player"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "dragon_"
 		},
 		{
 			"eventType": "block",
@@ -235,14 +265,34 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 906820416995170,
+					"sid": 913046658176123,
 					"parameters": {
 						"object-name": "\"bullet\"",
-						"layer": "0",
+						"layer": "player.LayerName",
 						"x": "gun_arm.X-gun_arm.ImagePointCount",
 						"y": "gun_arm.Y-gun_arm.ImagePointCount",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 267760547902167,
+					"parameters": {
+						"audio-file": "Gun_Shoot",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bullet",
+					"sid": 659642823471611,
+					"parameters": {
+						"object": "gun_arm",
+						"image-point-optional": "1"
 					}
 				},
 				{
@@ -253,6 +303,14 @@
 						"degrees": "360",
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "bullet",
+					"sid": 719231929039990,
+					"parameters": {
+						"z": "gun_arm.ZElevation"
 					}
 				},
 				{
@@ -508,18 +566,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 918644153280478,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "player",
-							"sid": 416674567419947,
-							"parameters": {
-								"animation": "\"run\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 301512375167961,
+									"parameters": {
+										"first-value": "gun_arm.Angle",
+										"comparison": 4,
+										"second-value": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 472105076782925,
+									"parameters": {
+										"animation": "\"run_back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 920755367678714
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 141204002200418
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 148316911766629,
+									"parameters": {
+										"animation": "\"run\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 429962150587787
 						}
-					],
-					"sid": 918644153280478
+					]
 				},
 				{
 					"eventType": "block",
@@ -530,18 +629,59 @@
 							"sid": 901645658724490
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 358852339080567,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "player",
-							"sid": 995040200563512,
-							"parameters": {
-								"animation": "\"idle\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 389964755817724,
+									"parameters": {
+										"first-value": "gun_arm.Angle",
+										"comparison": 4,
+										"second-value": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 958687582753907,
+									"parameters": {
+										"animation": "\"idle_back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 861634291041802
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 846311794942509
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 675131178924186,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 281373495781056
 						}
-					],
-					"sid": 358852339080567
+					]
 				}
 			]
 		},
@@ -565,7 +705,36 @@
 					}
 				}
 			],
-			"sid": 164444196563612
+			"sid": 164444196563612,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 650847919778684,
+							"parameters": {
+								"which": "nearest",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 135026675077628,
+							"parameters": {
+								"object": "player",
+								"image-point-optional": "2"
+							}
+						}
+					],
+					"sid": 845700198064293
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -649,6 +818,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 460004847317527,
+					"parameters": {
+						"audio-file": "Player_Hit",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 958749146312139,
@@ -711,6 +891,681 @@
 				}
 			],
 			"sid": 781770458306495
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "player",
+					"sid": 812775823428902
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 520597374543840,
+					"parameters": {
+						"instance-variable": "ability",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 718121119067238,
+					"parameters": {
+						"instance-variable": "special_ability_cooldown",
+						"value": "4"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 743125180707159,
+					"parameters": {
+						"instance-variable": "ability_can",
+						"value": "true"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 774642309053306,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 345391238457545,
+					"parameters": {
+						"audio-file": "The_Gates_Are_Opening_MASTERED (1)",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 792296693498655,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 899375073842443,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 299217833705098,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 543355004958062
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "player",
+					"sid": 669243350679357,
+					"parameters": {
+						"object": "pickups"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 489516025417845,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "pickups",
+					"sid": 444571407592266
+				}
+			],
+			"sid": 967472348678966
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "sheild",
+					"sid": 139709455538219,
+					"parameters": {
+						"object": "player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 632903366661427,
+					"parameters": {
+						"instance-variable": "ability",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 570577160000720,
+					"parameters": {
+						"instance-variable": "special_ability_cooldown",
+						"value": "8"
+					}
+				}
+			],
+			"sid": 742836826752097
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "laser_pickup",
+					"sid": 958009914794205,
+					"parameters": {
+						"object": "player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 364912145839197,
+					"parameters": {
+						"instance-variable": "ability",
+						"value": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 745543015945841,
+					"parameters": {
+						"instance-variable": "special_ability_cooldown",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 412458176114949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 557861916217794,
+					"parameters": {
+						"mouse-button": "right",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 418572083230372,
+					"parameters": {
+						"instance-variable": "ability_can"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 262555209894846,
+					"parameters": {
+						"instance-variable": "ability_can",
+						"value": "false"
+					}
+				},
+				{
+					"callFunction": "Function1",
+					"sid": 654968189432129
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 316210022721538,
+					"parameters": {
+						"seconds": "player.special_ability_cooldown"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 227761294944480,
+					"parameters": {
+						"instance-variable": "ability_can",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 638790374262006
+		},
+		{
+			"functionName": "Function1",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 844672938778717,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 512568920931194,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 961921947727588,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "player",
+							"sid": 296698220527981,
+							"parameters": {
+								"scale": "0.6"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 350297737328228,
+							"parameters": {
+								"seconds": "0.12"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 773270635658100,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 628886362408703,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 691746007163650,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 136679467485167,
+							"parameters": {
+								"seconds": "0.12"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 234292612659437,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 468156524672613,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 905267263364078,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 514175217284392,
+							"parameters": {
+								"seconds": "3.5"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 368540391819254,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-scale",
+							"objectClass": "player",
+							"sid": 544617761964265,
+							"parameters": {
+								"scale": "1"
+							}
+						}
+					],
+					"sid": 834539140194851
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 212738469668585,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 224146988498669,
+							"parameters": {
+								"object-name": "\"laser\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 620856222266147,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "laser",
+							"sid": 899134150081737,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "laser",
+							"sid": 157914202089000,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "laser",
+							"sid": 961727272821734,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "laser",
+							"sid": 854713528251751,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "laser.Angle"
+							}
+						}
+					],
+					"sid": 389549749157121
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 900964843237595,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 485731265271213,
+							"parameters": {
+								"object-name": "\"bullet\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 243499187114553,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "bullet",
+							"sid": 471321347685933,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "bullet",
+							"sid": 585369130168309,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bullet",
+							"sid": 215688902549018,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bullet",
+							"sid": 868231377872278,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "bullet.Angle"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 628831754082167,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 206701672556667,
+							"parameters": {
+								"object-name": "\"bullet\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 402832602477086,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "bullet",
+							"sid": 656642034962835,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "bullet",
+							"sid": 178330057780997,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bullet",
+							"sid": 360274706191614,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bullet",
+							"sid": 975365606346058,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "bullet.Angle"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 227030187516858,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 884074628461281,
+							"parameters": {
+								"object-name": "\"bullet\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 550326567709212,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "bullet",
+							"sid": 610357039888375,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "bullet",
+							"sid": 184669997709675,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bullet",
+							"sid": 875974075277332,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bullet",
+							"sid": 573568625137144,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "bullet.Angle"
+							}
+						}
+					],
+					"sid": 350772848703850
+				}
+			]
 		}
 	],
 	"sid": 463042977011712

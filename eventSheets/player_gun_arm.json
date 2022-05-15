@@ -136,6 +136,53 @@
 				}
 			],
 			"sid": 636348540374422
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 214954172684323,
+					"parameters": {
+						"first-value": "gun_arm.Angle",
+						"comparison": 4,
+						"second-value": "180"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "gun_arm",
+					"sid": 509036221564649,
+					"parameters": {
+						"z": "-0.015"
+					}
+				}
+			],
+			"sid": 394835780266940
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 798719129361122
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "gun_arm",
+					"sid": 430856178808787,
+					"parameters": {
+						"z": "-0.005"
+					}
+				}
+			],
+			"sid": 294714340903037
 		}
 	],
 	"sid": 250172277664748

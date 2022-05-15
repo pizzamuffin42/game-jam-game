@@ -24,14 +24,14 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 9,
+						"height": 15,
+						"originX": 0.5555555555555556,
+						"originY": 0.5333333333333333,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1739175,
+						"imageSpriteId": 4523900,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
@@ -47,25 +47,61 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
-						"originX": 0.5,
-						"originY": 0.5,
+						"width": 9,
+						"height": 15,
+						"originX": 0.5555555555555556,
+						"originY": 0.5333333333333333,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 1812519,
+						"imageSpriteId": 7245683,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 9,
+						"height": 15,
+						"originX": 0.5555555555555556,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4684519,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 9,
+						"height": 15,
+						"originX": 0.5555555555555556,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 4259757,
+						"useCollisionPoly": true,
+						"duration": 1
+					},
+					{
+						"width": 9,
+						"height": 15,
+						"originX": 0.5555555555555556,
+						"originY": 0.5333333333333333,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6017014,
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
 				"sid": 808250841624491,
 				"name": "gone",
-				"isLooping": false,
+				"isLooping": true,
 				"isPingPong": false,
 				"repeatCount": 1,
 				"repeatTo": 0,
-				"speed": 5
+				"speed": 3
 			}
 		],
 		"subfolders": []

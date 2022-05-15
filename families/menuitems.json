@@ -1,0 +1,17 @@
+{
+	"name": "MenuItems",
+	"plugin-id": "Sprite",
+	"sid": 439300444146892,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"members": [
+		"Credits_Text",
+		"Credits_Text_H",
+		"Settings_Text",
+		"Quit_Text",
+		"Start_Text",
+		"Start_Text_H",
+		"Quit_Text_H"
+	]
+}

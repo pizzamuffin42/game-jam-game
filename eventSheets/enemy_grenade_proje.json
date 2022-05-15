@@ -37,9 +37,109 @@
 						"instance-variable": "destroy_on_wall_collision",
 						"value": "true"
 					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 629138299323558,
+					"parameters": {
+						"animation": "\"Animation 2\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 751889816143249,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 177381848131816,
+					"parameters": {
+						"instance-variable": "destroy_on_player_hit",
+						"value": "false"
+					}
 				}
 			],
-			"sid": 469180767838026
+			"sid": 469180767838026,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 793688440773270,
+							"parameters": {
+								"angle": "enemy_grenade.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 222810430640678,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 784071956930893,
+							"parameters": {
+								"seconds": "0.01"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 649637373955095,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 838985388875921
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 785063629030878
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 429301873629145,
+							"parameters": {
+								"seconds": "0.01"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 781249489624839,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 210428062302137
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -47,41 +147,41 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 365184741385913,
+					"sid": 574206551076282,
 					"parameters": {
 						"instance-variable": "xtar",
 						"comparison": 4,
-						"value": "enemy_grenade_proj.X-10"
+						"value": "enemy_grenade_proj.X-5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 762519378370489,
+					"sid": 660507437994264,
 					"parameters": {
 						"instance-variable": "xtar",
 						"comparison": 2,
-						"value": "enemy_grenade_proj.X+10"
+						"value": "enemy_grenade_proj.X+5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 135919300569624,
+					"sid": 847922839636634,
 					"parameters": {
 						"instance-variable": "ytar",
 						"comparison": 4,
-						"value": "enemy_grenade_proj.Y-10"
+						"value": "enemy_grenade_proj.Y-5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 195426398241765,
+					"sid": 647909838036141,
 					"parameters": {
 						"instance-variable": "ytar",
 						"comparison": 2,
-						"value": "enemy_grenade_proj.Y+10"
+						"value": "enemy_grenade_proj.Y+5"
 					}
 				}
 			],
@@ -114,11 +214,36 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 239130903396913,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 992163982629348,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 163390462131772,
+					"sid": 926217331218339,
 					"parameters": {
-						"seconds": "0.2"
+						"seconds": "0.15"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 256416259673274,
+					"parameters": {
+						"seconds": "0.1"
 					}
 				},
 				{

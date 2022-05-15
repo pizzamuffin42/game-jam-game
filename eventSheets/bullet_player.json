@@ -14,9 +14,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 524197687800018,
+					"sid": 331832162348260,
 					"parameters": {
-						"seconds": "4"
+						"seconds": "0.5"
 					}
 				},
 				{
@@ -46,7 +46,8 @@
 					"sid": 582907454795157
 				}
 			],
-			"sid": 542845545486847
+			"sid": 542845545486847,
+			"isOrBlock": true
 		},
 		{
 			"eventType": "block",
@@ -58,6 +59,15 @@
 					"parameters": {
 						"object": "enemies"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemies",
+					"sid": 854934168009584,
+					"parameters": {
+						"instance-variable": "invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
@@ -68,6 +78,17 @@
 					"parameters": {
 						"instance-variable": "health",
 						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 502355545425154,
+					"parameters": {
+						"audio-file": "Enemy_Hit",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
@@ -112,6 +133,28 @@
 				}
 			],
 			"sid": 115754461144614
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "bullet",
+					"sid": 880578401274031,
+					"parameters": {
+						"object": "TM_floorWallPlaceholder"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "bullet",
+					"sid": 705888989318516
+				}
+			],
+			"sid": 432787304205951,
+			"isOrBlock": true
 		}
 	],
 	"sid": 107066292320628
