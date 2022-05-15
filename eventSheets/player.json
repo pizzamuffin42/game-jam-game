@@ -254,6 +254,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 267760547902167,
+					"parameters": {
+						"audio-file": "Gun_Shoot",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "rotate-toward-position",
 					"objectClass": "bullet",
 					"sid": 103027879948118,
@@ -756,6 +767,17 @@
 					}
 				},
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 460004847317527,
+					"parameters": {
+						"audio-file": "Player_Hit",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 958749146312139,
@@ -865,6 +887,17 @@
 						"y": "player.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 535774134764013,
+					"parameters": {
+						"audio-file": "The_Gates_Are_Opening_MASTERED (1)",
+						"loop": "looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{
