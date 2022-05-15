@@ -358,6 +358,6 @@
 		"cordovaAndroidScheme": "https"
 	},
 	"viewportWidth": 640,
-	"viewportHeight": 352,
+	"viewportHeight": 320,
 	"firstLayout": "main_menu"
 }

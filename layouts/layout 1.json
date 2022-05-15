@@ -140,7 +140,6 @@
 						"health": 10,
 						"shooting_rate": 1,
 						"bullet_speed": 400,
-						"invincible": false,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -290,8 +289,8 @@
 						}
 					},
 					"world": {
-						"x": 478.15202666724343,
-						"y": 6.232604283508792,
+						"x": 474.76518308692073,
+						"y": -4.492400387513143,
 						"width": 250,
 						"height": 52.15188751615102,
 						"originX": 0.5,
@@ -320,7 +319,6 @@
 						"health": 5,
 						"shooting_rate": 1,
 						"bullet_speed": 400,
-						"invincible": false,
 						"in_sight": false,
 						"can_shoot": true,
 						"can_move": true
@@ -391,7 +389,6 @@
 						"health": 10,
 						"shooting_rate": 2,
 						"bullet_speed": 300,
-						"invincible": false,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -867,8 +864,8 @@
 	"sid": 883654746363942,
 	"nonworld-instances": [],
 	"effectTypes": [],
-	"width": 660,
-	"height": 372,
+	"width": 640,
+	"height": 320,
 	"unboundedScrolling": false,
 	"vpX": 0.5,
 	"vpY": 0.5,
