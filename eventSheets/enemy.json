@@ -2,6 +2,10 @@
 	"name": "enemy",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "pathfinding"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -52,7 +56,8 @@
 					}
 				}
 			],
-			"sid": 960956584972932
+			"sid": 960956584972932,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -72,7 +77,8 @@
 					"behaviorType": "Pathfinding"
 				}
 			],
-			"sid": 488099109556166
+			"sid": 488099109556166,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -123,14 +129,15 @@
 				{
 					"id": "stop",
 					"objectClass": "enemy",
-					"sid": 762834892060759,
-					"behaviorType": "Pathfinding"
+					"sid": 508333739134325,
+					"behaviorType": "Pathfinding2"
 				},
 				{
 					"id": "set-speed",
 					"objectClass": "enemy",
-					"sid": 111014943332867,
-					"behaviorType": "Pathfinding",
+					"sid": 391567324241848,
+					"disabled": true,
+					"behaviorType": "Pathfinding2",
 					"parameters": {
 						"speed": "0"
 					}
@@ -284,7 +291,8 @@
 					}
 				}
 			],
-			"sid": 226237204425000
+			"sid": 226237204425000,
+			"disabled": true
 		}
 	],
 	"sid": 495478269261270

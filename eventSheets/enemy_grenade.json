@@ -6,6 +6,10 @@
 			"includeSheet": "enemy_grenade_proje"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "pathfinding"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -66,7 +70,8 @@
 					}
 				}
 			],
-			"sid": 412800728584329
+			"sid": 412800728584329,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -86,7 +91,8 @@
 					"behaviorType": "Pathfinding"
 				}
 			],
-			"sid": 130651153814069
+			"sid": 130651153814069,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -137,14 +143,15 @@
 				{
 					"id": "stop",
 					"objectClass": "enemy_grenade",
-					"sid": 352055039999332,
-					"behaviorType": "Pathfinding"
+					"sid": 513295361669310,
+					"behaviorType": "Pathfinding2"
 				},
 				{
 					"id": "set-speed",
 					"objectClass": "enemy_grenade",
-					"sid": 145121276338029,
-					"behaviorType": "Pathfinding",
+					"sid": 907456421171346,
+					"disabled": true,
+					"behaviorType": "Pathfinding2",
 					"parameters": {
 						"speed": "0"
 					}
@@ -298,8 +305,8 @@
 				{
 					"id": "compare-speed",
 					"objectClass": "enemy_grenade",
-					"sid": 355311257514121,
-					"behaviorType": "Pathfinding",
+					"sid": 860708192807368,
+					"behaviorType": "Pathfinding2",
 					"parameters": {
 						"comparison": 4,
 						"speed": "0.1"
@@ -418,7 +425,8 @@
 					}
 				}
 			],
-			"sid": 661333109821271
+			"sid": 661333109821271,
+			"disabled": true
 		}
 	],
 	"sid": 391045078266819

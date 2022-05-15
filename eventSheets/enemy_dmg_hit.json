@@ -2,6 +2,10 @@
 	"name": "enemy_dmg_hit",
 	"events": [
 		{
+			"eventType": "include",
+			"includeSheet": "pathfinding"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -12,9 +16,9 @@
 				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "enemy_dammage_on_hit",
-					"sid": 568018107656141,
+					"sid": 875288845765770,
 					"parameters": {
-						"instance-variable": "can_move"
+						"instance-variable": "can_move_p"
 					}
 				}
 			],
@@ -44,6 +48,7 @@
 					"id": "find-path",
 					"objectClass": "enemy_dammage_on_hit",
 					"sid": 154340560738366,
+					"disabled": true,
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"x": "player.X",
@@ -60,7 +65,8 @@
 					}
 				}
 			],
-			"sid": 693945119276999
+			"sid": 693945119276999,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -88,7 +94,8 @@
 					"behaviorType": "Pathfinding"
 				}
 			],
-			"sid": 269852524059187
+			"sid": 269852524059187,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -156,23 +163,23 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "enemy_dammage_on_hit",
-					"sid": 602577359423328,
+					"sid": 430899200450428,
 					"parameters": {
-						"instance-variable": "can_move",
+						"instance-variable": "can_move_p",
 						"value": "false"
 					}
 				},
 				{
 					"id": "stop",
 					"objectClass": "enemy_dammage_on_hit",
-					"sid": 603411587436836,
-					"behaviorType": "Pathfinding"
+					"sid": 541962229099958,
+					"behaviorType": "Pathfinding2"
 				},
 				{
 					"id": "set-speed",
 					"objectClass": "enemy_dammage_on_hit",
-					"sid": 648163949357329,
-					"behaviorType": "Pathfinding",
+					"sid": 712055965526227,
+					"behaviorType": "Pathfinding2",
 					"parameters": {
 						"speed": "0"
 					}
@@ -188,9 +195,9 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "enemy_dammage_on_hit",
-					"sid": 123808019615674,
+					"sid": 402622334136462,
 					"parameters": {
-						"instance-variable": "can_move",
+						"instance-variable": "can_move_p",
 						"value": "true"
 					}
 				}
@@ -221,7 +228,8 @@
 					}
 				}
 			],
-			"sid": 718363305322865
+			"sid": 718363305322865,
+			"disabled": true
 		}
 	],
 	"sid": 479637642427429

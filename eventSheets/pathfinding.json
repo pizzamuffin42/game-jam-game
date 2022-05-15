@@ -1,0 +1,70 @@
+{
+	"name": "pathfinding",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "timeToPathFinding",
+			"type": "number",
+			"initialValue": "0.3",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": true,
+			"sid": 396557365484269
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 160484374059347,
+					"parameters": {
+						"interval-seconds": "timeToPathFinding"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "Pathfinding",
+					"sid": 125961531171758,
+					"behaviorType": "Pathfinding2",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 181597742932073
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "Pathfinding",
+					"sid": 440876918272646,
+					"behaviorType": "Pathfinding2"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "Pathfinding",
+					"sid": 768522123527735,
+					"parameters": {
+						"instance-variable": "can_move_p"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "Pathfinding",
+					"sid": 867393118165933,
+					"behaviorType": "Pathfinding2"
+				}
+			],
+			"sid": 492574358194356
+		}
+	],
+	"sid": 384043354637890
+}

@@ -140,10 +140,25 @@
 						"health": 10,
 						"shooting_rate": 1,
 						"bullet_speed": 400,
+						"can_move_p": true,
 						"in_sight": false,
 						"can_shoot": true
 					},
 					"behaviors": {
+						"Pathfinding2": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
 						"Solid": {
 							"properties": {
 								"enabled": false,
@@ -319,11 +334,26 @@
 						"health": 5,
 						"shooting_rate": 1,
 						"bullet_speed": 400,
+						"can_move_p": true,
 						"in_sight": false,
 						"can_shoot": true,
 						"can_move": true
 					},
 					"behaviors": {
+						"Pathfinding2": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
 						"Solid": {
 							"properties": {
 								"enabled": false,
@@ -389,10 +419,25 @@
 						"health": 10,
 						"shooting_rate": 2,
 						"bullet_speed": 300,
+						"can_move_p": true,
 						"in_sight": false,
 						"can_shoot": true
 					},
 					"behaviors": {
+						"Pathfinding2": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": true,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
 						"Solid": {
 							"properties": {
 								"enabled": false,

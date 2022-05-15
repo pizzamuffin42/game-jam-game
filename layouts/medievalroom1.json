@@ -283,7 +283,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 36,
@@ -312,7 +312,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 37,
@@ -341,7 +341,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 38,
@@ -370,7 +370,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 39,
@@ -399,7 +399,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 40,
@@ -428,7 +428,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 41,
@@ -457,7 +457,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 42,
@@ -486,7 +486,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 43,
@@ -515,7 +515,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 44,
@@ -544,7 +544,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 45,
@@ -602,7 +602,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 46,
@@ -631,7 +631,7 @@
 								"initially-visible": true,
 								"initial-animation": "idle",
 								"initial-frame": 0,
-								"enable-collisions": true,
+								"enable-collisions": false,
 								"live-preview": false
 							},
 							"uid": 47,
@@ -876,6 +876,90 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "enemy_grenade",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 49,
+					"instanceVariables": {
+						"health": 10,
+						"shooting_rate": 2,
+						"bullet_speed": 300,
+						"can_move_p": true,
+						"in_sight": false,
+						"can_shoot": true
+					},
+					"behaviors": {
+						"Pathfinding2": {
+							"properties": {
+								"cell-size": 30,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 16,
+								"cell-border": 4,
+								"obstacles": "custom",
+								"max-speed": 50,
+								"acceleration": 3000,
+								"deceleration": 3000,
+								"rotate-speed": 2000,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 150,
+								"cone-of-view": 360,
+								"use-collision-cells": false
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
+					"world": {
+						"x": 213.65609741210938,
+						"y": 86.9279556274414,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 606590593818246,
@@ -1075,6 +1159,52 @@
 						],
 						"angle": 0,
 						"zElevation": -0.005
+					}
+				},
+				{
+					"type": "BasicEnemy",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 51,
+					"instanceVariables": {
+						"can_move_p": true
+					},
+					"behaviors": {
+						"Pathfinding2": {
+							"properties": {
+								"cell-size": 16,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 200,
+								"acceleration": 1000,
+								"deceleration": 2000,
+								"rotate-speed": 135,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						}
+					},
+					"world": {
+						"x": 140.64170859327282,
+						"y": 76.54530799596094,
+						"width": 19.568514531399416,
+						"height": 56.41075621339081,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				}
 			],

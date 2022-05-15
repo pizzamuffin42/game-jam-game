@@ -122,7 +122,8 @@
 			"Sprite",
 			"gun_arm",
 			"shaker",
-			"Sprite2"
+			"Sprite2",
+			"BasicEnemy"
 		],
 		"subfolders": [
 			{
@@ -149,7 +150,8 @@
 	"families": {
 		"items": [
 			"enemies",
-			"enemy_bullets"
+			"enemy_bullets",
+			"Pathfinding"
 		],
 		"subfolders": []
 	},
@@ -175,7 +177,8 @@
 			"enemy_grenade_proje",
 			"player_gun_arm",
 			"enemy_proje",
-			"environmentalWind"
+			"environmentalWind",
+			"pathfinding"
 		],
 		"subfolders": []
 	},

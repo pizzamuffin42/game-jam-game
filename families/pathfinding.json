@@ -1,0 +1,27 @@
+{
+	"name": "Pathfinding",
+	"plugin-id": "Sprite",
+	"sid": 733470243044898,
+	"instanceVariables": [
+		{
+			"name": "can_move_p",
+			"type": "boolean",
+			"desc": "",
+			"sid": 357575304731895
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Pathfinding",
+			"name": "Pathfinding2",
+			"sid": 770738396759362
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"enemy_grenade",
+		"enemy",
+		"enemy_dammage_on_hit",
+		"BasicEnemy"
+	]
+}
