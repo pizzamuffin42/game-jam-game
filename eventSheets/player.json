@@ -243,10 +243,10 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 906820416995170,
+					"sid": 913046658176123,
 					"parameters": {
 						"object-name": "\"bullet\"",
-						"layer": "0",
+						"layer": "player.LayerName",
 						"x": "gun_arm.X-gun_arm.ImagePointCount",
 						"y": "gun_arm.Y-gun_arm.ImagePointCount",
 						"create-hierarchy": false,
@@ -857,10 +857,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 621001527639822,
+					"sid": 774642309053306,
 					"parameters": {
 						"object-to-create": "shadow",
-						"layer": "0",
+						"layer": "player.LayerName",
 						"x": "player.X",
 						"y": "player.Y",
 						"create-hierarchy": false,
