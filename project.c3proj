@@ -113,7 +113,8 @@
 			"enemy_grenade_proj",
 			"Sprite",
 			"gun_arm",
-			"shaker"
+			"shaker",
+			"Sprite2"
 		],
 		"subfolders": []
 	},

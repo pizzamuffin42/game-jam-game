@@ -273,6 +273,55 @@
 				}
 			],
 			"sid": 459840040484447
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "enemy_grenade",
+					"sid": 355311257514121,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade",
+					"sid": 410578127095608,
+					"parameters": {
+						"animation": "\"run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 235990835045894
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 955083852923365
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade",
+					"sid": 653057668086858,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 604713032615795
 		}
 	],
 	"sid": 391045078266819

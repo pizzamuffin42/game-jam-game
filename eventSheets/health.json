@@ -7,11 +7,11 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "health",
-					"sid": 628572997060563,
+					"sid": 976799330814239,
 					"parameters": {
 						"instance-variable": "index",
 						"comparison": 3,
-						"value": "player.health+1"
+						"value": "player.health"
 					}
 				}
 			],
@@ -19,10 +19,10 @@
 				{
 					"id": "set-animation",
 					"objectClass": "health",
-					"sid": 434554364968498,
+					"sid": 220770026873286,
 					"parameters": {
 						"animation": "\"here\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
 				}
 			],
@@ -39,16 +39,24 @@
 						"object": "health",
 						"instance": "player.health"
 					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "health",
+					"sid": 401099552254791,
+					"parameters": {
+						"animation": "\"here\""
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-animation",
 					"objectClass": "health",
-					"sid": 696976575230349,
+					"sid": 145513301758009,
 					"parameters": {
 						"animation": "\"gone\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
 				}
 			],
@@ -65,16 +73,24 @@
 						"object": "health",
 						"instance": "player.health+1"
 					}
+				},
+				{
+					"id": "is-animation-playing",
+					"objectClass": "health",
+					"sid": 100345207078985,
+					"parameters": {
+						"animation": "\"here\""
+					}
 				}
 			],
 			"actions": [
 				{
 					"id": "set-animation",
 					"objectClass": "health",
-					"sid": 960570964300478,
+					"sid": 653541502388614,
 					"parameters": {
 						"animation": "\"gone\"",
-						"from": "beginning"
+						"from": "current-frame"
 					}
 				}
 			],

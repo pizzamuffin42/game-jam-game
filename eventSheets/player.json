@@ -256,6 +256,14 @@
 					}
 				},
 				{
+					"id": "set-z-elevation",
+					"objectClass": "bullet",
+					"sid": 719231929039990,
+					"parameters": {
+						"z": "gun_arm.ZElevation"
+					}
+				},
+				{
 					"id": "set-speed",
 					"objectClass": "bullet",
 					"sid": 730592600691849,
@@ -508,18 +516,59 @@
 							}
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 918644153280478,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "player",
-							"sid": 416674567419947,
-							"parameters": {
-								"animation": "\"run\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 301512375167961,
+									"parameters": {
+										"first-value": "gun_arm.Angle",
+										"comparison": 4,
+										"second-value": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 472105076782925,
+									"parameters": {
+										"animation": "\"run_back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 920755367678714
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 141204002200418
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 148316911766629,
+									"parameters": {
+										"animation": "\"run\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 429962150587787
 						}
-					],
-					"sid": 918644153280478
+					]
 				},
 				{
 					"eventType": "block",
@@ -530,18 +579,59 @@
 							"sid": 901645658724490
 						}
 					],
-					"actions": [
+					"actions": [],
+					"sid": 358852339080567,
+					"children": [
 						{
-							"id": "set-animation",
-							"objectClass": "player",
-							"sid": 995040200563512,
-							"parameters": {
-								"animation": "\"idle\"",
-								"from": "beginning"
-							}
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 389964755817724,
+									"parameters": {
+										"first-value": "gun_arm.Angle",
+										"comparison": 4,
+										"second-value": "180"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 958687582753907,
+									"parameters": {
+										"animation": "\"idle_back\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 861634291041802
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 846311794942509
+								}
+							],
+							"actions": [
+								{
+									"id": "set-animation",
+									"objectClass": "player",
+									"sid": 675131178924186,
+									"parameters": {
+										"animation": "\"idle\"",
+										"from": "beginning"
+									}
+								}
+							],
+							"sid": 281373495781056
 						}
-					],
-					"sid": 358852339080567
+					]
 				}
 			]
 		},
@@ -711,6 +801,31 @@
 				}
 			],
 			"sid": 781770458306495
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 498177363964671,
+					"parameters": {
+						"key": 80
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "player",
+					"sid": 392178427886845,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "2"
+					}
+				}
+			],
+			"sid": 553301070419187
 		}
 	],
 	"sid": 463042977011712

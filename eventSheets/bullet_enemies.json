@@ -93,6 +93,14 @@
 						"instance-variable": "invincible"
 					},
 					"isInverted": true
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemy_bullets",
+					"sid": 448638906849810,
+					"parameters": {
+						"instance-variable": "can_hit_player"
+					}
 				}
 			],
 			"actions": [
@@ -104,14 +112,32 @@
 						"instance-variable": "health",
 						"value": "1"
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "enemy_bullets",
-					"sid": 925497917661454
 				}
 			],
-			"sid": 982577052722136
+			"sid": 982577052722136,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemy_bullets",
+							"sid": 922087483746719,
+							"parameters": {
+								"instance-variable": "destroy_on_player_hit"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "enemy_bullets",
+							"sid": 639693336608867
+						}
+					],
+					"sid": 486880619274255
+				}
+			]
 		}
 	],
 	"sid": 950996090175221
