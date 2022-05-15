@@ -221,12 +221,37 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "Enemy_Hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 418224428356846,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Player_Hit.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 170655468420143,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
 		},
 		"music": {
-			"items": [],
+			"items": [
+				{
+					"name": "The_Gates_Are_Opening_MASTERED (1).webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 374300954705860,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
 			"subfolders": []
 		},
 		"video": {
