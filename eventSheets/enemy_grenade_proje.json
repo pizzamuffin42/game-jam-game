@@ -64,14 +64,6 @@
 						"instance-variable": "destroy_on_player_hit",
 						"value": "false"
 					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 998177350872756,
-					"parameters": {
-						"seconds": "0.1"
-					}
 				}
 			],
 			"sid": 469180767838026,
@@ -82,9 +74,9 @@
 						{
 							"id": "is-between-angles",
 							"objectClass": "System",
-							"sid": 646371064512096,
+							"sid": 793688440773270,
 							"parameters": {
-								"angle": "enemy_grenade_proj.Angle",
+								"angle": "enemy_grenade.Angle",
 								"first-angle": "90",
 								"second-angle": "270"
 							}
@@ -102,9 +94,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 715884781571864,
+							"sid": 784071956930893,
 							"parameters": {
-								"seconds": "0.1"
+								"seconds": "0.01"
 							}
 						},
 						{
@@ -131,9 +123,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 493316517873907,
+							"sid": 429301873629145,
 							"parameters": {
-								"seconds": "0.2"
+								"seconds": "0.01"
 							}
 						},
 						{
@@ -155,41 +147,41 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 365184741385913,
+					"sid": 574206551076282,
 					"parameters": {
 						"instance-variable": "xtar",
 						"comparison": 4,
-						"value": "enemy_grenade_proj.X-10"
+						"value": "enemy_grenade_proj.X-5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 762519378370489,
+					"sid": 660507437994264,
 					"parameters": {
 						"instance-variable": "xtar",
 						"comparison": 2,
-						"value": "enemy_grenade_proj.X+10"
+						"value": "enemy_grenade_proj.X+5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 135919300569624,
+					"sid": 847922839636634,
 					"parameters": {
 						"instance-variable": "ytar",
 						"comparison": 4,
-						"value": "enemy_grenade_proj.Y-10"
+						"value": "enemy_grenade_proj.Y-5"
 					}
 				},
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 195426398241765,
+					"sid": 647909838036141,
 					"parameters": {
 						"instance-variable": "ytar",
 						"comparison": 2,
-						"value": "enemy_grenade_proj.Y+10"
+						"value": "enemy_grenade_proj.Y+5"
 					}
 				}
 			],
@@ -228,6 +220,14 @@
 					"parameters": {
 						"instance-variable": "can_hit_player",
 						"value": "true"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 992163982629348,
+					"parameters": {
+						"angle": "0"
 					}
 				},
 				{

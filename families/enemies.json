@@ -20,6 +20,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 867528811915474
+		},
+		{
+			"name": "invincible",
+			"type": "boolean",
+			"desc": "",
+			"sid": 392581601899178
 		}
 	],
 	"behaviorTypes": [],

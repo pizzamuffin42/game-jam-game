@@ -657,6 +657,15 @@
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
 					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "shadow",
+					"sid": 732733382636383,
+					"parameters": {
+						"object": "player",
+						"image-point-optional": "2"
+					}
 				}
 			],
 			"sid": 164444196563612
@@ -830,6 +839,57 @@
 				}
 			],
 			"sid": 553301070419187
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "player",
+					"sid": 812775823428902
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 621001527639822,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "0",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 792296693498655,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 899375073842443,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 299217833705098,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 543355004958062
 		}
 	],
 	"sid": 463042977011712

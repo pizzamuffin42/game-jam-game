@@ -58,6 +58,15 @@
 					"parameters": {
 						"object": "enemies"
 					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "enemies",
+					"sid": 854934168009584,
+					"parameters": {
+						"instance-variable": "invincible"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [

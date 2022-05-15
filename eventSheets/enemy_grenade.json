@@ -419,6 +419,71 @@
 				}
 			],
 			"sid": 661333109821271
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "enemy_grenade",
+					"sid": 205590067851713,
+					"parameters": {
+						"animation": "\"throw\""
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "enemy_grenade",
+					"sid": 228615489850815,
+					"parameters": {
+						"comparison": 5,
+						"number": "4"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "enemy_grenade",
+					"sid": 271470461912965,
+					"parameters": {
+						"comparison": 2,
+						"number": "12"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade",
+					"sid": 319593979920334,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 811465836724323
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 574167885335308
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade",
+					"sid": 574867917785880,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 241286038273044
 		}
 	],
 	"sid": 391045078266819

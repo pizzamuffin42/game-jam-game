@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "shadowlight",
+			"name": "Shadow light",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -114,7 +122,9 @@
 			"Sprite",
 			"gun_arm",
 			"shaker",
-			"Sprite2"
+			"Sprite2",
+			"ShadowLight",
+			"shadow"
 		],
 		"subfolders": []
 	},
