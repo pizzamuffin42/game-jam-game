@@ -38,6 +38,10 @@
 			"includeSheet": "enemy_proje"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "environmentalWind"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

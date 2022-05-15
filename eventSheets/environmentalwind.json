@@ -1,0 +1,90 @@
+{
+	"name": "environmentalWind",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 491161305406265,
+					"parameters": {
+						"interval-seconds": "random(4,11)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "S_grassBreeze1",
+					"sid": 231269175192949,
+					"parameters": {
+						"animation": "\"breeze\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "S_grassBreeze2",
+					"sid": 451225520771340,
+					"parameters": {
+						"animation": "\"breeze\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 910811303147723
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "S_grassBreeze1",
+					"sid": 766263247181357,
+					"parameters": {
+						"animation": "\"breeze\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "S_grassBreeze1",
+					"sid": 280155560899315,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 213078846869541
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-animation-finished",
+					"objectClass": "S_grassBreeze2",
+					"sid": 774682974752840,
+					"parameters": {
+						"animation": "\"breeze\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "S_grassBreeze2",
+					"sid": 622243529204450,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 242834022472410
+		}
+	],
+	"sid": 840189894476469
+}
