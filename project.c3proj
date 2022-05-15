@@ -131,13 +131,8 @@
 			"gun_arm",
 			"shaker",
 			"Sprite2",
-<<<<<<< Updated upstream
 			"ShadowLight",
 			"shadow"
-=======
-			"Cursor",
-			"Cursor_Clicked"
->>>>>>> Stashed changes
 		],
 		"subfolders": [
 			{
@@ -156,21 +151,6 @@
 				],
 				"subfolders": [],
 				"name": "Tilemaps"
-			},
-			{
-				"items": [
-					"Start_Text",
-					"Start_Text_H",
-					"Credits_Text",
-					"Credits_Text_H",
-					"Quit_Text",
-					"Quit_Text_H",
-					"Settings_Text",
-					"Menu",
-					"Settings_Text_H"
-				],
-				"subfolders": [],
-				"name": "MainMenu"
 			}
 		]
 	},
@@ -179,8 +159,7 @@
 	"families": {
 		"items": [
 			"enemies",
-			"enemy_bullets",
-			"MenuItems"
+			"enemy_bullets"
 		],
 		"subfolders": []
 	},
@@ -358,6 +337,6 @@
 		"cordovaAndroidScheme": "https"
 	},
 	"viewportWidth": 640,
-	"viewportHeight": 320,
+	"viewportHeight": 352,
 	"firstLayout": "main_menu"
 }

@@ -243,10 +243,10 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 458455146547160,
+					"sid": 906820416995170,
 					"parameters": {
 						"object-name": "\"bullet\"",
-						"layer": "player.LayerName",
+						"layer": "0",
 						"x": "gun_arm.X-gun_arm.ImagePointCount",
 						"y": "gun_arm.Y-gun_arm.ImagePointCount",
 						"create-hierarchy": false,

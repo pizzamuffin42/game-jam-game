@@ -91,7 +91,7 @@
 						{
 							"id": "go-to-layout-by-name",
 							"objectClass": "System",
-							"sid": 897766405611517,
+							"sid": 165155750380001,
 							"parameters": {
 								"layout": "\"main_menu\""
 							}
