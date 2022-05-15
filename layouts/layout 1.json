@@ -153,7 +153,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 3,
+								"cell-border": 4,
 								"obstacles": "custom",
 								"max-speed": 100,
 								"acceleration": 3000,
@@ -333,7 +333,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 3,
+								"cell-border": 4,
 								"obstacles": "custom",
 								"max-speed": 200,
 								"acceleration": 3000,
@@ -402,7 +402,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 3,
+								"cell-border": 4,
 								"obstacles": "custom",
 								"max-speed": 50,
 								"acceleration": 3000,
