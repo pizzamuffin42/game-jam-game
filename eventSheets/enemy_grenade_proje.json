@@ -50,23 +50,104 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 613914605077338,
+					"sid": 751889816143249,
 					"parameters": {
 						"instance-variable": "can_hit_player",
-						"value": "true"
+						"value": "false"
 					}
 				},
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "enemy_grenade_proj",
-					"sid": 640677679289962,
+					"sid": 177381848131816,
 					"parameters": {
 						"instance-variable": "destroy_on_player_hit",
-						"value": "true"
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 998177350872756,
+					"parameters": {
+						"seconds": "0.1"
 					}
 				}
 			],
-			"sid": 469180767838026
+			"sid": 469180767838026,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 646371064512096,
+							"parameters": {
+								"angle": "enemy_grenade_proj.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 222810430640678,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 715884781571864,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 649637373955095,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 838985388875921
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 785063629030878
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 493316517873907,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "enemy_grenade_proj",
+							"sid": 781249489624839,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 210428062302137
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -172,27 +253,6 @@
 				}
 			],
 			"sid": 427152329583797
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 834076566468425
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 153071888176129,
-					"parameters": {
-						"angle": "0"
-					}
-				}
-			],
-			"sid": 513074842170367
 		}
 	],
 	"sid": 263204537098625

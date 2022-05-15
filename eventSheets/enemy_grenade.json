@@ -16,6 +16,16 @@
 			],
 			"actions": [
 				{
+					"id": "rotate-toward-position",
+					"objectClass": "enemy_grenade",
+					"sid": 835988233498863,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 106456569065037,
@@ -183,6 +193,24 @@
 			],
 			"actions": [
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_grenade",
+					"sid": 144498038367556,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade",
+					"sid": 621076209482181,
+					"parameters": {
+						"animation": "\"throw\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 127075321623906,
@@ -224,15 +252,6 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "enemy_grenade",
-					"sid": 543981040011605,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "false"
-					}
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 416239153206412,
@@ -247,6 +266,15 @@
 					"parameters": {
 						"instance-variable": "can_shoot",
 						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "enemy_grenade",
+					"sid": 446000373078663,
+					"parameters": {
+						"animation": "\"idle\"",
+						"from": "beginning"
 					}
 				}
 			],
@@ -310,18 +338,71 @@
 					"sid": 955083852923365
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 604713032615795
+		},
+		{
+			"eventType": "block",
+			"conditions": [
 				{
-					"id": "set-animation",
-					"objectClass": "enemy_grenade",
-					"sid": 653057668086858,
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 278636090152203,
 					"parameters": {
-						"animation": "\"idle\"",
-						"from": "beginning"
+						"angle": "enemy_grenade.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
 					}
 				}
 			],
-			"sid": 604713032615795
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade",
+					"sid": 406797314328371,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_grenade",
+					"sid": 804707670317766,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 142699193433734
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 530875546428556
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade",
+					"sid": 494441929245161,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_grenade",
+					"sid": 378916957131387,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 669535365704120
 		}
 	],
 	"sid": 391045078266819
