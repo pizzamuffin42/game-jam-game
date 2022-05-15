@@ -1,0 +1,113 @@
+{
+	"name": "Pathfinding_Family_Logic",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "PathfindingFamily",
+					"sid": 901202542952329
+				}
+			],
+			"actions": [
+				{
+					"id": "add-obstacle",
+					"objectClass": "PathfindingFamily",
+					"sid": 568262195852259,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "CollisionTilemap"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "PathfindingFamily",
+					"sid": 331525405051321,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "CollisionTilemap"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "PathfindingFamily",
+					"sid": 628779548688195,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 701335661561669
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 378404585370242
+				},
+				{
+					"id": "is-moving-along-path",
+					"objectClass": "PathfindingFamily",
+					"sid": 968181920747111,
+					"behaviorType": "Pathfinding",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 853616569289154,
+					"disabled": true,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "PathfindingFamily",
+					"sid": 158145055639552,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 141560385908102
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "PathfindingFamily",
+					"sid": 580005202131001,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-moving-along-path",
+					"objectClass": "PathfindingFamily",
+					"sid": 352397669122580,
+					"behaviorType": "Pathfinding",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "PathfindingFamily",
+					"sid": 450956485617834,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 614521112697483
+		}
+	],
+	"sid": 496864356166238
+}

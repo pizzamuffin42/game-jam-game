@@ -31,6 +31,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Tilemap",
+			"name": "Tilemap",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "EightDir",
 			"name": "8 Direction",
@@ -114,23 +122,35 @@
 			"Sprite",
 			"gun_arm",
 			"shaker",
-			"Sprite2"
+			"MockTilemap",
+			"MockTilemap2",
+			"CollisionTilemap",
+			"GeneralEnemy"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": [],
+				"name": "New folder"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
 	"families": {
 		"items": [
 			"enemies",
-			"enemy_bullets"
+			"enemy_bullets",
+			"PathfindingFamily"
 		],
 		"subfolders": []
 	},
 	"layouts": {
 		"items": [
 			"Layout 1",
-			"main_menu"
+			"main_menu",
+			"Mock Room",
+			"Tilemap Test Room"
 		],
 		"subfolders": []
 	},
@@ -146,7 +166,8 @@
 			"enemy_dmg_hit",
 			"enemy_grenade",
 			"enemy_grenade_proje",
-			"player_gun_arm"
+			"player_gun_arm",
+			"Pathfinding_Family_Logic"
 		],
 		"subfolders": []
 	},

@@ -8,18 +8,6 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 792083709189948
-		},
-		{
-			"name": "can_hit_player",
-			"type": "boolean",
-			"desc": "",
-			"sid": 835718218810352
-		},
-		{
-			"name": "destroy_on_player_hit",
-			"type": "boolean",
-			"desc": "",
-			"sid": 864594555543130
 		}
 	],
 	"behaviorTypes": [],
