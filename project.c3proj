@@ -131,13 +131,10 @@
 			"gun_arm",
 			"shaker",
 			"Sprite2",
-<<<<<<< Updated upstream
 			"ShadowLight",
 			"shadow"
-=======
 			"Cursor",
 			"Cursor_Clicked"
->>>>>>> Stashed changes
 		],
 		"subfolders": [
 			{
