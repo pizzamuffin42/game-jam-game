@@ -270,10 +270,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 127075321623906,
+					"sid": 956486179251310,
 					"parameters": {
 						"object-to-create": "enemy_grenade_proj",
-						"layer": "0",
+						"layer": "player.LayerName",
 						"x": "enemy_grenade.X",
 						"y": "enemy_grenade.Y",
 						"create-hierarchy": false,
@@ -576,6 +576,19 @@
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 942977770452067
+				},
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 948624458184227,
+					"parameters": {
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"layer": "player.LayerNumber",
+						"x": "enemy_grenade.X",
+						"y": "enemy_grenade.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
 				}
 			],
 			"sid": 460275892636626

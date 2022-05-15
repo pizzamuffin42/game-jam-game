@@ -312,6 +312,19 @@
 			],
 			"actions": [
 				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 918101877722059,
+					"parameters": {
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"layer": "player.LayerNumber",
+						"x": "plant_monster.X",
+						"y": "plant_monster.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 362742853977969

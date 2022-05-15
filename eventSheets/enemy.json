@@ -264,10 +264,10 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 478720809839547,
+					"sid": 832612602028540,
 					"parameters": {
 						"object-to-create": "enemy_bullet",
-						"layer": "0",
+						"layer": "player.LayerName",
 						"x": "enemy.X",
 						"y": "enemy.Y",
 						"create-hierarchy": false,
@@ -481,6 +481,19 @@
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 838619331593473
+				},
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 712656727970741,
+					"parameters": {
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"layer": "player.LayerNumber",
+						"x": "enemy.X",
+						"y": "enemy.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
 				}
 			],
 			"sid": 667484515915532

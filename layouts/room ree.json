@@ -194,6 +194,35 @@
 								],
 								"zElevation": 0
 							}
+						},
+						{
+							"type": "Sprite3",
+							"properties": {
+								"initially-visible": true,
+								"initial-animation": "Animation 2",
+								"initial-frame": 0,
+								"enable-collisions": true,
+								"live-preview": false
+							},
+							"uid": 186,
+							"instanceVariables": {},
+							"behaviors": {},
+							"world": {
+								"x": 338,
+								"y": 266,
+								"width": 32,
+								"height": 32,
+								"originX": 0.5,
+								"originY": 0.5,
+								"color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"angle": 0,
+								"zElevation": 0
+							}
 						}
 					],
 					"sid": 846312757796543,
@@ -725,7 +754,8 @@
 						"screen_shake_amount_on_dammaging": 3,
 						"special_ability_cooldown": 0,
 						"ability_can": false,
-						"ability": 0
+						"ability": 0,
+						"ignor": true
 					},
 					"behaviors": {
 						"8Direction": {

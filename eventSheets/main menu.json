@@ -2,6 +2,16 @@
 	"name": "main menu",
 	"events": [
 		{
+			"eventType": "variable",
+			"name": "high_score",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 154732965603340
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{
@@ -16,9 +26,9 @@
 				{
 					"id": "cursor-is-over-object",
 					"objectClass": "Mouse",
-					"sid": 366123565098031,
+					"sid": 910526667901229,
 					"parameters": {
-						"object": "MenuItems"
+						"object": "Start_Text"
 					}
 				}
 			],
@@ -26,9 +36,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 460600556256570,
+					"sid": 941545924555598,
 					"parameters": {
-						"layout": "Layout 1"
+						"layout": "medievalRoom2"
 					}
 				}
 			],
@@ -50,6 +60,35 @@
 					"sid": 717357764635178,
 					"parameters": {
 						"sprite": "Cursor"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 185621497831839,
+					"parameters": {
+						"variable": "high_score",
+						"value": "layouts"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 869674643562710,
+					"parameters": {
+						"variable": "layouts",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 345391238457545,
+					"parameters": {
+						"audio-file": "The_Gates_Are_Opening_MASTERED (1)",
+						"loop": "looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
 					}
 				}
 			],
@@ -95,13 +134,30 @@
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
-					"sid": 123207754925714,
+					"sid": 162499855908134,
 					"parameters": {
 						"sprite": "Cursor_Clicked"
 					}
 				}
 			],
-			"sid": 537075847435863
+			"sid": 537075847435863,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "cursor-is-over-object",
+							"objectClass": "Mouse",
+							"sid": 580528917162725,
+							"parameters": {
+								"object": "Quit_Text"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 519508611019369
+				}
+			]
 		},
 		{
 			"eventType": "block",

@@ -1486,7 +1486,8 @@
 						"screen_shake_amount_on_dammaging": 3,
 						"special_ability_cooldown": 0,
 						"ability_can": false,
-						"ability": 0
+						"ability": 0,
+						"ignor": true
 					},
 					"behaviors": {
 						"8Direction": {

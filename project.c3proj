@@ -149,7 +149,10 @@
 			"laser_pickup",
 			"laser",
 			"dragon",
-			"dragon_fire"
+			"dragon_fire",
+			"TM_dirt",
+			"S_grassBreeze3",
+			"Sprite3"
 		],
 		"subfolders": [
 			{
@@ -203,11 +206,6 @@
 		"items": [
 			"Layout 1",
 			"main_menu",
-			"medievalRoom1",
-			"medievalRoom2",
-			"medievalRoom3",
-			"medievalRoom4",
-			"medievalRoom5",
 			"medievalRoom6",
 			"medievalRoom7",
 			"medievalroom33232",
@@ -215,7 +213,11 @@
 			"medievalRoom9",
 			"Room Yum",
 			"Room You",
-			"Room Ree"
+			"Room Ree",
+			"medievalRoom1",
+			"medievalRoom2",
+			"medievalRoom3",
+			"medievalRoom4"
 		],
 		"subfolders": []
 	},
@@ -236,7 +238,8 @@
 			"environmentalWind",
 			"plant_monst",
 			"lazer_player",
-			"dragon_"
+			"dragon_",
+			"enemy spawn"
 		],
 		"subfolders": []
 	},

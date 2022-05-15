@@ -315,6 +315,19 @@
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 803209741906056
+				},
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 522130404739524,
+					"parameters": {
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"layer": "player.LayerNumber",
+						"x": "enemy_dammage_on_hit.X",
+						"y": "enemy_dammage_on_hit.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
 				}
 			],
 			"sid": 785382297575654

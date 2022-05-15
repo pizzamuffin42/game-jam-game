@@ -1,0 +1,21 @@
+{
+	"name": "TM_dirt",
+	"plugin-id": "Tilemap",
+	"sid": 296169019241311,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"image": {
+		"width": 320,
+		"height": 320,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "",
+		"exportFormat": "png",
+		"exportQuality": 0.8,
+		"imageSpriteId": 4901054,
+		"useCollisionPoly": true
+	},
+	"tile-collision-polys": {}
+}

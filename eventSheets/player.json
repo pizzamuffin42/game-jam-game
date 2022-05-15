@@ -3,9 +3,9 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "ability",
-			"type": "string",
-			"initialValue": "\"bullet\"",
+			"name": "layouts",
+			"type": "number",
+			"initialValue": "1",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -62,6 +62,10 @@
 		{
 			"eventType": "include",
 			"includeSheet": "dragon_"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "enemy spawn"
 		},
 		{
 			"eventType": "block",
@@ -940,17 +944,6 @@
 						"y": "player.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 345391238457545,
-					"parameters": {
-						"audio-file": "The_Gates_Are_Opening_MASTERED (1)",
-						"loop": "looping",
-						"volume": "-10",
-						"tag-optional": "\"\""
 					}
 				},
 				{

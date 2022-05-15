@@ -69,6 +69,12 @@
 			"type": "number",
 			"desc": "",
 			"sid": 825366014304854
+		},
+		{
+			"name": "ignor",
+			"type": "boolean",
+			"desc": "",
+			"sid": 906608287230825
 		}
 	],
 	"behaviorTypes": [

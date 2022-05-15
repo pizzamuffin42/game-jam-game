@@ -1,0 +1,119 @@
+{
+	"name": "enemy spawn",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "player",
+					"sid": 491563563219787
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 820619667431515,
+					"parameters": {
+						"object-to-create": "door",
+						"layer": "0",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 659910542104162,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 258639252186126,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "-1+(layouts*2)"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 618896955634346,
+							"parameters": {
+								"object-to-create": "enemies",
+								"layer": "player.LayerName",
+								"x": "random(30,600)",
+								"y": "random(30,300)",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 522223900461562,
+							"parameters": {
+								"seconds": "0.1"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 577084886643513,
+							"parameters": {
+								"instance-variable": "ignor",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 151722853666264
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "enemies",
+					"sid": 470145189595264,
+					"parameters": {
+						"object": "tilemaps"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 682988875717708,
+					"parameters": {
+						"instance-variable": "ignor"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemies",
+					"sid": 483617480689550
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 165454872100167,
+					"parameters": {
+						"seconds": "2"
+					}
+				}
+			],
+			"sid": 770602983664597
+		}
+	],
+	"sid": 470365633724210
+}

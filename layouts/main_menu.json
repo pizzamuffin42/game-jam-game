@@ -72,7 +72,7 @@
 					"type": "Menu",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Title",
+						"initial-animation": "Animation 3",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -146,8 +146,8 @@
 					"world": {
 						"x": -131,
 						"y": -25,
-						"width": 7,
-						"height": 7,
+						"width": 20,
+						"height": 20,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -175,8 +175,8 @@
 					"world": {
 						"x": -130,
 						"y": -1,
-						"width": 7,
-						"height": 7,
+						"width": 20,
+						"height": 20,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -203,7 +203,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 320,
-						"y": 154.267478,
+						"y": 172.21292858892122,
 						"width": 50,
 						"height": 7,
 						"originX": 0.5,
@@ -233,35 +233,6 @@
 					"world": {
 						"x": -130.72641985616428,
 						"y": 27.163311327138018,
-						"width": 50,
-						"height": 7,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Credits_Text",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 57,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 320,
-						"y": 192.5,
 						"width": 50,
 						"height": 7,
 						"originX": 0.5,
@@ -319,7 +290,7 @@
 					"behaviors": {},
 					"world": {
 						"x": 320,
-						"y": 211.5,
+						"y": 191.65259915707577,
 						"width": 50,
 						"height": 7,
 						"originX": 0.5,
@@ -349,35 +320,6 @@
 					"world": {
 						"x": -132.15347290039062,
 						"y": 88.11854553222656,
-						"width": 50,
-						"height": 7,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Settings_Text",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 61,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 320,
-						"y": 173.6819942145297,
 						"width": 50,
 						"height": 7,
 						"originX": 0.5,
