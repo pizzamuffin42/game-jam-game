@@ -1,0 +1,105 @@
+{
+	"name": "Quit Game Sauce",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 266082954820289,
+					"parameters": {
+						"object": "Quit_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Quit_Text",
+					"sid": 202463750515509,
+					"parameters": {
+						"frame-number": "1"
+					}
+				}
+			],
+			"sid": 903617482152262
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 707564669625060
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "Quit_Text",
+					"sid": 752342839044245,
+					"parameters": {
+						"frame-number": "0"
+					}
+				}
+			],
+			"sid": 311730028296292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Mouse",
+					"sid": 728265732861259,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				},
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Mouse",
+					"sid": 609366050852849,
+					"parameters": {
+						"object": "Quit_Text"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "go-to-layout",
+					"objectClass": "System",
+					"sid": 415050273990773,
+					"parameters": {
+						"layout": "main_menu"
+					}
+				}
+			],
+			"sid": 677368360055111
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "Text2",
+					"sid": 386015452608968
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 138270855374539,
+					"parameters": {
+						"text": "str(high_score)"
+					}
+				}
+			],
+			"sid": 791382546889210
+		}
+	],
+	"sid": 992520967888684
+}

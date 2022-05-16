@@ -408,9 +408,9 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 677885177452892,
+					"sid": 651224334133986,
 					"parameters": {
-						"layout": "main_menu"
+						"layout": "Game Over"
 					}
 				}
 			],

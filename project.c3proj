@@ -55,6 +55,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Text",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -153,7 +161,10 @@
 			"TM_dirt",
 			"S_grassBreeze3",
 			"Sprite3",
-			"dead"
+			"dead",
+			"Sprite4",
+			"Text",
+			"Text2"
 		],
 		"subfolders": [
 			{
@@ -218,7 +229,8 @@
 			"medievalRoom1",
 			"medievalRoom2",
 			"medievalRoom3",
-			"medievalRoom4"
+			"medievalRoom4",
+			"Game Over"
 		],
 		"subfolders": []
 	},
@@ -240,7 +252,8 @@
 			"plant_monst",
 			"lazer_player",
 			"dragon_",
-			"enemy spawn"
+			"enemy spawn",
+			"Quit Game Sauce"
 		],
 		"subfolders": []
 	},
