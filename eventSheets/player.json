@@ -899,10 +899,10 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "player",
-					"sid": 959223275066844,
+					"sid": 852355641365768,
 					"parameters": {
 						"instance-variable": "health",
-						"comparison": 1,
+						"comparison": 2,
 						"value": "player.pre_health"
 					}
 				}

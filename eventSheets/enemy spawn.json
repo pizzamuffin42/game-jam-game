@@ -335,12 +335,12 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 421844207150017,
+					"sid": 423188036224320,
 					"parameters": {
 						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\"\"\",\"\"\"\",\"health_pickup\")",
 						"layer": "player.LayerNumber",
 						"x": "enemies.X",
-						"y": "enemies.Y",
+						"y": "enemies.Y-10",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}

@@ -617,19 +617,6 @@
 					"sid": 942977770452067
 				},
 				{
-					"id": "create-object-by-name",
-					"objectClass": "System",
-					"sid": 991258968323787,
-					"parameters": {
-						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\")",
-						"layer": "player.LayerNumber",
-						"x": "enemy_grenade.X",
-						"y": "enemy_grenade.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 627592331783092,
