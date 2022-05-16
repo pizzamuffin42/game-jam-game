@@ -380,6 +380,30 @@
 			],
 			"actions": [
 				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 101094960195104,
+					"parameters": {
+						"time-scale": "0.01"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 655863273441538,
+					"parameters": {
+						"seconds": "0.003"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 888232847305143,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "player",
 					"sid": 714575985395011
@@ -400,9 +424,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 139997823490257,
+					"sid": 819202078357632,
 					"parameters": {
-						"seconds": "1"
+						"seconds": "0.5"
 					}
 				},
 				{
@@ -803,6 +827,33 @@
 				{
 					"id": "compare-instance-variable",
 					"objectClass": "player",
+					"sid": 844664571709959,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 2,
+						"value": "player.pre_health-1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 348872000648004,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "player.pre_health-1"
+					}
+				}
+			],
+			"sid": 823149070268353
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "player",
 					"sid": 959223275066844,
 					"parameters": {
 						"instance-variable": "health",
@@ -978,6 +1029,32 @@
 					"parameters": {
 						"opacity": "10"
 					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 830218078057747,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 704817708476422,
+					"parameters": {
+						"seconds": "1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 787153674499198,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 543355004958062
@@ -995,6 +1072,24 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 890741376543881,
+					"parameters": {
+						"instance-variable": "ability_can",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 380966544127007,
+					"parameters": {
+						"instance-variable": "ability_picked_up",
+						"value": "true"
+					}
+				},
 				{
 					"id": "wait",
 					"objectClass": "System",
@@ -1111,28 +1206,78 @@
 					}
 				},
 				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 454545643791530,
+					"parameters": {
+						"instance-variable": "ability_picked_up",
+						"value": "false"
+					}
+				},
+				{
 					"callFunction": "Function1",
 					"sid": 654968189432129
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 316210022721538,
+					"sid": 780947806766622,
 					"parameters": {
 						"seconds": "player.special_ability_cooldown"
 					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 227761294944480,
-					"parameters": {
-						"instance-variable": "ability_can",
-						"value": "true"
-					}
 				}
 			],
-			"sid": 638790374262006
+			"sid": 638790374262006,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 604216607505206,
+							"parameters": {
+								"instance-variable": "ability_picked_up"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 723534613404691,
+							"parameters": {
+								"instance-variable": "ability_can",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 443626028836731
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 325611693359368
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 390919242362859,
+							"parameters": {
+								"instance-variable": "ability_picked_up",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 264149731207659
+				}
+			]
 		},
 		{
 			"functionName": "Function1",

@@ -74,9 +74,9 @@
 						{
 							"id": "is-between-angles",
 							"objectClass": "System",
-							"sid": 793688440773270,
+							"sid": 373541867842806,
 							"parameters": {
-								"angle": "enemy_grenade.Angle",
+								"angle": "enemy_grenade_proj.Angle",
 								"first-angle": "90",
 								"second-angle": "270"
 							}

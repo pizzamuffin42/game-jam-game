@@ -718,7 +718,8 @@
 						"special_ability_cooldown": 0,
 						"ability_can": false,
 						"ability": 0,
-						"ignor": false
+						"ignor": false,
+						"ability_picked_up": false
 					},
 					"behaviors": {
 						"8Direction": {

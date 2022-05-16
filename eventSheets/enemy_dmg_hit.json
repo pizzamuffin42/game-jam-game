@@ -352,7 +352,30 @@
 					}
 				}
 			],
-			"sid": 785382297575654
+			"sid": 785382297575654,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "enemy_dammage_on_hit",
+							"sid": 531006146300292
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "dead",
+							"sid": 542633689389196,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 509068028936296
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -465,6 +488,31 @@
 				}
 			],
 			"sid": 293153042933653
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 156796710379189,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 251115802791782,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "random(170,210)"
+					}
+				}
+			],
+			"sid": 144209559528953
 		}
 	],
 	"sid": 479637642427429

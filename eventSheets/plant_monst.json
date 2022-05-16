@@ -352,7 +352,30 @@
 					}
 				}
 			],
-			"sid": 887668848250529
+			"sid": 887668848250529,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "plant_monster",
+							"sid": 294961033616483
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "dead",
+							"sid": 280102618871026,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 744822226542058
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -465,6 +488,31 @@
 				}
 			],
 			"sid": 977265799990857
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 675326345709233,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "plant_monster",
+					"sid": 794244826650681,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "random(80,120)"
+					}
+				}
+			],
+			"sid": 319070008045893
 		}
 	],
 	"sid": 583777518517058

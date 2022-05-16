@@ -60,6 +60,69 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 110719051177367,
+					"parameters": {
+						"angle": "enemy_grenade.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade",
+					"sid": 565913669023432,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_grenade",
+					"sid": 204067037329934,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 564554779653185
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 747004536567041
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "enemy_grenade",
+					"sid": 922523247728870,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "enemy_grenade",
+					"sid": 885284302606091,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 676969618780435
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-created",
 					"objectClass": "enemy_grenade",
 					"sid": 145562915555265
@@ -281,6 +344,15 @@
 					}
 				},
 				{
+					"id": "set-position-to-another-object",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 321228513680112,
+					"parameters": {
+						"object": "enemy_grenade",
+						"image-point-optional": "1"
+					}
+				},
+				{
 					"id": "rotate-toward-position",
 					"objectClass": "enemy_grenade_proj",
 					"sid": 710200644062732,
@@ -397,69 +469,6 @@
 			],
 			"actions": [],
 			"sid": 604713032615795
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-between-angles",
-					"objectClass": "System",
-					"sid": 278636090152203,
-					"parameters": {
-						"angle": "enemy_grenade.Angle",
-						"first-angle": "90",
-						"second-angle": "270"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_grenade",
-					"sid": 406797314328371,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_grenade",
-					"sid": 804707670317766,
-					"parameters": {
-						"state": "mirrored"
-					}
-				}
-			],
-			"sid": 142699193433734
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 530875546428556
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_grenade",
-					"sid": 494441929245161,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_grenade",
-					"sid": 378916957131387,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 669535365704120
 		},
 		{
 			"eventType": "block",
@@ -613,7 +622,55 @@
 					}
 				}
 			],
-			"sid": 460275892636626
+			"sid": 460275892636626,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "enemy_grenade",
+							"sid": 294222560152766
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "dead",
+							"sid": 582074756176285,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 392592534858000
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 897024737914529,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "enemy_grenade",
+					"sid": 156355190338490,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "random(30,70)"
+					}
+				}
+			],
+			"sid": 740761080384561
 		}
 	],
 	"sid": 391045078266819

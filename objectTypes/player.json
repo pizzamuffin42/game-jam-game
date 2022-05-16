@@ -75,6 +75,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 906608287230825
+		},
+		{
+			"name": "ability_picked_up",
+			"type": "boolean",
+			"desc": "",
+			"sid": 262055323867695
 		}
 	],
 	"behaviorTypes": [

@@ -155,6 +155,27 @@
 				}
 			],
 			"sid": 391092491601820
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 704586770506685
+				}
+			],
+			"actions": [
+				{
+					"id": "set-z-elevation",
+					"objectClass": "enemies",
+					"sid": 349419087320994,
+					"parameters": {
+						"z": "0+(enemies.Y/1000)"
+					}
+				}
+			],
+			"sid": 684538466609093
 		}
 	],
 	"sid": 470365633724210

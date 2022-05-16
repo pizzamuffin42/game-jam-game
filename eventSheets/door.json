@@ -73,6 +73,14 @@
 					}
 				},
 				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 278910971067312,
+					"parameters": {
+						"seconds": "1.0"
+					}
+				},
+				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
 					"sid": 399878224877310,
