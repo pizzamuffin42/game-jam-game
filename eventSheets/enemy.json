@@ -31,10 +31,10 @@
 						{
 							"id": "set-position-to-another-object",
 							"objectClass": "shadow",
-							"sid": 569583978470371,
+							"sid": 455832049725450,
 							"parameters": {
 								"object": "enemy",
-								"image-point-optional": "2"
+								"image-point-optional": "0"
 							}
 						},
 						{
@@ -419,12 +419,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 463339053255308,
+					"sid": 402539644207742,
 					"parameters": {
 						"object-to-create": "shadow",
 						"layer": "player.LayerName",
-						"x": "player.X",
-						"y": "player.Y",
+						"x": "enemy.X",
+						"y": "enemy.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -493,6 +493,28 @@
 						"y": "enemy.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 957942413269386,
+					"parameters": {
+						"object-to-create": "dead",
+						"layer": "player.LayerName",
+						"x": "enemy.X",
+						"y": "enemy.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dead",
+					"sid": 872175752892235,
+					"parameters": {
+						"animation": "\"ske\"",
+						"from": "beginning"
 					}
 				}
 			],

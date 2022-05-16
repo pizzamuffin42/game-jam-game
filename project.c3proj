@@ -152,7 +152,8 @@
 			"dragon_fire",
 			"TM_dirt",
 			"S_grassBreeze3",
-			"Sprite3"
+			"Sprite3",
+			"dead"
 		],
 		"subfolders": [
 			{

@@ -31,10 +31,10 @@
 						{
 							"id": "set-position-to-another-object",
 							"objectClass": "shadow",
-							"sid": 495441379671865,
+							"sid": 273750186824536,
 							"parameters": {
 								"object": "plant_monster",
-								"image-point-optional": "2"
+								"image-point-optional": "0"
 							}
 						},
 						{
@@ -328,6 +328,28 @@
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 362742853977969
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 972231198026696,
+					"parameters": {
+						"object-to-create": "dead",
+						"layer": "player.LayerName",
+						"x": "plant_monster.X",
+						"y": "plant_monster.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dead",
+					"sid": 208793684976028,
+					"parameters": {
+						"animation": "\"plant\"",
+						"from": "beginning"
+					}
 				}
 			],
 			"sid": 887668848250529

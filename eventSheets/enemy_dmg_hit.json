@@ -31,10 +31,10 @@
 						{
 							"id": "set-position-to-another-object",
 							"objectClass": "shadow",
-							"sid": 579393955930533,
+							"sid": 350112893209159,
 							"parameters": {
 								"object": "enemy_dammage_on_hit",
-								"image-point-optional": "2"
+								"image-point-optional": "0"
 							}
 						},
 						{
@@ -327,6 +327,28 @@
 						"y": "enemy_dammage_on_hit.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 471402966059979,
+					"parameters": {
+						"object-to-create": "dead",
+						"layer": "player.LayerName",
+						"x": "enemy_dammage_on_hit.X",
+						"y": "enemy_dammage_on_hit.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dead",
+					"sid": 459201380667441,
+					"parameters": {
+						"animation": "\"cloak\"",
+						"from": "beginning"
 					}
 				}
 			],

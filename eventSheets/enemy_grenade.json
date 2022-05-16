@@ -35,10 +35,10 @@
 						{
 							"id": "set-position-to-another-object",
 							"objectClass": "shadow",
-							"sid": 843044184118257,
+							"sid": 233874088288543,
 							"parameters": {
 								"object": "enemy_grenade",
-								"image-point-optional": "2"
+								"image-point-optional": "0"
 							}
 						},
 						{
@@ -588,6 +588,28 @@
 						"y": "enemy_grenade.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 627592331783092,
+					"parameters": {
+						"object-to-create": "dead",
+						"layer": "player.LayerName",
+						"x": "enemy_grenade.X",
+						"y": "enemy_grenade.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dead",
+					"sid": 819290172632880,
+					"parameters": {
+						"animation": "\"barrel\"",
+						"from": "beginning"
 					}
 				}
 			],
