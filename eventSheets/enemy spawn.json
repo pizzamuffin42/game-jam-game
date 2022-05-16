@@ -113,6 +113,45 @@
 				}
 			],
 			"sid": 770602983664597
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemies",
+					"sid": 377830159204318
+				},
+				{
+					"id": "is-overlapping-another-object",
+					"objectClass": "enemies",
+					"sid": 519598365302262,
+					"parameters": {
+						"object": "TM_floorWallPlaceholder"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemies",
+					"sid": 204254728645631
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 824424682859232,
+					"parameters": {
+						"object-to-create": "enemies",
+						"layer": "player.LayerName",
+						"x": "random(30,600)",
+						"y": "random(30,300)",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 391092491601820
 		}
 	],
 	"sid": 470365633724210
