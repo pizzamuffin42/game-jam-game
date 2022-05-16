@@ -8,6 +8,7 @@
 	"members": [
 		"sheild",
 		"laser_pickup",
-		"triple_pickup"
+		"triple_pickup",
+		"health_pickup"
 	]
 }

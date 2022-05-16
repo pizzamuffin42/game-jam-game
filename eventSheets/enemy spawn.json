@@ -321,6 +321,32 @@
 			],
 			"sid": 455991170308601,
 			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "enemies",
+					"sid": 874456208692187
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object-by-name",
+					"objectClass": "System",
+					"sid": 421844207150017,
+					"parameters": {
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\"\"\",\"\"\"\",\"health_pickup\")",
+						"layer": "player.LayerNumber",
+						"x": "enemies.X",
+						"y": "enemies.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 303903536443135
 		}
 	],
 	"sid": 470365633724210

@@ -1169,9 +1169,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 489516025417845,
+					"sid": 733556908967283,
 					"parameters": {
-						"seconds": "0.1"
+						"seconds": "0.02"
 					}
 				},
 				{
@@ -1310,6 +1310,31 @@
 				}
 			],
 			"sid": 410379598888499
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "health_pickup",
+					"sid": 332652664038055,
+					"parameters": {
+						"object": "player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "player",
+					"sid": 854450909507381,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 652284440677209
 		},
 		{
 			"eventType": "block",
