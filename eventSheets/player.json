@@ -907,6 +907,14 @@
 			],
 			"actions": [
 				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 795615212628275,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "player",
 					"sid": 520597374543840,

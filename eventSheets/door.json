@@ -88,6 +88,14 @@
 					"parameters": {
 						"layout": "choose(\"Room Yum\",\"Room Ree\",\"medievalRoom2\",\"medievalRoom4\")"
 					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 165526448936906,
+					"parameters": {
+						"time-scale": "1.0"
+					}
 				}
 			],
 			"sid": 793955944082107,
