@@ -65,10 +65,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 185621497831839,
+					"sid": 729654792285456,
 					"parameters": {
 						"variable": "high_score",
-						"value": "layouts"
+						"value": "max(layouts,high_score)"
 					}
 				},
 				{
@@ -90,32 +90,17 @@
 						"volume": "-10",
 						"tag-optional": "\"\""
 					}
-				}
-			],
-			"sid": 524469856504083
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+				},
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 668224921473860
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Sprite",
-					"sid": 641696516677312,
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 141539436167865,
 					"parameters": {
-						"x": "Mouse.X",
-						"y": "Mouse.Y"
+						"text": "high_score"
 					}
 				}
 			],
-			"sid": 857109649279302,
-			"disabled": true
+			"sid": 524469856504083
 		},
 		{
 			"eventType": "block",
@@ -154,7 +139,13 @@
 							}
 						}
 					],
-					"actions": [],
+					"actions": [
+						{
+							"id": "close",
+							"objectClass": "Browser",
+							"sid": 578611380273796
+						}
+					],
 					"sid": 519508611019369
 				}
 			]

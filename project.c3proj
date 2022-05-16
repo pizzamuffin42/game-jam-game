@@ -63,6 +63,14 @@
 			"bundled": false
 		},
 		{
+			"type": "plugin",
+			"id": "Browser",
+			"name": "Browser",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
+		},
+		{
 			"type": "behavior",
 			"id": "solid",
 			"name": "Solid",
@@ -164,7 +172,8 @@
 			"dead",
 			"Sprite4",
 			"Text",
-			"Text2"
+			"Text2",
+			"Browser"
 		],
 		"subfolders": [
 			{

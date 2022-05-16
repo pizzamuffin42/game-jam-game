@@ -589,7 +589,7 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 948624458184227,
+					"sid": 412117240733040,
 					"parameters": {
 						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
 						"layer": "player.LayerNumber",

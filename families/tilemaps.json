@@ -13,6 +13,8 @@
 		"TM_grass",
 		"TM_floorWallPlaceholder",
 		"TM_dirtPath",
-		"TM_vegetation"
+		"TM_vegetation",
+		"Pitts",
+		"TM_dirt"
 	]
 }

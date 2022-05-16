@@ -722,17 +722,7 @@
 					"sid": 480314175701881
 				}
 			],
-			"actions": [
-				{
-					"id": "set-position",
-					"objectClass": "Sprite",
-					"sid": 626189509909682,
-					"parameters": {
-						"x": "Mouse.X",
-						"y": "Mouse.Y"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 164444196563612,
 			"children": [
 				{

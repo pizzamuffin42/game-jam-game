@@ -136,14 +136,9 @@
 			],
 			"actions": [
 				{
-					"id": "destroy",
-					"objectClass": "enemies",
-					"sid": 204254728645631
-				},
-				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 824424682859232,
+					"sid": 152222442372168,
 					"parameters": {
 						"object-to-create": "enemies",
 						"layer": "player.LayerName",
@@ -152,6 +147,11 @@
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "enemies",
+					"sid": 640908642915796
 				}
 			],
 			"sid": 391092491601820
