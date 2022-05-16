@@ -39,7 +39,73 @@
 					}
 				}
 			],
-			"sid": 786964184836572
+			"sid": 786964184836572,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 451479945685063,
+							"parameters": {
+								"instance-variable": "ability_can"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 439019607742287,
+							"parameters": {
+								"instance-variable": "invincible"
+							}
+						},
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 719066747279578,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-blend-mode",
+							"objectClass": "gun_arm",
+							"sid": 784060398793345,
+							"parameters": {
+								"blend-mode": "additive"
+							}
+						}
+					],
+					"sid": 461977633944057
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 924875962389880
+						}
+					],
+					"actions": [
+						{
+							"id": "set-blend-mode",
+							"objectClass": "gun_arm",
+							"sid": 614338473136575,
+							"parameters": {
+								"blend-mode": "normal"
+							}
+						}
+					],
+					"sid": 200645425998710
+				}
+			]
 		},
 		{
 			"eventType": "block",
