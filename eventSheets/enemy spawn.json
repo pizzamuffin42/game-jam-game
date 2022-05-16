@@ -76,6 +76,30 @@
 						}
 					],
 					"sid": 151722853666264
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 593261036984518,
+							"parameters": {
+								"seconds": "0.2"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 543017274867920,
+							"parameters": {
+								"instance-variable": "wait",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 530333991349314
 				}
 			]
 		},
@@ -329,6 +353,14 @@
 					"id": "on-destroyed",
 					"objectClass": "enemies",
 					"sid": 874456208692187
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 737866489043175,
+					"parameters": {
+						"instance-variable": "wait"
+					}
 				}
 			],
 			"actions": [
@@ -347,6 +379,166 @@
 				}
 			],
 			"sid": 303903536443135
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "enemy",
+					"sid": 805549048568949,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 386650197523775,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy",
+					"sid": 190019991122638
+				}
+			],
+			"sid": 129411549435695
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 457310469101783,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 831694971417704,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 861373359211829
+				}
+			],
+			"sid": 445612689121345
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "enemy_grenade",
+					"sid": 886310781341869,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 827258552780284,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemy_grenade",
+					"sid": 275520077330594
+				}
+			],
+			"sid": 796184059087360
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
+					"objectClass": "plant_monster",
+					"sid": 502888033122036,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 880272205660868,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "plant_monster",
+					"sid": 707702964906993
+				}
+			],
+			"sid": 551437918342009
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 538843266333909,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "dead",
+					"sid": 845721063795219
+				}
+			],
+			"sid": 753143681099531
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 437689975244520,
+					"parameters": {
+						"first-value": "layouts",
+						"comparison": 0,
+						"second-value": "3"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 780530099769770,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [],
+			"sid": 184183487201325
 		}
 	],
 	"sid": 470365633724210

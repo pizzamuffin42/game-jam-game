@@ -757,7 +757,7 @@
 						"ability": 0,
 						"ignor": true,
 						"ability_picked_up": false,
-						"ability_str": "\"2\""
+						"wait": false
 					},
 					"behaviors": {
 						"8Direction": {

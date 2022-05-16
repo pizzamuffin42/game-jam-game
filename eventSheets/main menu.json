@@ -81,6 +81,15 @@
 					}
 				},
 				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 108730767416424,
+					"parameters": {
+						"variable": "hp",
+						"value": "8"
+					}
+				},
+				{
 					"id": "play",
 					"objectClass": "Audio",
 					"sid": 345391238457545,

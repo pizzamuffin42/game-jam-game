@@ -83,10 +83,10 @@
 			"sid": 262055323867695
 		},
 		{
-			"name": "ability_str",
-			"type": "string",
+			"name": "wait",
+			"type": "boolean",
 			"desc": "",
-			"sid": 784977408559321
+			"sid": 905289286560287
 		}
 	],
 	"behaviorTypes": [

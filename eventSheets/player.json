@@ -996,6 +996,57 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-instance-variable",
+					"objectClass": "player",
+					"sid": 315362854752595,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 4,
+						"value": "player.pre_health"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 622344130315876,
+					"parameters": {
+						"time-scale": "0.001"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 512348418880384,
+					"parameters": {
+						"seconds": "0.00005"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 823006521784909,
+					"parameters": {
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 756397100739088,
+					"parameters": {
+						"instance-variable": "pre_health",
+						"value": "player.health"
+					}
+				}
+			],
+			"sid": 760459827387118
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-created",
 					"objectClass": "player",
 					"sid": 812775823428902

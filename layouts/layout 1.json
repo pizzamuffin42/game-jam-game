@@ -30,7 +30,7 @@
 						"ability": 2,
 						"ignor": true,
 						"ability_picked_up": false,
-						"ability_str": "\"2\""
+						"wait": false
 					},
 					"behaviors": {
 						"8Direction": {
@@ -160,7 +160,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 4,
+								"cell-border": -1,
 								"obstacles": "solids",
 								"max-speed": 100,
 								"acceleration": 3000,
@@ -186,8 +186,8 @@
 						}
 					},
 					"world": {
-						"x": 160.65842271307625,
-						"y": 40.21662025750197,
+						"x": 454.35420852005666,
+						"y": 252.633804876039,
 						"width": 32,
 						"height": 32,
 						"originX": 0.484,
@@ -258,8 +258,8 @@
 						}
 					},
 					"world": {
-						"x": 145.14866356269613,
-						"y": -82.38034469400353,
+						"x": 63.187048918887655,
+						"y": -87.16143888155904,
 						"width": 296.87264398133374,
 						"height": 302.4312530751282,
 						"originX": 0.5,
@@ -341,7 +341,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 4,
+								"cell-border": -1,
 								"obstacles": "solids",
 								"max-speed": 200,
 								"acceleration": 3000,
@@ -411,7 +411,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 4,
+								"cell-border": -1,
 								"obstacles": "solids",
 								"max-speed": 50,
 								"acceleration": 3000,
@@ -517,7 +517,7 @@
 						"Pathfinding": {
 							"properties": {
 								"cell-size": 16,
-								"cell-border": 4,
+								"cell-border": -1,
 								"obstacles": "solids",
 								"max-speed": 100,
 								"acceleration": 3000,

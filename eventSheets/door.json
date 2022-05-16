@@ -79,44 +79,60 @@
 					"parameters": {
 						"seconds": "1.0"
 					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 399878224877310,
-					"parameters": {
-						"variable": "layouts",
-						"value": "layouts+1"
-					}
-				},
-				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 416080298264035,
-					"parameters": {
-						"layout": "choose(\"Room Yum\",\"Room Ree\",\"medievalRoom2\",\"medievalRoom4\")"
-					}
-				},
-				{
-					"id": "set-time-scale",
-					"objectClass": "System",
-					"sid": 165526448936906,
-					"parameters": {
-						"time-scale": "1.0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 365240087843578,
-					"parameters": {
-						"variable": "hp",
-						"value": "player.health"
-					}
 				}
 			],
 			"sid": 793955944082107,
 			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "door",
+							"sid": 669279284376256,
+							"parameters": {
+								"instance-variable": "open"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 780271519205844,
+							"parameters": {
+								"variable": "layouts",
+								"value": "layouts+1"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 313159729929546,
+							"parameters": {
+								"layout": "choose(\"Room Yum\",\"Room Ree\",\"medievalRoom2\",\"medievalRoom4\")"
+							}
+						},
+						{
+							"id": "set-time-scale",
+							"objectClass": "System",
+							"sid": 207010673464977,
+							"parameters": {
+								"time-scale": "1.0"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 381055531303538,
+							"parameters": {
+								"variable": "hp",
+								"value": "player.health"
+							}
+						}
+					],
+					"sid": 260690610591006
+				},
 				{
 					"eventType": "block",
 					"conditions": [
