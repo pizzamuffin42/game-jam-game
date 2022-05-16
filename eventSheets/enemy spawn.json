@@ -59,6 +59,7 @@
 							"id": "wait",
 							"objectClass": "System",
 							"sid": 522223900461562,
+							"disabled": true,
 							"parameters": {
 								"seconds": "0.1"
 							}
@@ -67,6 +68,7 @@
 							"id": "set-boolean-instvar",
 							"objectClass": "player",
 							"sid": 577084886643513,
+							"disabled": true,
 							"parameters": {
 								"instance-variable": "ignor",
 								"value": "false"
@@ -112,7 +114,8 @@
 					}
 				}
 			],
-			"sid": 770602983664597
+			"sid": 770602983664597,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
