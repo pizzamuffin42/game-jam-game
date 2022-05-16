@@ -271,7 +271,7 @@
 					1
 				]
 			},
-			"useCollisionPoly": true
+			"useCollisionPoly": false
 		},
 		"17": {
 			"collisionPoly": {
