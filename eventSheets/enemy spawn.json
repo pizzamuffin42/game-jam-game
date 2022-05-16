@@ -136,19 +136,6 @@
 			],
 			"actions": [
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 152222442372168,
-					"parameters": {
-						"object-to-create": "enemies",
-						"layer": "player.LayerName",
-						"x": "random(30,600)",
-						"y": "random(30,300)",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
 					"id": "destroy",
 					"objectClass": "enemies",
 					"sid": 640908642915796
@@ -176,6 +163,164 @@
 				}
 			],
 			"sid": 684538466609093
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 510582844587620,
+					"parameters": {
+						"object": "enemies",
+						"expression": "0",
+						"order": "ascending"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 734435285529242,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 974460387703093,
+							"parameters": {
+								"angle": "enemies.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 997994602801872,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 194870817714598,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 128550667905392
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 890727632746568
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 183229362034738,
+							"parameters": {
+								"first-value": "0",
+								"comparison": 0,
+								"second-value": "enemies.Angle"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 351016181422487,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 750457768601134,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 458552176592526
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-between-angles",
+					"objectClass": "System",
+					"sid": 868425244729949,
+					"parameters": {
+						"angle": "plant_monster.Angle",
+						"first-angle": "90",
+						"second-angle": "270"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "plant_monster",
+					"sid": 916492856930014,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "plant_monster",
+					"sid": 863284072924865,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 128426995874062,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 544374042517547
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "plant_monster",
+					"sid": 910824790593176,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "set-mirrored",
+					"objectClass": "plant_monster",
+					"sid": 157560257429767,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 455991170308601,
+			"disabled": true
 		}
 	],
 	"sid": 470365633724210

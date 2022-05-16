@@ -81,6 +81,12 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 262055323867695
+		},
+		{
+			"name": "ability_str",
+			"type": "string",
+			"desc": "",
+			"sid": 784977408559321
 		}
 	],
 	"behaviorTypes": [

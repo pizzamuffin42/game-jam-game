@@ -314,9 +314,9 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 918101877722059,
+					"sid": 799902556950600,
 					"parameters": {
-						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\")",
 						"layer": "player.LayerNumber",
 						"x": "plant_monster.X",
 						"y": "plant_monster.Y",
@@ -376,69 +376,6 @@
 					"sid": 744822226542058
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-between-angles",
-					"objectClass": "System",
-					"sid": 944050234953719,
-					"parameters": {
-						"angle": "plant_monster.Angle",
-						"first-angle": "90",
-						"second-angle": "270"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "plant_monster",
-					"sid": 257494549148572,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "plant_monster",
-					"sid": 537534520344467,
-					"parameters": {
-						"state": "mirrored"
-					}
-				}
-			],
-			"sid": 682745447736402
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 668774385773920
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "plant_monster",
-					"sid": 644969839567103,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "plant_monster",
-					"sid": 980053154665893,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 331977893098393
 		},
 		{
 			"eventType": "block",

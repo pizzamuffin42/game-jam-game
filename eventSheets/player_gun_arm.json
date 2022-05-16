@@ -29,6 +29,14 @@
 						"x": "Mouse.X",
 						"y": "Mouse.Y"
 					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "player",
+					"sid": 694603178501751,
+					"parameters": {
+						"z": "(player.Y/1000)"
+					}
 				}
 			],
 			"sid": 786964184836572
@@ -155,9 +163,9 @@
 				{
 					"id": "set-z-elevation",
 					"objectClass": "gun_arm",
-					"sid": 509036221564649,
+					"sid": 484024781632523,
 					"parameters": {
-						"z": "-0.015"
+						"z": "-0.05+(player.Y/1000)"
 					}
 				}
 			],
@@ -176,9 +184,9 @@
 				{
 					"id": "set-z-elevation",
 					"objectClass": "gun_arm",
-					"sid": 430856178808787,
+					"sid": 727194009473324,
 					"parameters": {
-						"z": "-0.005"
+						"z": "0.005+(player.Y/1000)"
 					}
 				}
 			],

@@ -7,6 +7,7 @@
 	"effectTypes": [],
 	"members": [
 		"sheild",
-		"laser_pickup"
+		"laser_pickup",
+		"triple_pickup"
 	]
 }

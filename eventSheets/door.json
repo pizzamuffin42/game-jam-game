@@ -104,6 +104,15 @@
 					"parameters": {
 						"time-scale": "1.0"
 					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 365240087843578,
+					"parameters": {
+						"variable": "hp",
+						"value": "player.health"
+					}
 				}
 			],
 			"sid": 793955944082107,

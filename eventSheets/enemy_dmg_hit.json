@@ -319,9 +319,9 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 780428946818595,
+					"sid": 963164381128428,
 					"parameters": {
-						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\")",
 						"layer": "player.LayerNumber",
 						"x": "enemy_dammage_on_hit.X",
 						"y": "enemy_dammage_on_hit.Y-10",
@@ -376,69 +376,6 @@
 					"sid": 509068028936296
 				}
 			]
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-between-angles",
-					"objectClass": "System",
-					"sid": 956589015772576,
-					"parameters": {
-						"angle": "enemy_dammage_on_hit.Angle",
-						"first-angle": "90",
-						"second-angle": "270"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 350950634635160,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 900358827998883,
-					"parameters": {
-						"state": "mirrored"
-					}
-				}
-			],
-			"sid": 852436826039255
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 789522375572703
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 737470680477628,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 535383152635270,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 461963993886131
 		},
 		{
 			"eventType": "block",

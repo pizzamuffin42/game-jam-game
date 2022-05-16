@@ -12,6 +12,16 @@
 			"sid": 506019580640564
 		},
 		{
+			"eventType": "variable",
+			"name": "hp",
+			"type": "number",
+			"initialValue": "8",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 218418138786106
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "bullet_player"
 		},
@@ -751,6 +761,51 @@
 						}
 					],
 					"sid": 845700198064293
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 531298032003098,
+							"parameters": {
+								"instance-variable": "ability_can"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "ability",
+							"sid": 186791120465282,
+							"parameters": {
+								"color": "rgbEx(100,100,100)"
+							}
+						}
+					],
+					"sid": 294067916274185
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 443084960628559
+						}
+					],
+					"actions": [
+						{
+							"id": "set-default-color",
+							"objectClass": "ability",
+							"sid": 532234240398221,
+							"parameters": {
+								"color": "rgbEx(75,50,50)"
+							}
+						}
+					],
+					"sid": 255047490732195
 				}
 			]
 		},
@@ -948,6 +1003,24 @@
 			],
 			"actions": [
 				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 529308188704636,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "hp"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 930989482579994,
+					"parameters": {
+						"instance-variable": "pre_health",
+						"value": "hp"
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 795615212628275,
@@ -976,7 +1049,7 @@
 				{
 					"id": "set-boolean-instvar",
 					"objectClass": "player",
-					"sid": 743125180707159,
+					"sid": 460600912749566,
 					"parameters": {
 						"instance-variable": "ability_can",
 						"value": "true"
@@ -991,6 +1064,19 @@
 						"layer": "player.LayerName",
 						"x": "player.X",
 						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 326797677469721,
+					"parameters": {
+						"object-to-create": "ability",
+						"layer": "health.LayerName",
+						"x": "20",
+						"y": "40",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -1110,6 +1196,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-animation",
+					"objectClass": "ability",
+					"sid": 187431677976475,
+					"parameters": {
+						"animation": "\"0\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "player",
 					"sid": 632903366661427,
@@ -1144,6 +1239,15 @@
 			],
 			"actions": [
 				{
+					"id": "set-animation",
+					"objectClass": "ability",
+					"sid": 432485838417103,
+					"parameters": {
+						"animation": "\"1\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "set-instvar-value",
 					"objectClass": "player",
 					"sid": 364912145839197,
@@ -1163,6 +1267,49 @@
 				}
 			],
 			"sid": 412458176114949
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "triple_pickup",
+					"sid": 320384888182085,
+					"parameters": {
+						"object": "player"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "ability",
+					"sid": 977656092503786,
+					"parameters": {
+						"animation": "\"2\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 389760563054041,
+					"parameters": {
+						"instance-variable": "ability",
+						"value": "2"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 524821613191857,
+					"parameters": {
+						"instance-variable": "special_ability_cooldown",
+						"value": "4"
+					}
+				}
+			],
+			"sid": 410379598888499
 		},
 		{
 			"eventType": "block",
@@ -1196,22 +1343,13 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 454545643791530,
-					"parameters": {
-						"instance-variable": "ability_picked_up",
-						"value": "false"
-					}
-				},
-				{
 					"callFunction": "Function1",
 					"sid": 654968189432129
 				},
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 780947806766622,
+					"sid": 184996461471064,
 					"parameters": {
 						"seconds": "player.special_ability_cooldown"
 					}
@@ -1258,7 +1396,7 @@
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "player",
-							"sid": 390919242362859,
+							"sid": 685957315671689,
 							"parameters": {
 								"instance-variable": "ability_picked_up",
 								"value": "false"
@@ -1297,6 +1435,15 @@
 					],
 					"actions": [
 						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 768411848862246,
+							"parameters": {
+								"animation": "\"0\"",
+								"from": "beginning"
+							}
+						},
+						{
 							"id": "set-boolean-instvar",
 							"objectClass": "player",
 							"sid": 961921947727588,
@@ -1306,11 +1453,11 @@
 							}
 						},
 						{
-							"id": "set-scale",
+							"id": "set-blend-mode",
 							"objectClass": "player",
-							"sid": 296698220527981,
+							"sid": 336885887453665,
 							"parameters": {
-								"scale": "0.6"
+								"blend-mode": "additive"
 							}
 						},
 						{
@@ -1405,6 +1552,14 @@
 							"parameters": {
 								"scale": "1"
 							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 802521901267651,
+							"parameters": {
+								"blend-mode": "normal"
+							}
 						}
 					],
 					"sid": 834539140194851
@@ -1424,6 +1579,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 760690449223847,
+							"parameters": {
+								"animation": "\"1\"",
+								"from": "beginning"
+							}
+						},
 						{
 							"id": "create-object-by-name",
 							"objectClass": "System",
@@ -1502,6 +1666,15 @@
 						}
 					],
 					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 893053376270325,
+							"parameters": {
+								"animation": "\"2\"",
+								"from": "beginning"
+							}
+						},
 						{
 							"id": "create-object-by-name",
 							"objectClass": "System",

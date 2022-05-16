@@ -32,12 +32,22 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "for",
+					"objectClass": "System",
+					"sid": 784453903479829,
+					"parameters": {
+						"name": "\"\"",
+						"start-index": "0",
+						"end-index": "10"
+					}
+				},
+				{
 					"id": "pick-nth-instance",
 					"objectClass": "System",
-					"sid": 232291402271558,
+					"sid": 317163826960402,
 					"parameters": {
 						"object": "health",
-						"instance": "player.health"
+						"instance": "player.health+loopindex"
 					}
 				},
 				{
@@ -94,7 +104,8 @@
 					}
 				}
 			],
-			"sid": 396992239528662
+			"sid": 396992239528662,
+			"disabled": true
 		}
 	],
 	"sid": 827989286647512

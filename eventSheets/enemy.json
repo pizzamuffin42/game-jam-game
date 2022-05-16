@@ -56,64 +56,94 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-between-angles",
+					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 132614971187745,
+					"sid": 416636371828943,
 					"parameters": {
-						"angle": "enemy.Angle",
-						"first-angle": "90",
-						"second-angle": "270"
+						"object": "enemies",
+						"expression": "0",
+						"order": "ascending"
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 115294763169812,
+			"children": [
 				{
-					"id": "set-angle",
-					"objectClass": "enemy",
-					"sid": 761968623082912,
-					"parameters": {
-						"angle": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 544475013583357,
+							"parameters": {
+								"angle": "enemies.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 190439466853067,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 420005611050801,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 992383799390819
 				},
 				{
-					"id": "set-mirrored",
-					"objectClass": "enemy",
-					"sid": 895539354354323,
-					"parameters": {
-						"state": "mirrored"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 627565915172279
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 505407468697772,
+							"parameters": {
+								"first-value": "0",
+								"comparison": 0,
+								"second-value": "enemies.Angle"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 563683725509585,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 470572492608043,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 297435278895744
 				}
-			],
-			"sid": 375807904076607
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 224775613741519
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy",
-					"sid": 851715790823621,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy",
-					"sid": 291296277716181,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 744337313846237
+			]
 		},
 		{
 			"eventType": "block",
@@ -485,9 +515,9 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 712656727970741,
+					"sid": 471889554993866,
 					"parameters": {
-						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\")",
 						"layer": "player.LayerNumber",
 						"x": "enemy.X",
 						"y": "enemy.Y",

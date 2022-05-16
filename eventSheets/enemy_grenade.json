@@ -60,64 +60,94 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-between-angles",
+					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 110719051177367,
+					"sid": 969226420212235,
 					"parameters": {
-						"angle": "enemy_grenade.Angle",
-						"first-angle": "90",
-						"second-angle": "270"
+						"object": "enemies",
+						"expression": "0",
+						"order": "ascending"
 					}
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 865574280164109,
+			"children": [
 				{
-					"id": "set-angle",
-					"objectClass": "enemy_grenade",
-					"sid": 565913669023432,
-					"parameters": {
-						"angle": "0"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 644185055289701,
+							"parameters": {
+								"angle": "enemies.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 703029655122855,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 954266710572459,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 439498947741272
 				},
 				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_grenade",
-					"sid": 204067037329934,
-					"parameters": {
-						"state": "mirrored"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 836731872873718
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 568045258933715,
+							"parameters": {
+								"first-value": "0",
+								"comparison": 0,
+								"second-value": "enemies.Angle"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 189109842232600,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 799683643887956,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 158243119179278
 				}
-			],
-			"sid": 564554779653185
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 747004536567041
-				}
-			],
-			"actions": [
-				{
-					"id": "set-angle",
-					"objectClass": "enemy_grenade",
-					"sid": 922523247728870,
-					"parameters": {
-						"angle": "0"
-					}
-				},
-				{
-					"id": "set-mirrored",
-					"objectClass": "enemy_grenade",
-					"sid": 885284302606091,
-					"parameters": {
-						"state": "not-mirrored"
-					}
-				}
-			],
-			"sid": 676969618780435
+			]
 		},
 		{
 			"eventType": "block",
@@ -151,12 +181,12 @@
 				{
 					"id": "create-object",
 					"objectClass": "System",
-					"sid": 508943885856338,
+					"sid": 612911430042357,
 					"parameters": {
 						"object-to-create": "shadow",
 						"layer": "player.LayerName",
-						"x": "player.X",
-						"y": "player.Y",
+						"x": "enemy_grenade.X",
+						"y": "enemy_grenade.Y",
 						"create-hierarchy": false,
 						"template-name": "\"\""
 					}
@@ -164,10 +194,10 @@
 				{
 					"id": "set-position-to-another-object",
 					"objectClass": "shadow",
-					"sid": 321471685280031,
+					"sid": 615249226229421,
 					"parameters": {
 						"object": "enemy_grenade",
-						"image-point-optional": "2"
+						"image-point-optional": "0"
 					}
 				},
 				{
@@ -589,9 +619,9 @@
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
-					"sid": 412117240733040,
+					"sid": 991258968323787,
 					"parameters": {
-						"object-name": "choose(\"sheild\",\"laser_pickup\",\"\",\"\")",
+						"object-name": "choose(\"sheild\",\"laser_pickup\",\"triple_pickup\",\"\",\"\")",
 						"layer": "player.LayerNumber",
 						"x": "enemy_grenade.X",
 						"y": "enemy_grenade.Y",

@@ -92,6 +92,25 @@
 					}
 				},
 				{
+					"id": "set-blend-mode",
+					"objectClass": "enemies",
+					"sid": 533747065415539,
+					"parameters": {
+						"blend-mode": "destination-out"
+					}
+				},
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "enemies",
+					"sid": 539855545889246,
+					"disabled": true,
+					"parameters": {
+						"effect": "\"\"",
+						"parameter-index": "1",
+						"value": "rgbEx(100,100,100)"
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
 					"sid": 659102651882819,
@@ -118,7 +137,7 @@
 				{
 					"id": "shake",
 					"objectClass": "shaker",
-					"sid": 929567551786947,
+					"sid": 206814606201369,
 					"behaviorType": "ScrollTo",
 					"parameters": {
 						"magnitude": "player.screen_shake_amount_on_dammaging",
@@ -130,6 +149,22 @@
 					"id": "destroy",
 					"objectClass": "bullet",
 					"sid": 177338855799881
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 928626546530578,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-blend-mode",
+					"objectClass": "enemies",
+					"sid": 201903527126762,
+					"parameters": {
+						"blend-mode": "normal"
+					}
 				}
 			],
 			"sid": 115754461144614

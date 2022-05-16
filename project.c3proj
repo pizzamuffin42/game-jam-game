@@ -173,7 +173,9 @@
 			"Sprite4",
 			"Text",
 			"Text2",
-			"Browser"
+			"Browser",
+			"ability",
+			"triple_pickup"
 		],
 		"subfolders": [
 			{

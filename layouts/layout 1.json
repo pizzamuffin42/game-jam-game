@@ -29,7 +29,8 @@
 						"ability_can": true,
 						"ability": 2,
 						"ignor": true,
-						"ability_picked_up": false
+						"ability_picked_up": false,
+						"ability_str": "\"2\""
 					},
 					"behaviors": {
 						"8Direction": {
