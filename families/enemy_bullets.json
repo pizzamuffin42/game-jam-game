@@ -27,6 +27,7 @@
 	"members": [
 		"enemy_bullet",
 		"enemy_grenade_proj",
-		"dragon_fire"
+		"dragon_fire",
+		"goat_boom"
 	]
 }

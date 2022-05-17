@@ -176,7 +176,9 @@
 			"Browser",
 			"ability",
 			"triple_pickup",
-			"health_pickup"
+			"health_pickup",
+			"goat_boom",
+			"goat"
 		],
 		"subfolders": [
 			{
@@ -265,7 +267,9 @@
 			"lazer_player",
 			"dragon_",
 			"enemy spawn",
-			"Quit Game Sauce"
+			"Quit Game Sauce",
+			"goat_",
+			"goat_boom_"
 		],
 		"subfolders": []
 	},

@@ -35,6 +35,7 @@
 		"enemy_dammage_on_hit",
 		"enemy_grenade",
 		"plant_monster",
-		"dragon"
+		"dragon",
+		"goat"
 	]
 }

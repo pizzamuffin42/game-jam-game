@@ -78,6 +78,14 @@
 			"includeSheet": "enemy spawn"
 		},
 		{
+			"eventType": "include",
+			"includeSheet": "goat_"
+		},
+		{
+			"eventType": "include",
+			"includeSheet": "goat_boom_"
+		},
+		{
 			"eventType": "block",
 			"conditions": [
 				{

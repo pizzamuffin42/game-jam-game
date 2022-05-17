@@ -1,0 +1,680 @@
+{
+	"name": "goat_",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 251503831968676
+				}
+			],
+			"actions": [],
+			"sid": 830154452253692,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "pick-nearestfurthest",
+							"objectClass": "shadow",
+							"sid": 522977032486827,
+							"parameters": {
+								"which": "nearest",
+								"x": "goat.X",
+								"y": "goat.Y"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "shadow",
+							"sid": 386703494536839,
+							"parameters": {
+								"object": "goat",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "goat",
+							"sid": 742629818161148,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						}
+					],
+					"sid": 287461974157459
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 361281379597273,
+					"parameters": {
+						"object": "enemies",
+						"expression": "0",
+						"order": "ascending"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 135248620691551,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 607259919723475,
+							"parameters": {
+								"angle": "enemies.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 117368126608774,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 349469987664246,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 446997340144968
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 776741158830080
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 136301114921555,
+							"parameters": {
+								"first-value": "0",
+								"comparison": 0,
+								"second-value": "enemies.Angle"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-angle",
+							"objectClass": "enemies",
+							"sid": 522318964696242,
+							"parameters": {
+								"angle": "0"
+							}
+						},
+						{
+							"id": "set-mirrored",
+							"objectClass": "enemies",
+							"sid": 896939414866338,
+							"parameters": {
+								"state": "not-mirrored"
+							}
+						}
+					],
+					"sid": 688276808448606
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "goat",
+					"sid": 786527090091208
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "goat",
+					"sid": 301345095622919,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "goat",
+					"sid": 762182499538478,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				}
+			],
+			"sid": 924456905206322
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-path-found",
+					"objectClass": "goat",
+					"sid": 603222545945834,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"actions": [
+				{
+					"id": "move-along-path",
+					"objectClass": "goat",
+					"sid": 814205861494478,
+					"behaviorType": "Pathfinding"
+				}
+			],
+			"sid": 252079258974036
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "goat",
+					"sid": 872240120701859,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "goat",
+					"sid": 895804503378141
+				}
+			],
+			"sid": 800724173480897
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "has-los-to-object",
+					"objectClass": "goat",
+					"sid": 130756176731643,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"object": "player",
+						"image-point": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 401600086973022,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "stop",
+					"objectClass": "goat",
+					"sid": 970687347639374,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "goat",
+					"sid": 644150993716219,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 637034034072700,
+					"parameters": {
+						"instance-variable": "in_sight",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 443690724106204
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "goat",
+					"sid": 796253676315215,
+					"parameters": {
+						"instance-variable": "in_sight"
+					}
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "goat",
+					"sid": 396130391300862,
+					"parameters": {
+						"instance-variable": "can_shoot"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 172849556448300,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "goat",
+					"sid": 138927088961574,
+					"parameters": {
+						"animation": "\"jumping\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 547950236798847,
+					"parameters": {
+						"seconds": "enemies.shooting_rate"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 125536736569414,
+					"parameters": {
+						"object-to-create": "goat_boom",
+						"layer": "player.LayerName",
+						"x": "goat.X",
+						"y": "goat.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 378054331982770,
+					"parameters": {
+						"object": "goat",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 148715833726762,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 748073020038114,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 851373971324825,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "enemy_grenade_proj.Angle"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 579486372713057,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 667654680729734,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "goat",
+					"sid": 279293621286000,
+					"parameters": {
+						"animation": "\"fall\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 465337954342965
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 831278664201183
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 686780765699320,
+					"parameters": {
+						"instance-variable": "in_sight",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 613580084926916
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 337984742489789,
+					"parameters": {
+						"interval-seconds": "0.3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "find-path",
+					"objectClass": "goat",
+					"sid": 755203446381841,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				}
+			],
+			"sid": 811641120604317
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "goat",
+					"sid": 418773056622672
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 797431942632335,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "goat.X",
+						"y": "goat.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 674948272865104,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 281346678253752,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 923290146550623,
+					"parameters": {
+						"opacity": "10"
+					}
+				}
+			],
+			"sid": 490755145698101
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "goat",
+					"sid": 368627299458902
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 140227468025724,
+					"parameters": {
+						"which": "nearest",
+						"x": "goat.X",
+						"y": "goat.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 405220626101071
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 424225441893761,
+					"parameters": {
+						"object-to-create": "dead",
+						"layer": "player.LayerName",
+						"x": "goat.X",
+						"y": "goat.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "dead",
+					"sid": 791934869145027,
+					"parameters": {
+						"animation": "\"goat\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 731216649221840,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-mirrored",
+							"objectClass": "goat",
+							"sid": 550406120496062
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "dead",
+							"sid": 287993935098556,
+							"parameters": {
+								"state": "mirrored"
+							}
+						}
+					],
+					"sid": 687261242192033
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-speed",
+					"objectClass": "goat",
+					"sid": 734599368696292,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"comparison": 4,
+						"speed": "0.1"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 997777082980863
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 800355161486388,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-max-speed",
+					"objectClass": "goat",
+					"sid": 633844909857305,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"speed": "random(180,220)"
+					}
+				}
+			],
+			"sid": 582215882321693
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "goat",
+					"sid": 548933218032386,
+					"parameters": {
+						"animation": "\"jumping\""
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "goat",
+					"sid": 105732008324989,
+					"parameters": {
+						"comparison": 5,
+						"number": "1"
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "goat",
+					"sid": 557415164851986,
+					"parameters": {
+						"comparison": 3,
+						"number": "6"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 268615066290067,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 195312808080943
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 749504536579345
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 414080944588545,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 959889734850633
+		}
+	],
+	"sid": 183029359436661
+}

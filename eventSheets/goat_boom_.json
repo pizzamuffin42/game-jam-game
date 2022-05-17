@@ -1,0 +1,140 @@
+{
+	"name": "goat_boom_",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "goat_boom",
+					"sid": 128915766331020
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "goat_boom",
+					"sid": 652772888111103,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "0"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullets",
+					"sid": 789801605016348,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat_boom",
+					"sid": 590866589043773,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "goat_boom",
+					"sid": 860942868787459,
+					"parameters": {
+						"angle": "0"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 506739983637291,
+					"parameters": {
+						"seconds": "0.25"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "goat_boom",
+					"sid": 502572932293426
+				}
+			],
+			"sid": 151824043367089,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-between-angles",
+							"objectClass": "System",
+							"sid": 411687538994720,
+							"parameters": {
+								"angle": "goat_boom.Angle",
+								"first-angle": "90",
+								"second-angle": "270"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-mirrored",
+							"objectClass": "goat_boom",
+							"sid": 518280101428110,
+							"parameters": {
+								"state": "mirrored"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 673802110118837,
+							"parameters": {
+								"seconds": "0.01"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "goat_boom",
+							"sid": 865648039351513,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 656265814251456
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 986421531902293
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 671907166516335,
+							"parameters": {
+								"seconds": "0.01"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "goat_boom",
+							"sid": 967250246643610,
+							"parameters": {
+								"angle": "0"
+							}
+						}
+					],
+					"sid": 327601207133377
+				}
+			]
+		}
+	],
+	"sid": 508269186266346
+}
