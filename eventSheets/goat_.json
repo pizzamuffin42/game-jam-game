@@ -308,90 +308,6 @@
 						"animation": "\"jumping\"",
 						"from": "beginning"
 					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 547950236798847,
-					"parameters": {
-						"seconds": "enemies.shooting_rate"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 125536736569414,
-					"parameters": {
-						"object-to-create": "goat_boom",
-						"layer": "player.LayerName",
-						"x": "goat.X",
-						"y": "goat.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 378054331982770,
-					"parameters": {
-						"object": "goat",
-						"image-point-optional": "1"
-					}
-				},
-				{
-					"id": "rotate-toward-position",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 148715833726762,
-					"parameters": {
-						"degrees": "360",
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 748073020038114,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "enemies.bullet_speed"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 851373971324825,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "enemy_grenade_proj.Angle"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 579486372713057,
-					"parameters": {
-						"seconds": "0.1"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "goat",
-					"sid": 667654680729734,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "true"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "goat",
-					"sid": 279293621286000,
-					"parameters": {
-						"animation": "\"fall\"",
-						"from": "beginning"
-					}
 				}
 			],
 			"sid": 465337954342965
@@ -674,6 +590,99 @@
 				}
 			],
 			"sid": 959889734850633
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "goat",
+					"sid": 855867589352011,
+					"parameters": {
+						"animation": "\"jumping\""
+					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "goat",
+					"sid": 797594147334694,
+					"parameters": {
+						"comparison": 0,
+						"number": "7"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 525790403058729,
+					"parameters": {
+						"object-to-create": "goat_boom",
+						"layer": "player.LayerName",
+						"x": "goat.X",
+						"y": "goat.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 336729150723466,
+					"parameters": {
+						"object": "goat",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 473316485071581,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 232179240963173,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 706924605872414,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "enemy_grenade_proj.Angle"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat",
+					"sid": 418510710658305,
+					"parameters": {
+						"instance-variable": "can_shoot",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "goat",
+					"sid": 540700864729023,
+					"parameters": {
+						"animation": "\"fall\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 947122118207993
 		}
 	],
 	"sid": 183029359436661
