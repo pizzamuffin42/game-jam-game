@@ -84,9 +84,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 593261036984518,
+							"sid": 618785681693154,
 							"parameters": {
-								"seconds": "0.2"
+								"seconds": "0.3"
 							}
 						},
 						{
@@ -545,6 +545,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 414673666882437,
+					"parameters": {
+						"variable": "layouts",
+						"comparison": 1,
+						"value": "0"
+					}
+				},
+				{
 					"id": "compare-two-values",
 					"objectClass": "System",
 					"sid": 387591556857362,
@@ -552,6 +562,16 @@
 						"first-value": "layouts/5",
 						"comparison": 0,
 						"second-value": "floor(Layouts/5)"
+					}
+				},
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 815619614736800,
+					"parameters": {
+						"first-value": "layouts/5",
+						"comparison": 0,
+						"second-value": "ceil(Layouts/5)"
 					}
 				},
 				{
@@ -569,9 +589,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 280617463366043,
+					"sid": 363423844441163,
 					"parameters": {
-						"seconds": "random(1.2,1.8)"
+						"seconds": "1.9"
 					}
 				}
 			],

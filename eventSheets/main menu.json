@@ -74,10 +74,10 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 404834469933031,
+					"sid": 506308388664437,
 					"parameters": {
 						"variable": "layouts",
-						"value": "1"
+						"value": "0"
 					}
 				},
 				{

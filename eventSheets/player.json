@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "layouts",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
@@ -2106,6 +2106,27 @@
 					"sid": 406414924005875
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 927732598575615,
+					"parameters": {
+						"key": 48
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemies",
+					"sid": 313285141242444
+				}
+			],
+			"sid": 768052611273495
 		}
 	],
 	"sid": 463042977011712
