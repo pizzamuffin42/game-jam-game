@@ -547,11 +547,11 @@
 				{
 					"id": "compare-two-values",
 					"objectClass": "System",
-					"sid": 437689975244520,
+					"sid": 387591556857362,
 					"parameters": {
-						"first-value": "layouts",
+						"first-value": "layouts/5",
 						"comparison": 0,
-						"second-value": "3"
+						"second-value": "floor(Layouts/5)"
 					}
 				},
 				{
@@ -573,22 +573,42 @@
 					"parameters": {
 						"seconds": "random(1.2,1.8)"
 					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 822720376761119,
-					"parameters": {
-						"object-to-create": "goat",
-						"layer": "player.LayerName",
-						"x": "player.X",
-						"y": "player.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
 				}
 			],
-			"sid": 184183487201325
+			"sid": 184183487201325,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 300649404028062,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "1",
+								"end-index": "layouts/5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 200202906722606,
+							"parameters": {
+								"object-to-create": "goat",
+								"layer": "player.LayerName",
+								"x": "player.X",
+								"y": "player.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 213679821684017
+				}
+			]
 		}
 	],
 	"sid": 470365633724210
