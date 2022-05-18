@@ -28,6 +28,7 @@
 		"enemy_bullet",
 		"enemy_grenade_proj",
 		"dragon_fire",
-		"goat_boom"
+		"goat_boom",
+		"goat_fire_ball"
 	]
 }

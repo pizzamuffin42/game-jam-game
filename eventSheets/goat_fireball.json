@@ -1,0 +1,46 @@
+{
+	"name": "goat_fireball",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "goat_fire_ball",
+					"sid": 755803538584697
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat_fire_ball",
+					"sid": 454417684772113,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat_fire_ball",
+					"sid": 774605339576720,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "goat_fire_ball",
+					"sid": 534830119473688,
+					"parameters": {
+						"instance-variable": "destroy_on_player_hit",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 223717217176183
+		}
+	],
+	"sid": 582503541484034
+}

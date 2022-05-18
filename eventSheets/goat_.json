@@ -507,9 +507,9 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 800355161486388,
+					"sid": 953632859015354,
 					"parameters": {
-						"interval-seconds": "1.0"
+						"interval-seconds": "0.3"
 					}
 				}
 			],
@@ -517,10 +517,10 @@
 				{
 					"id": "set-max-speed",
 					"objectClass": "goat",
-					"sid": 633844909857305,
+					"sid": 898571509927503,
 					"behaviorType": "Pathfinding",
 					"parameters": {
-						"speed": "random(180,220)"
+						"speed": "random(170,300)"
 					}
 				}
 			],
@@ -627,43 +627,6 @@
 					}
 				},
 				{
-					"id": "set-position-to-another-object",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 336729150723466,
-					"parameters": {
-						"object": "goat",
-						"image-point-optional": "1"
-					}
-				},
-				{
-					"id": "rotate-toward-position",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 473316485071581,
-					"parameters": {
-						"degrees": "360",
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 232179240963173,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "enemies.bullet_speed"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "enemy_grenade_proj",
-					"sid": 706924605872414,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "enemy_grenade_proj.Angle"
-					}
-				},
-				{
 					"id": "set-boolean-instvar",
 					"objectClass": "goat",
 					"sid": 418510710658305,
@@ -682,82 +645,379 @@
 					}
 				}
 			],
-			"sid": 947122118207993
+			"sid": 947122118207993,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 885940609418089,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 768509415803834,
+							"parameters": {
+								"object-to-create": "goat_fire_ball",
+								"layer": "player.LayerName",
+								"x": "goat.X",
+								"y": "goat.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "goat_fire_ball",
+							"sid": 815481182260319,
+							"parameters": {
+								"object": "goat",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "goat_fire_ball",
+							"sid": 924273300108327,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "goat_fire_ball",
+							"sid": 559795325413059,
+							"parameters": {
+								"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "goat_fire_ball",
+							"sid": 647467332525382,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "enemies.bullet_speed"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "goat_fire_ball",
+							"sid": 484049191731197,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "goat_fire_ball.Angle"
+							}
+						}
+					],
+					"sid": 912375370022341
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 483459871285092,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						}
+					],
+					"sid": 367723901489488,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 469940089293145,
+									"parameters": {
+										"name": "\"\"",
+										"start-index": "0",
+										"end-index": "5"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 582385746658462,
+									"parameters": {
+										"object-to-create": "goat_fire_ball",
+										"layer": "player.LayerName",
+										"x": "goat.X",
+										"y": "goat.Y",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-position-to-another-object",
+									"objectClass": "goat_fire_ball",
+									"sid": 820982898922015,
+									"parameters": {
+										"object": "goat",
+										"image-point-optional": "0"
+									}
+								},
+								{
+									"id": "rotate-toward-position",
+									"objectClass": "goat_fire_ball",
+									"sid": 910679086032124,
+									"parameters": {
+										"degrees": "360",
+										"x": "player.X",
+										"y": "player.Y"
+									}
+								},
+								{
+									"id": "set-angle",
+									"objectClass": "goat_fire_ball",
+									"sid": 234561825966692,
+									"parameters": {
+										"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)-72"
+									}
+								},
+								{
+									"id": "set-speed",
+									"objectClass": "goat_fire_ball",
+									"sid": 273128550319568,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"speed": "enemies.bullet_speed*random(0.7,0.9)"
+									}
+								},
+								{
+									"id": "set-angle-of-motion",
+									"objectClass": "goat_fire_ball",
+									"sid": 949132107951600,
+									"behaviorType": "Bullet",
+									"parameters": {
+										"angle": "goat_fire_ball.Angle"
+									}
+								}
+							],
+							"sid": 541026657472538
+						},
+						{
+							"eventType": "block",
+							"conditions": [],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 817948443351919,
+									"parameters": {
+										"seconds": "0.05"
+									}
+								}
+							],
+							"sid": 496311526016968,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for",
+											"objectClass": "System",
+											"sid": 569518981204656,
+											"parameters": {
+												"name": "\"\"",
+												"start-index": "0",
+												"end-index": "5"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 855702343622266,
+											"parameters": {
+												"object-to-create": "goat_fire_ball",
+												"layer": "player.LayerName",
+												"x": "goat.X",
+												"y": "goat.Y",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-position-to-another-object",
+											"objectClass": "goat_fire_ball",
+											"sid": 599293772061738,
+											"parameters": {
+												"object": "goat",
+												"image-point-optional": "0"
+											}
+										},
+										{
+											"id": "rotate-toward-position",
+											"objectClass": "goat_fire_ball",
+											"sid": 308286187884763,
+											"parameters": {
+												"degrees": "360",
+												"x": "player.X",
+												"y": "player.Y"
+											}
+										},
+										{
+											"id": "set-angle",
+											"objectClass": "goat_fire_ball",
+											"sid": 827564727197347,
+											"parameters": {
+												"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)-72"
+											}
+										},
+										{
+											"id": "set-speed",
+											"objectClass": "goat_fire_ball",
+											"sid": 975544595286004,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"speed": "enemies.bullet_speed*random(0.5,0.7)"
+											}
+										},
+										{
+											"id": "set-angle-of-motion",
+											"objectClass": "goat_fire_ball",
+											"sid": 166931481461025,
+											"behaviorType": "Bullet",
+											"parameters": {
+												"angle": "goat_fire_ball.Angle"
+											}
+										}
+									],
+									"sid": 384882884520585
+								}
+							]
+						}
+					]
+				}
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-x-seconds",
-					"objectClass": "System",
-					"sid": 419320867034372,
+					"id": "is-animation-playing",
+					"objectClass": "goat",
+					"sid": 633952902761437,
 					"parameters": {
-						"interval-seconds": "1.0"
+						"animation": "\"fall\""
 					}
+				},
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "goat",
+					"sid": 736778979139431,
+					"parameters": {
+						"comparison": 0,
+						"number": "3"
+					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 674485566024672
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 409284175938236,
+			"children": [
 				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 582402319710829,
-					"parameters": {
-						"object-to-create": "enemy_bullet",
-						"layer": "player.LayerName",
-						"x": "enemy.X",
-						"y": "enemy.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "enemy_bullet",
-					"sid": 687496958679380,
-					"parameters": {
-						"object": "goat",
-						"image-point-optional": "1"
-					}
-				},
-				{
-					"id": "rotate-toward-position",
-					"objectClass": "enemy_bullet",
-					"sid": 203469273991889,
-					"parameters": {
-						"degrees": "360",
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "enemy_bullet",
-					"sid": 882605543757560,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "enemies.bullet_speed"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "enemy_bullet",
-					"sid": 730644037585262,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "enemy_bullet.Angle"
-					}
-				},
-				{
-					"id": "bounce-off-object",
-					"objectClass": "enemy_bullet",
-					"sid": 289304583248457,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"object": "tilemaps"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for",
+							"objectClass": "System",
+							"sid": 563474119545330,
+							"parameters": {
+								"name": "\"\"",
+								"start-index": "0",
+								"end-index": "5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 315661355590965,
+							"parameters": {
+								"object-to-create": "goat_fire_ball",
+								"layer": "player.LayerName",
+								"x": "goat.X",
+								"y": "goat.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "goat_fire_ball",
+							"sid": 286688958157832,
+							"parameters": {
+								"object": "goat",
+								"image-point-optional": "0"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "goat_fire_ball",
+							"sid": 847716982390378,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-angle",
+							"objectClass": "goat_fire_ball",
+							"sid": 391260586088454,
+							"parameters": {
+								"angle": "goat_fire_ball.Angle+(loopindex*72)"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "goat_fire_ball",
+							"sid": 827648182401881,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "enemies.bullet_speed/1.5"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "goat_fire_ball",
+							"sid": 134302187456768,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "goat_fire_ball.Angle"
+							}
+						}
+					],
+					"sid": 665152784273578,
+					"disabled": true
 				}
-			],
-			"sid": 409284175938236
+			]
 		}
 	],
 	"sid": 183029359436661

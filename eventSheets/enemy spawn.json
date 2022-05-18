@@ -518,6 +518,33 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-created",
+					"objectClass": "goat",
+					"sid": 393603711095909
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 516097043077258,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "goat",
+					"sid": 965218088434476
+				}
+			],
+			"sid": 271234218086873
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "compare-two-values",
 					"objectClass": "System",
 					"sid": 437689975244520,
@@ -528,16 +555,39 @@
 					}
 				},
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "player",
-					"sid": 780530099769770,
-					"parameters": {
-						"instance-variable": "wait"
-					},
-					"isInverted": true
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 609736033286717
 				}
 			],
-			"actions": [],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "enemies",
+					"sid": 402120342665792
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 280617463366043,
+					"parameters": {
+						"seconds": "random(1.2,1.8)"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 822720376761119,
+					"parameters": {
+						"object-to-create": "goat",
+						"layer": "player.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
 			"sid": 184183487201325
 		}
 	],

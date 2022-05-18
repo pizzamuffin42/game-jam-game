@@ -178,7 +178,8 @@
 			"triple_pickup",
 			"health_pickup",
 			"goat_boom",
-			"goat"
+			"goat",
+			"goat_fire_ball"
 		],
 		"subfolders": [
 			{
@@ -269,7 +270,8 @@
 			"enemy spawn",
 			"Quit Game Sauce",
 			"goat_",
-			"goat_boom_"
+			"goat_boom_",
+			"goat_fireball"
 		],
 		"subfolders": []
 	},

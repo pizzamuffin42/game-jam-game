@@ -75,9 +75,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 278910971067312,
+					"sid": 323745609936208,
 					"parameters": {
-						"seconds": "1.0"
+						"seconds": "2"
 					}
 				}
 			],
@@ -106,14 +106,6 @@
 							}
 						},
 						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 313159729929546,
-							"parameters": {
-								"layout": "choose(\"Room Yum\",\"Room Ree\",\"medievalRoom2\",\"medievalRoom4\")"
-							}
-						},
-						{
 							"id": "set-time-scale",
 							"objectClass": "System",
 							"sid": 207010673464977,
@@ -128,6 +120,14 @@
 							"parameters": {
 								"variable": "hp",
 								"value": "player.health"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 668349765312803,
+							"parameters": {
+								"layout": "choose(\"Room Yum\",\"Room Ree\",\"medievalRoom2\",\"medievalRoom4\")"
 							}
 						}
 					],
