@@ -683,6 +683,81 @@
 				}
 			],
 			"sid": 947122118207993
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 419320867034372,
+					"parameters": {
+						"interval-seconds": "1.0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 582402319710829,
+					"parameters": {
+						"object-to-create": "enemy_bullet",
+						"layer": "player.LayerName",
+						"x": "enemy.X",
+						"y": "enemy.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "enemy_bullet",
+					"sid": 687496958679380,
+					"parameters": {
+						"object": "goat",
+						"image-point-optional": "1"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "enemy_bullet",
+					"sid": 203469273991889,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_bullet",
+					"sid": 882605543757560,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "enemy_bullet",
+					"sid": 730644037585262,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "enemy_bullet.Angle"
+					}
+				},
+				{
+					"id": "bounce-off-object",
+					"objectClass": "enemy_bullet",
+					"sid": 289304583248457,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"object": "tilemaps"
+					}
+				}
+			],
+			"sid": 409284175938236
 		}
 	],
 	"sid": 183029359436661

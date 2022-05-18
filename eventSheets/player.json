@@ -22,6 +22,16 @@
 			"sid": 218418138786106
 		},
 		{
+			"eventType": "variable",
+			"name": "ability",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 534251381641284
+		},
+		{
 			"eventType": "include",
 			"includeSheet": "bullet_player"
 		},
@@ -1090,10 +1100,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "player",
-					"sid": 520597374543840,
+					"sid": 881006644302123,
 					"parameters": {
 						"instance-variable": "ability",
-						"value": "2"
+						"value": "ability"
 					}
 				},
 				{
@@ -1177,9 +1187,21 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 704817708476422,
+					"sid": 851641795363823,
 					"parameters": {
-						"seconds": "1"
+						"seconds": "0.02"
+					}
+				},
+				{
+					"callFunction": "Function2",
+					"sid": 719044082429116
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 569326414704562,
+					"parameters": {
+						"seconds": "0.98"
 					}
 				},
 				{
@@ -1237,6 +1259,32 @@
 					"id": "destroy",
 					"objectClass": "pickups",
 					"sid": 444571407592266
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 876855937722708,
+					"parameters": {
+						"variable": "ability",
+						"value": "player.ability"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 699642476952180,
+					"parameters": {
+						"seconds": "player.special_ability_cooldown"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 870669056918433,
+					"parameters": {
+						"instance-variable": "ability_picked_up",
+						"value": "false"
+					}
 				}
 			],
 			"sid": 967472348678966
@@ -1957,6 +2005,101 @@
 						}
 					],
 					"sid": 350772848703850
+				}
+			]
+		},
+		{
+			"functionName": "Function2",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [],
+			"sid": 179966218931091,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 221959553068027,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 206770360743734,
+							"parameters": {
+								"animation": "\"0\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 392813139260383
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 718801568485997,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 656662181655069,
+							"parameters": {
+								"animation": "\"1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 316040702765285
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-instance-variable",
+							"objectClass": "player",
+							"sid": 363483261149706,
+							"parameters": {
+								"instance-variable": "ability",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "ability",
+							"sid": 819951825523396,
+							"parameters": {
+								"animation": "\"2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 406414924005875
 				}
 			]
 		}
