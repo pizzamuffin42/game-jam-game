@@ -785,6 +785,112 @@
 				}
 			],
 			"sid": 629240872739414
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 924880290783352
+				},
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 429027018156320,
+					"parameters": {
+						"object": "enemies",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
+				{
+					"id": "pick-nearestfurthest",
+					"objectClass": "shadow",
+					"sid": 591226735770022,
+					"parameters": {
+						"which": "nearest",
+						"x": "enemies.X",
+						"y": "enemies.Y"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "shadow",
+					"sid": 614128660491389,
+					"parameters": {
+						"object": "enemies",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "shadow",
+					"sid": 911122572405076,
+					"parameters": {
+						"instance-variable": "used",
+						"value": "3"
+					}
+				}
+			],
+			"sid": 923704996301486
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 997515284086026
+				},
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 391494913248900,
+					"parameters": {
+						"object": "shadow",
+						"expression": "0",
+						"order": "ascending"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "shadow",
+					"sid": 178942232089370,
+					"parameters": {
+						"instance-variable": "used",
+						"value": "-1"
+					}
+				}
+			],
+			"sid": 364384770571276
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "shadow",
+					"sid": 639968205681090,
+					"parameters": {
+						"instance-variable": "used",
+						"comparison": 2,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "shadow",
+					"sid": 918772584811648
+				}
+			],
+			"sid": 132421942308625
 		}
 	],
 	"sid": 470365633724210

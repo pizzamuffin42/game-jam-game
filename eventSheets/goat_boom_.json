@@ -12,17 +12,6 @@
 			],
 			"actions": [
 				{
-					"id": "play",
-					"objectClass": "Audio",
-					"sid": 839645308791569,
-					"parameters": {
-						"audio-file": "Deeper_Explosion",
-						"loop": "not-looping",
-						"volume": "0",
-						"tag-optional": "\"\""
-					}
-				},
-				{
 					"id": "set-speed",
 					"objectClass": "goat_boom",
 					"sid": 652772888111103,
@@ -55,6 +44,17 @@
 					"sid": 860942868787459,
 					"parameters": {
 						"angle": "0"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 255500773371457,
+					"parameters": {
+						"audio-file": "Deeper_Explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
 					}
 				},
 				{

@@ -181,7 +181,8 @@
 			"goat",
 			"goat_fire_ball",
 			"screen_transition",
-			"spawn_portal"
+			"spawn_portal",
+			"Sprite5"
 		],
 		"subfolders": [
 			{
