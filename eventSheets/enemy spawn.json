@@ -152,9 +152,9 @@
 				{
 					"id": "is-overlapping-another-object",
 					"objectClass": "enemies",
-					"sid": 519598365302262,
+					"sid": 124494528104305,
 					"parameters": {
-						"object": "TM_floorWallPlaceholder"
+						"object": "tilemaps"
 					}
 				}
 			],
