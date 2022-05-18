@@ -117,13 +117,18 @@
 					"parameters": {
 						"instance-variable": "open"
 					}
+				},
+				{
+					"id": "trigger-once-while-true",
+					"objectClass": "System",
+					"sid": 751185604335942
 				}
 			],
 			"actions": [
 				{
 					"id": "set-animation",
 					"objectClass": "door",
-					"sid": 885345501651165,
+					"sid": 710172939525808,
 					"parameters": {
 						"animation": "\"open\"",
 						"from": "beginning"
@@ -132,7 +137,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 323745609936208,
+					"sid": 330753446579026,
 					"parameters": {
 						"seconds": "2"
 					}
@@ -154,20 +159,59 @@
 					],
 					"actions": [
 						{
-							"id": "set-eventvar-value",
+							"id": "create-object",
 							"objectClass": "System",
-							"sid": 904713083409981,
+							"sid": 735659520525881,
 							"parameters": {
-								"variable": "layouts",
-								"value": "layouts+1"
+								"object-to-create": "screen_transition",
+								"layer": "health.LayerName",
+								"x": "0",
+								"y": "0",
+								"create-hierarchy": false,
+								"template-name": "\"\""
 							}
 						},
 						{
-							"callFunction": "Function3",
-							"sid": 311098124857441
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 934676962092517,
+							"parameters": {
+								"seconds": "1"
+							}
 						}
 					],
-					"sid": 260690610591006
+					"sid": 260690610591006,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "door",
+									"sid": 357311815516089,
+									"parameters": {
+										"instance-variable": "open"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 955591755570885,
+									"parameters": {
+										"variable": "layouts",
+										"value": "layouts+1"
+									}
+								},
+								{
+									"callFunction": "Function3",
+									"sid": 555813425551995
+								}
+							],
+							"sid": 342631663466819
+						}
+					]
 				},
 				{
 					"eventType": "block",

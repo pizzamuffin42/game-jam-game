@@ -629,6 +629,162 @@
 					"sid": 213679821684017
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "enemies",
+					"sid": 341546958435370
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "enemies",
+					"sid": 247309126552125,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemies",
+					"sid": 579256073850489,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 523797519917430,
+					"parameters": {
+						"seconds": "0.02"
+					}
+				},
+				{
+					"id": "set-object-time-scale",
+					"objectClass": "System",
+					"sid": 398325671575472,
+					"parameters": {
+						"object": "enemies",
+						"time-scale": "0.0001"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 465479283945292,
+					"parameters": {
+						"seconds": "0.5"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 347404250882097,
+					"parameters": {
+						"object-to-create": "spawn_portal",
+						"layer": "player.LayerName",
+						"x": "enemies.X",
+						"y": "enemies.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 364033759020247,
+					"parameters": {
+						"seconds": "0.6"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemies",
+					"sid": 326303447148891,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-object-time-scale",
+					"objectClass": "System",
+					"sid": 119379132558034,
+					"parameters": {
+						"object": "enemies",
+						"time-scale": "1"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "enemies",
+					"sid": 705947732687683,
+					"parameters": {
+						"visibility": "visible"
+					}
+				}
+			],
+			"sid": 143961738139205
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-any-animation-finished",
+					"objectClass": "spawn_portal",
+					"sid": 434204350089761
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "spawn_portal",
+					"sid": 700239800677923
+				}
+			],
+			"sid": 467484874995388
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "spawn_portal",
+					"sid": 574851444709647
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "spawn_portal",
+					"sid": 882319842209651,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "0"
+					}
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "spawn_portal",
+					"sid": 621553037945989,
+					"parameters": {
+						"comparison": 0,
+						"y-co-ordinate": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "spawn_portal",
+					"sid": 483091263970049
+				}
+			],
+			"sid": 629240872739414
 		}
 	],
 	"sid": 470365633724210

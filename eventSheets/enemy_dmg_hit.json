@@ -63,22 +63,40 @@
 			],
 			"actions": [
 				{
-					"id": "find-path",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 154340560738366,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
 					"id": "add-obstacle",
 					"objectClass": "enemy_dammage_on_hit",
 					"sid": 232804060470927,
 					"behaviorType": "LineOfSight",
 					"parameters": {
 						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 278736630962845,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 595971144763721,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 167566863450405,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
 					}
 				},
 				{
@@ -117,24 +135,6 @@
 					"sid": 993874704828412,
 					"parameters": {
 						"opacity": "10"
-					}
-				},
-				{
-					"id": "add-obstacle",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 484301040713159,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"obstacle": "TM_floorWallPlaceholder"
-					}
-				},
-				{
-					"id": "add-obstacle",
-					"objectClass": "enemy_dammage_on_hit",
-					"sid": 929763587150958,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"obstacle": "Pitts"
 					}
 				}
 			],

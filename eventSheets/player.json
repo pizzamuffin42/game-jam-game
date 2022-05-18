@@ -189,6 +189,28 @@
 					}
 				},
 				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 658507094892828,
+					"parameters": {
+						"object-to-create": "screen_transition",
+						"layer": "health.LayerName",
+						"x": "0",
+						"y": "0",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-animation",
+					"objectClass": "screen_transition",
+					"sid": 133319912326227,
+					"parameters": {
+						"animation": "\"reverse\"",
+						"from": "beginning"
+					}
+				},
+				{
 					"id": "set-size",
 					"objectClass": "shadow",
 					"sid": 517912315852388,
@@ -2177,6 +2199,28 @@
 			],
 			"sid": 768052611273495,
 			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-animation-frame",
+					"objectClass": "screen_transition",
+					"sid": 106899941238673,
+					"parameters": {
+						"comparison": 0,
+						"number": "13"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "screen_transition",
+					"sid": 445322870611607
+				}
+			],
+			"sid": 230207786194275
 		}
 	],
 	"sid": 463042977011712

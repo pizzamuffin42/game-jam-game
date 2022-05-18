@@ -179,7 +179,9 @@
 			"health_pickup",
 			"goat_boom",
 			"goat",
-			"goat_fire_ball"
+			"goat_fire_ball",
+			"screen_transition",
+			"spawn_portal"
 		],
 		"subfolders": [
 			{

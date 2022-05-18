@@ -63,16 +63,6 @@
 			],
 			"actions": [
 				{
-					"id": "find-path",
-					"objectClass": "plant_monster",
-					"sid": 162593424961350,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
 					"id": "add-obstacle",
 					"objectClass": "plant_monster",
 					"sid": 104036156054011,
@@ -97,6 +87,16 @@
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"obstacle": "Pitts"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "plant_monster",
+					"sid": 378149032606637,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
 					}
 				},
 				{

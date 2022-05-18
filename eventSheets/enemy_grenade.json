@@ -357,6 +357,11 @@
 					"parameters": {
 						"instance-variable": "can_shoot"
 					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "enemies",
+					"sid": 576502081080080
 				}
 			],
 			"actions": [

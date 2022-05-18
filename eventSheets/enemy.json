@@ -156,16 +156,6 @@
 			],
 			"actions": [
 				{
-					"id": "find-path",
-					"objectClass": "enemy",
-					"sid": 941520190018695,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
 					"id": "add-obstacle",
 					"objectClass": "enemy",
 					"sid": 444097466646947,
@@ -190,6 +180,16 @@
 					"behaviorType": "Pathfinding",
 					"parameters": {
 						"obstacle": "Pitts"
+					}
+				},
+				{
+					"id": "find-path",
+					"objectClass": "enemy",
+					"sid": 607191416447896,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"x": "player.X",
+						"y": "player.Y"
 					}
 				}
 			],
@@ -438,6 +438,11 @@
 					"parameters": {
 						"interval-seconds": "0.3"
 					}
+				},
+				{
+					"id": "is-visible",
+					"objectClass": "enemies",
+					"sid": 587795815085086
 				}
 			],
 			"actions": [
@@ -611,7 +616,7 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 159767962089279,
+					"sid": 491618533271942,
 					"parameters": {
 						"interval-seconds": "1.0"
 					}
