@@ -307,6 +307,38 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "Explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 197750829040891,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Super_Cursed_Goat.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 782000454793765,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Cursed_Goat.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 842849357520080,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "Deeper_Explosion.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 824515023183989,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []

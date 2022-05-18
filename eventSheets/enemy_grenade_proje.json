@@ -253,6 +253,33 @@
 				}
 			],
 			"sid": 427152329583797
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-animation-playing",
+					"objectClass": "enemy_grenade_proj",
+					"sid": 227004052531643,
+					"parameters": {
+						"animation": "\"explosion\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 615743159760057,
+					"parameters": {
+						"audio-file": "Deeper_Explosion",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 760297117633093
 		}
 	],
 	"sid": 263204537098625

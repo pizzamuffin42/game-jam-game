@@ -450,6 +450,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 550170278724331,
+					"parameters": {
+						"audio-file": "Super_Cursed_Goat",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "destroy",
 					"objectClass": "shadow",
 					"sid": 405220626101071
@@ -585,7 +596,33 @@
 					}
 				}
 			],
-			"sid": 195312808080943
+			"sid": 195312808080943,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 598115903755575
+						}
+					],
+					"actions": [
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 554221650827007,
+							"parameters": {
+								"audio-file": "Cursed_Goat",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						}
+					],
+					"sid": 501557396156315
+				}
+			]
 		},
 		{
 			"eventType": "block",

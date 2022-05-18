@@ -12,6 +12,17 @@
 			],
 			"actions": [
 				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 839645308791569,
+					"parameters": {
+						"audio-file": "Deeper_Explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
 					"id": "set-speed",
 					"objectClass": "goat_boom",
 					"sid": 652772888111103,
@@ -49,9 +60,47 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 506739983637291,
+					"sid": 996624497433235,
 					"parameters": {
-						"seconds": "0.25"
+						"seconds": "0.03"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 719334342130766,
+					"parameters": {
+						"audio-file": "Deeper_Explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 176864122778798,
+					"parameters": {
+						"seconds": "0.06"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 713742710210837,
+					"parameters": {
+						"audio-file": "Deeper_Explosion",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 399112388313786,
+					"parameters": {
+						"seconds": "0.239"
 					}
 				},
 				{

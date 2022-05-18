@@ -82,7 +82,7 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 674013773034420,
+					"sid": 607872610355099,
 					"parameters": {
 						"audio-file": "Enemy_Hit",
 						"loop": "not-looping",
@@ -91,9 +91,28 @@
 					}
 				},
 				{
+					"id": "set-blend-mode",
+					"objectClass": "enemies",
+					"sid": 931432743344562,
+					"parameters": {
+						"blend-mode": "destination-out"
+					}
+				},
+				{
+					"id": "set-effect-parameter",
+					"objectClass": "enemies",
+					"sid": 323421906377308,
+					"disabled": true,
+					"parameters": {
+						"effect": "\"\"",
+						"parameter-index": "1",
+						"value": "rgbEx(100,100,100)"
+					}
+				},
+				{
 					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 606164555729977,
+					"sid": 355562191530076,
 					"parameters": {
 						"time-scale": "0.001"
 					}
@@ -101,7 +120,7 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 365330845550576,
+					"sid": 465735731899612,
 					"parameters": {
 						"seconds": "0.00001"
 					}
@@ -109,7 +128,7 @@
 				{
 					"id": "set-time-scale",
 					"objectClass": "System",
-					"sid": 241946049572696,
+					"sid": 624223890967870,
 					"parameters": {
 						"time-scale": "1"
 					}
@@ -117,7 +136,7 @@
 				{
 					"id": "shake",
 					"objectClass": "shaker",
-					"sid": 989301020842345,
+					"sid": 838785973456299,
 					"behaviorType": "ScrollTo",
 					"parameters": {
 						"magnitude": "player.screen_shake_amount_on_dammaging",
@@ -128,7 +147,23 @@
 				{
 					"id": "destroy",
 					"objectClass": "laser",
-					"sid": 600099237732870
+					"sid": 747275593017981
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 529059090587295,
+					"parameters": {
+						"seconds": "0.1"
+					}
+				},
+				{
+					"id": "set-blend-mode",
+					"objectClass": "enemies",
+					"sid": 849034235820550,
+					"parameters": {
+						"blend-mode": "normal"
+					}
 				}
 			],
 			"sid": 881305983523570
