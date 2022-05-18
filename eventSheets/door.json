@@ -37,18 +37,75 @@
 					"sid": 183434532897520
 				}
 			],
-			"actions": [
+			"actions": [],
+			"sid": 236158907126258,
+			"children": [
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "door",
-					"sid": 134328562305470,
-					"parameters": {
-						"instance-variable": "open",
-						"value": "true"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 120802020127390,
+							"parameters": {
+								"first-value": "layouts/5",
+								"comparison": 0,
+								"second-value": "floor(Layouts/5)"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 315311554393726,
+							"parameters": {
+								"first-value": "layouts/5",
+								"comparison": 0,
+								"second-value": "ceil(Layouts/5)"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 899367072826962,
+							"parameters": {
+								"instance-variable": "wait"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"callFunction": "Function3",
+							"sid": 974342446295643
+						}
+					],
+					"sid": 770849187216198
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 283801488662850
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "door",
+							"sid": 971150413257889,
+							"parameters": {
+								"instance-variable": "open",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 116084404403565
 				}
-			],
-			"sid": 236158907126258
+			]
 		},
 		{
 			"eventType": "block",
@@ -99,36 +156,15 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 780271519205844,
+							"sid": 904713083409981,
 							"parameters": {
 								"variable": "layouts",
 								"value": "layouts+1"
 							}
 						},
 						{
-							"id": "set-time-scale",
-							"objectClass": "System",
-							"sid": 207010673464977,
-							"parameters": {
-								"time-scale": "1.0"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 381055531303538,
-							"parameters": {
-								"variable": "hp",
-								"value": "player.health"
-							}
-						},
-						{
-							"id": "go-to-layout-by-name",
-							"objectClass": "System",
-							"sid": 201167373245593,
-							"parameters": {
-								"layout": "choose(\"Room Yum\",\"Room You\",\"Room Ree\",\"medievalRoom1\",\"medievalRoom2\",\"medievalRoom3\",\"medievalRoom4\",\"medievalRoom6\",\"medievalRoom7\",\"medievalRoom8\",\"medievalRoom9\",\"medievalroom33232\")"
-							}
+							"callFunction": "Function3",
+							"sid": 311098124857441
 						}
 					],
 					"sid": 260690610591006
@@ -171,6 +207,44 @@
 				}
 			],
 			"sid": 221339071977113
+		},
+		{
+			"functionName": "Function3",
+			"functionDescription": "",
+			"functionCategory": "",
+			"functionReturnType": "none",
+			"functionIsAsync": false,
+			"functionParameters": [],
+			"eventType": "function-block",
+			"conditions": [],
+			"actions": [
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 207010673464977,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 381055531303538,
+					"parameters": {
+						"variable": "hp",
+						"value": "player.health"
+					}
+				},
+				{
+					"id": "go-to-layout-by-name",
+					"objectClass": "System",
+					"sid": 201167373245593,
+					"parameters": {
+						"layout": "choose(\"Room Yum\",\"Room You\",\"Room Ree\",\"medievalRoom1\",\"medievalRoom2\",\"medievalRoom3\",\"medievalRoom4\",\"medievalRoom6\",\"medievalRoom7\",\"medievalRoom8\",\"medievalRoom9\",\"medievalroom33232\")"
+					}
+				}
+			],
+			"sid": 333499154902583
 		}
 	],
 	"sid": 753157940460362
