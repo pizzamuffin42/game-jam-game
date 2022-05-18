@@ -173,6 +173,24 @@
 					"parameters": {
 						"obstacle": "wall"
 					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "goat",
+					"sid": 455365126554985,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "goat",
+					"sid": 740562490900340,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
 				}
 			],
 			"sid": 924456905206322

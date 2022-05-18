@@ -169,6 +169,24 @@
 					}
 				},
 				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 444260011580587,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 246571041493341,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
+				},
+				{
 					"id": "find-path",
 					"objectClass": "enemy_grenade",
 					"sid": 668369600531408,

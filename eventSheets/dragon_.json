@@ -143,6 +143,24 @@
 					"parameters": {
 						"obstacle": "wall"
 					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "dragon",
+					"sid": 686371899066647,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "dragon",
+					"sid": 714254119988217,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
 				}
 			],
 			"sid": 970007302112630

@@ -118,6 +118,24 @@
 					"parameters": {
 						"opacity": "10"
 					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 484301040713159,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_dammage_on_hit",
+					"sid": 929763587150958,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
 				}
 			],
 			"sid": 693945119276999

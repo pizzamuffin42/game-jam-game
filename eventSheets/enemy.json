@@ -173,6 +173,24 @@
 					"parameters": {
 						"obstacle": "wall"
 					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 151944278189762,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 359109882717853,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
 				}
 			],
 			"sid": 960956584972932

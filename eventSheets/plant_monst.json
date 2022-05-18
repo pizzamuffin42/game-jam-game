@@ -82,6 +82,24 @@
 					}
 				},
 				{
+					"id": "add-obstacle",
+					"objectClass": "plant_monster",
+					"sid": 584336858357214,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "plant_monster",
+					"sid": 642219675209980,
+					"behaviorType": "Pathfinding",
+					"parameters": {
+						"obstacle": "Pitts"
+					}
+				},
+				{
 					"id": "create-object",
 					"objectClass": "System",
 					"sid": 535292017496156,
