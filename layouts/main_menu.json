@@ -193,7 +193,7 @@
 					"type": "Cursor",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Animation 2",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -204,10 +204,10 @@
 					"world": {
 						"x": -131,
 						"y": -25,
-						"width": 20,
-						"height": 20,
+						"width": 5.4,
+						"height": 5.4,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.51,
 						"color": [
 							1,
 							1,
@@ -222,7 +222,7 @@
 					"type": "Cursor_Clicked",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Animation 1",
+						"initial-animation": "Animation 2",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -233,8 +233,8 @@
 					"world": {
 						"x": -130,
 						"y": -1,
-						"width": 20,
-						"height": 20,
+						"width": 27,
+						"height": 27,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [

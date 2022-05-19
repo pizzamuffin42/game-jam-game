@@ -57,7 +57,7 @@
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
-					"sid": 717357764635178,
+					"sid": 673935767096496,
 					"parameters": {
 						"sprite": "Cursor"
 					}

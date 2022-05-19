@@ -183,7 +183,8 @@
 			"screen_transition",
 			"spawn_portal",
 			"Sprite5",
-			"Text3"
+			"Text3",
+			"Sprite6"
 		],
 		"subfolders": [
 			{
