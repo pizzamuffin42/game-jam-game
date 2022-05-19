@@ -3,13 +3,148 @@
 	"events": [
 		{
 			"eventType": "variable",
-			"name": "high_score",
+			"name": "high_score1",
 			"type": "number",
 			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 154732965603340
+		},
+		{
+			"eventType": "variable",
+			"name": "high_score2",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 298198865717771
+		},
+		{
+			"eventType": "variable",
+			"name": "high_score3",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 385756267898937
+		},
+		{
+			"eventType": "variable",
+			"name": "difficulty",
+			"type": "number",
+			"initialValue": "2",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 233008584241772
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 577934345716691
+				}
+			],
+			"actions": [],
+			"sid": 400932076505993,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 293004973057765,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Quit_Text",
+							"sid": 431151661169185,
+							"parameters": {
+								"animation": "\"1\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 510159552854430
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 701830541908511
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 115714285788224,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Quit_Text",
+							"sid": 591710065890360,
+							"parameters": {
+								"animation": "\"2\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 376272295869500
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 391443826780493
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 777329320545050,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Quit_Text",
+							"sid": 287361967993806,
+							"parameters": {
+								"animation": "\"3\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 122227893168543
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -65,24 +200,6 @@
 				{
 					"id": "set-eventvar-value",
 					"objectClass": "System",
-					"sid": 729654792285456,
-					"parameters": {
-						"variable": "high_score",
-						"value": "max(layouts,high_score)"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 506308388664437,
-					"parameters": {
-						"variable": "layouts",
-						"value": "0"
-					}
-				},
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
 					"sid": 108730767416424,
 					"parameters": {
 						"variable": "hp",
@@ -108,17 +225,153 @@
 						"volume": "-10",
 						"tag-optional": "\"\""
 					}
-				},
-				{
-					"id": "set-text",
-					"objectClass": "Text2",
-					"sid": 141539436167865,
-					"parameters": {
-						"text": "high_score"
-					}
 				}
 			],
-			"sid": 524469856504083
+			"sid": 524469856504083,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 698300158784828,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 318435197515067,
+							"parameters": {
+								"variable": "high_score1",
+								"value": "max(layouts,high_score1)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 141539436167865,
+							"parameters": {
+								"text": "high_score1"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 520051994705378,
+							"parameters": {
+								"variable": "layouts",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 233454281206217
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 668448518185586
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 736890188659212,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "2"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 730468730344580,
+							"parameters": {
+								"variable": "high_score2",
+								"value": "max(layouts,high_score2)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 904059986080417,
+							"parameters": {
+								"text": "high_score2"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 313830662858250,
+							"parameters": {
+								"variable": "layouts",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 990478557637927
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 996489358744597
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 410276084119804,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "3"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 695181921102999,
+							"parameters": {
+								"variable": "high_score3",
+								"value": "max(layouts,high_score3)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 535409741939863,
+							"parameters": {
+								"text": "high_score3"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 169208330146447,
+							"parameters": {
+								"variable": "layouts",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 969097743717505
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -134,6 +387,15 @@
 				}
 			],
 			"actions": [
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 530749516749447,
+					"parameters": {
+						"variable": "layouts",
+						"value": "0"
+					}
+				},
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
@@ -159,12 +421,45 @@
 					],
 					"actions": [
 						{
-							"id": "close",
-							"objectClass": "Browser",
-							"sid": 578611380273796
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 742173140643403,
+							"parameters": {
+								"variable": "difficulty",
+								"value": "difficulty+1"
+							}
 						}
 					],
-					"sid": 519508611019369
+					"sid": 519508611019369,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 460270348275057,
+									"parameters": {
+										"variable": "difficulty",
+										"comparison": 4,
+										"value": "3"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 836844980954155,
+									"parameters": {
+										"variable": "difficulty",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 778920333846556
+						}
+					]
 				}
 			]
 		},
@@ -387,6 +682,94 @@
 			"actions": [],
 			"sid": 814888075304309,
 			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 125463194642553,
+					"parameters": {
+						"variable": "difficulty",
+						"comparison": 0,
+						"value": "1"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 131999305820692,
+					"parameters": {
+						"text": "high_score1"
+					}
+				}
+			],
+			"sid": 520984235689712
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 875298463250439
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 337368070221208,
+					"parameters": {
+						"variable": "difficulty",
+						"comparison": 0,
+						"value": "2"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 211634971249590,
+					"parameters": {
+						"text": "high_score2"
+					}
+				}
+			],
+			"sid": 754822143224491
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 624967207747204
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 995471717188406,
+					"parameters": {
+						"variable": "difficulty",
+						"comparison": 0,
+						"value": "3"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 238276238351591,
+					"parameters": {
+						"text": "high_score3"
+					}
+				}
+			],
+			"sid": 453425598178768
 		}
 	],
 	"sid": 311289948218140

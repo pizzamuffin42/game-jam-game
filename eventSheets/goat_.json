@@ -708,11 +708,11 @@
 						{
 							"id": "for",
 							"objectClass": "System",
-							"sid": 885940609418089,
+							"sid": 299947516443048,
 							"parameters": {
 								"name": "\"\"",
 								"start-index": "0",
-								"end-index": "5"
+								"end-index": "3+difficulty"
 							}
 						}
 					],
@@ -752,18 +752,18 @@
 						{
 							"id": "set-angle",
 							"objectClass": "goat_fire_ball",
-							"sid": 559795325413059,
+							"sid": 543026359055679,
 							"parameters": {
-								"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)"
+								"angle": "goat_fire_ball.Angle+(loopindex*(360/(3+difficulty)))+random(-20,20)"
 							}
 						},
 						{
 							"id": "set-speed",
 							"objectClass": "goat_fire_ball",
-							"sid": 647467332525382,
+							"sid": 462048889992881,
 							"behaviorType": "Bullet",
 							"parameters": {
-								"speed": "enemies.bullet_speed"
+								"speed": "enemies.bullet_speed*(0.5+(difficulty/4))"
 							}
 						},
 						{
@@ -799,11 +799,11 @@
 								{
 									"id": "for",
 									"objectClass": "System",
-									"sid": 469940089293145,
+									"sid": 270018935025238,
 									"parameters": {
 										"name": "\"\"",
 										"start-index": "0",
-										"end-index": "5"
+										"end-index": "3+difficulty"
 									}
 								}
 							],
@@ -843,18 +843,18 @@
 								{
 									"id": "set-angle",
 									"objectClass": "goat_fire_ball",
-									"sid": 234561825966692,
+									"sid": 843715215282521,
 									"parameters": {
-										"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)-72"
+										"angle": "goat_fire_ball.Angle+(loopindex*(360/(3+difficulty)))+random(-20,20)-(360/(3+difficulty))"
 									}
 								},
 								{
 									"id": "set-speed",
 									"objectClass": "goat_fire_ball",
-									"sid": 273128550319568,
+									"sid": 341157215225854,
 									"behaviorType": "Bullet",
 									"parameters": {
-										"speed": "enemies.bullet_speed*random(0.7,0.9)"
+										"speed": "enemies.bullet_speed*random(0.7,0.9)*(0.5+(difficulty/4))"
 									}
 								},
 								{
@@ -890,11 +890,11 @@
 										{
 											"id": "for",
 											"objectClass": "System",
-											"sid": 569518981204656,
+											"sid": 783848653959499,
 											"parameters": {
 												"name": "\"\"",
 												"start-index": "0",
-												"end-index": "5"
+												"end-index": "3+difficulty"
 											}
 										}
 									],
@@ -934,18 +934,18 @@
 										{
 											"id": "set-angle",
 											"objectClass": "goat_fire_ball",
-											"sid": 827564727197347,
+											"sid": 459437499981464,
 											"parameters": {
-												"angle": "goat_fire_ball.Angle+(loopindex*72)+random(-20,20)-72"
+												"angle": "goat_fire_ball.Angle+(loopindex*(360/(3+difficulty)))+random(-20,20)"
 											}
 										},
 										{
 											"id": "set-speed",
 											"objectClass": "goat_fire_ball",
-											"sid": 975544595286004,
+											"sid": 832719625064261,
 											"behaviorType": "Bullet",
 											"parameters": {
-												"speed": "enemies.bullet_speed*random(0.5,0.7)"
+												"speed": "enemies.bullet_speed*random(0.5,0.7)*(0.5+(difficulty/4))"
 											}
 										},
 										{

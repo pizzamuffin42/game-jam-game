@@ -708,6 +708,15 @@
 						{
 							"id": "set-boolean-instvar",
 							"objectClass": "player",
+							"sid": 290404842355569,
+							"parameters": {
+								"instance-variable": "dashing",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
 							"sid": 127707578592553,
 							"parameters": {
 								"instance-variable": "can_Shoot",
@@ -721,15 +730,6 @@
 							"parameters": {
 								"animation": "\"idle\"",
 								"from": "beginning"
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "player",
-							"sid": 424670225976348,
-							"parameters": {
-								"instance-variable": "dashing",
-								"value": "false"
 							}
 						},
 						{
@@ -1898,9 +1898,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 628831754082167,
+							"sid": 965820240251874,
 							"parameters": {
-								"seconds": "0.1"
+								"seconds": "0.05"
 							}
 						},
 						{
@@ -1966,9 +1966,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 227030187516858,
+							"sid": 715335992053257,
 							"parameters": {
-								"seconds": "0.1"
+								"seconds": "0.05"
 							}
 						},
 						{
@@ -2026,6 +2026,142 @@
 							"id": "set-angle-of-motion",
 							"objectClass": "bullet",
 							"sid": 573568625137144,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "bullet.Angle"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 197621418771468,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 942978778343967,
+							"parameters": {
+								"object-name": "\"bullet\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 359046866792110,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "bullet",
+							"sid": 502939508124829,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "bullet",
+							"sid": 142555863211766,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bullet",
+							"sid": 884520926709557,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bullet",
+							"sid": 211644197930375,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "bullet.Angle"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 344005947582267,
+							"parameters": {
+								"seconds": "0.05"
+							}
+						},
+						{
+							"id": "create-object-by-name",
+							"objectClass": "System",
+							"sid": 224696815131832,
+							"parameters": {
+								"object-name": "\"bullet\"",
+								"layer": "player.LayerName",
+								"x": "gun_arm.X-gun_arm.ImagePointCount",
+								"y": "gun_arm.Y-gun_arm.ImagePointCount",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "play",
+							"objectClass": "Audio",
+							"sid": 539791456338394,
+							"parameters": {
+								"audio-file": "Gun_Shoot",
+								"loop": "not-looping",
+								"volume": "0",
+								"tag-optional": "\"\""
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "bullet",
+							"sid": 801781776125916,
+							"parameters": {
+								"degrees": "360",
+								"x": "Mouse.X",
+								"y": "Mouse.Y"
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "bullet",
+							"sid": 569698591796382,
+							"parameters": {
+								"z": "gun_arm.ZElevation"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "bullet",
+							"sid": 872019949730471,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "1200"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "bullet",
+							"sid": 143352265782429,
 							"behaviorType": "Bullet",
 							"parameters": {
 								"angle": "bullet.Angle"

@@ -73,10 +73,10 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "enemies",
-					"sid": 916917062537387,
+					"sid": 221270824098519,
 					"parameters": {
 						"instance-variable": "health",
-						"value": "5"
+						"value": "10/difficulty"
 					}
 				},
 				{
@@ -147,7 +147,7 @@
 				{
 					"id": "destroy",
 					"objectClass": "laser",
-					"sid": 747275593017981
+					"sid": 677196083104620
 				},
 				{
 					"id": "wait",

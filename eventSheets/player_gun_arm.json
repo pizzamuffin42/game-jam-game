@@ -196,6 +196,15 @@
 					"id": "else",
 					"objectClass": "System",
 					"sid": 388940167992865
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 656660939113863,
+					"parameters": {
+						"instance-variable": "dashing"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [

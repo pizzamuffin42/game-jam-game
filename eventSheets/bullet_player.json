@@ -74,10 +74,10 @@
 				{
 					"id": "subtract-from-instvar",
 					"objectClass": "enemies",
-					"sid": 884015876022194,
+					"sid": 329386640230777,
 					"parameters": {
 						"instance-variable": "health",
-						"value": "1"
+						"value": "2/difficulty"
 					}
 				},
 				{

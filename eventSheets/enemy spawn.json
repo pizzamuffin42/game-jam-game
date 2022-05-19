@@ -33,11 +33,11 @@
 						{
 							"id": "for",
 							"objectClass": "System",
-							"sid": 258639252186126,
+							"sid": 196151075284701,
 							"parameters": {
 								"name": "\"\"",
 								"start-index": "0",
-								"end-index": "-1+(layouts*2)"
+								"end-index": "-1+(layouts*difficulty)"
 							}
 						}
 					],
