@@ -413,6 +413,34 @@
 			"conditions": [
 				{
 					"id": "on-failed-to-find-path",
+					"objectClass": "dragon_2",
+					"sid": 792158299577507,
+					"behaviorType": "Pathfinding"
+				},
+				{
+					"id": "is-boolean-instance-variable-set",
+					"objectClass": "player",
+					"sid": 608084170976871,
+					"parameters": {
+						"instance-variable": "wait"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "dragon_2",
+					"sid": 939871649608942
+				}
+			],
+			"sid": 987969432309696
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-failed-to-find-path",
 					"objectClass": "enemy_dammage_on_hit",
 					"sid": 457310469101783,
 					"behaviorType": "Pathfinding"

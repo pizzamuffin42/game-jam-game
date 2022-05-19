@@ -551,9 +551,9 @@
 				{
 					"id": "set-animation",
 					"objectClass": "dead",
-					"sid": 379734609199514,
+					"sid": 371895528702232,
 					"parameters": {
-						"animation": "\"ske\"",
+						"animation": "\"dragon\"",
 						"from": "beginning"
 					}
 				}
