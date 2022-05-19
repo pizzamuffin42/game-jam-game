@@ -1,0 +1,46 @@
+{
+	"name": "dragon_projectile",
+	"events": [
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "dragon_fire",
+					"sid": 308787414055269
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon_fire",
+					"sid": 278724111175663,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon_fire",
+					"sid": 982128444422169,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "true"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "dragon_fire",
+					"sid": 465928654358343,
+					"parameters": {
+						"instance-variable": "destroy_on_player_hit",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 837968527485817
+		}
+	],
+	"sid": 338262733937727
+}

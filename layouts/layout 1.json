@@ -186,8 +186,8 @@
 						}
 					},
 					"world": {
-						"x": 454.35420852005666,
-						"y": 252.633804876039,
+						"x": 460.8255140788025,
+						"y": 257.29887867813636,
 						"width": 32,
 						"height": 32,
 						"originX": 0.484,
@@ -222,8 +222,8 @@
 						}
 					},
 					"world": {
-						"x": 295.0700038141032,
-						"y": 241.63040996035886,
+						"x": 304.4001514182979,
+						"y": 240.3581171052414,
 						"width": 301.6537381688892,
 						"height": 73.78001837341407,
 						"originX": 0.5,
@@ -323,7 +323,7 @@
 					},
 					"uid": 20,
 					"instanceVariables": {
-						"health": 5,
+						"health": 9,
 						"shooting_rate": 1,
 						"bullet_speed": 400,
 						"invincible": false,
@@ -572,8 +572,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 373.7874832815566,
-						"y": 179.83985211793856,
+						"x": 385.6414358126859,
+						"y": 178.1464303277772,
 						"width": 32,
 						"height": 32,
 						"originX": 0.53125,
@@ -671,6 +671,76 @@
 						"width": 32,
 						"height": 32,
 						"originX": 0.53125,
+						"originY": 1,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "dragon_2",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "throw",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 42,
+					"instanceVariables": {
+						"health": 8,
+						"shooting_rate": 1,
+						"bullet_speed": 500,
+						"invincible": false,
+						"in_sight": false,
+						"can_shoot": true
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": false,
+								"tags": ""
+							}
+						},
+						"Pathfinding": {
+							"properties": {
+								"cell-size": 16,
+								"cell-border": -1,
+								"obstacles": "solids",
+								"max-speed": 100,
+								"acceleration": 3000,
+								"deceleration": 3000,
+								"rotate-speed": 2000,
+								"rotate-object": false,
+								"diagonals": true,
+								"enabled": true
+							}
+						},
+						"LineOfSight": {
+							"properties": {
+								"obstacles": "solids",
+								"range": 10000,
+								"cone-of-view": 360,
+								"use-collision-cells": true
+							}
+						},
+						"BoundToLayout": {
+							"properties": {
+								"bound-by": "edge"
+							}
+						}
+					},
+					"world": {
+						"x": 408.43997489379336,
+						"y": 133.42510012451254,
+						"width": 16,
+						"height": 16,
+						"originX": 0.4375,
 						"originY": 1,
 						"color": [
 							1,

@@ -12,9 +12,261 @@
 			],
 			"actions": [
 				{
+					"id": "set-speed",
+					"objectClass": "enemy_bullet",
+					"sid": 449986367470965,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "1"
+					}
+				},
+				{
 					"id": "set-boolean-instvar",
 					"objectClass": "enemy_bullet",
-					"sid": 404698231190709,
+					"sid": 525135367991380,
+					"parameters": {
+						"instance-variable": "destroy_on_wall_collision",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullet",
+					"sid": 957245076732201,
+					"parameters": {
+						"instance-variable": "can_hit_player",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "enemy_bullet",
+					"sid": 179541512677022,
+					"parameters": {
+						"instance-variable": "destroy_on_player_hit",
+						"value": "false"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 238767053677238,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 863456294106754,
+					"parameters": {
+						"object-to-create": "bone_fragments",
+						"layer": "player.LayerName",
+						"x": "enemy_bullet.X",
+						"y": "enemy_bullet.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bone_fragments",
+					"sid": 913056564230322,
+					"parameters": {
+						"object": "bone_fragments",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "bone_fragments",
+					"sid": 959129225644180,
+					"parameters": {
+						"angle": "enemy_bullet.Angle-15"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "bone_fragments",
+					"sid": 367278283465691,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "bone_fragments",
+					"sid": 610460748043753,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "bone_fragments",
+					"sid": 603137022388218,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "bone_fragments.Angle"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 499420911961534,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 822447473640043,
+					"parameters": {
+						"object-to-create": "bone_fragments",
+						"layer": "player.LayerName",
+						"x": "enemy_bullet.X",
+						"y": "enemy_bullet.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bone_fragments",
+					"sid": 650532490039675,
+					"parameters": {
+						"object": "bone_fragments",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "bone_fragments",
+					"sid": 622006374206449,
+					"parameters": {
+						"angle": "enemy_bullet.Angle"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "bone_fragments",
+					"sid": 526873556086100,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "bone_fragments",
+					"sid": 190283375393735,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "bone_fragments",
+					"sid": 151475749386196,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "bone_fragments.Angle"
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 105489503814916,
+					"parameters": {
+						"seconds": "0.2"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 115386633733201,
+					"parameters": {
+						"object-to-create": "bone_fragments",
+						"layer": "player.LayerName",
+						"x": "enemy_bullet.X",
+						"y": "enemy_bullet.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-position-to-another-object",
+					"objectClass": "bone_fragments",
+					"sid": 678727219398911,
+					"parameters": {
+						"object": "bone_fragments",
+						"image-point-optional": "0"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "bone_fragments",
+					"sid": 125703296481470,
+					"parameters": {
+						"angle": "enemy_bullet.Angle+15"
+					}
+				},
+				{
+					"id": "rotate-toward-position",
+					"objectClass": "bone_fragments",
+					"sid": 160357570838196,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
+				},
+				{
+					"id": "set-speed",
+					"objectClass": "bone_fragments",
+					"sid": 700980197592718,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "enemies.bullet_speed"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "bone_fragments",
+					"sid": 338371207540407,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"angle": "bone_fragments.Angle"
+					}
+				},
+				{
+					"id": "destroy",
+					"objectClass": "enemy_bullet",
+					"sid": 256608563382278
+				}
+			],
+			"sid": 625408395651972
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "bone_fragments",
+					"sid": 446171781824828
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "bone_fragments",
+					"sid": 739563956232881,
 					"parameters": {
 						"instance-variable": "destroy_on_wall_collision",
 						"value": "true"
@@ -22,8 +274,8 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy_bullet",
-					"sid": 782828289608345,
+					"objectClass": "bone_fragments",
+					"sid": 104301240290845,
 					"parameters": {
 						"instance-variable": "can_hit_player",
 						"value": "true"
@@ -31,15 +283,37 @@
 				},
 				{
 					"id": "set-boolean-instvar",
-					"objectClass": "enemy_bullet",
-					"sid": 595634333530170,
+					"objectClass": "bone_fragments",
+					"sid": 422600885004975,
 					"parameters": {
 						"instance-variable": "destroy_on_player_hit",
 						"value": "true"
 					}
 				}
 			],
-			"sid": 625408395651972
+			"sid": 891079636157794
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 381903497136387
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "enemy_bullet",
+					"sid": 212093890878376,
+					"behaviorType": "Bullet",
+					"parameters": {
+						"speed": "2"
+					}
+				}
+			],
+			"sid": 916398240006137
 		}
 	],
 	"sid": 272704395387563

@@ -1,0 +1,63 @@
+{
+	"name": "bone_fragments",
+	"plugin-id": "Sprite",
+	"sid": 126044987788647,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 286440206324352
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 6,
+						"height": 5,
+						"originX": 0,
+						"originY": 0.6,
+						"originalSource": "",
+						"exportFormat": "png",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5792971,
+						"collisionPoly": {
+							"points": [
+								1,
+								0.2,
+								0.8333333333333334,
+								0.2,
+								0.6666666666666666,
+								0.4,
+								0.3333333333333333,
+								0.6,
+								0,
+								0.2,
+								0.3333333333333333,
+								0,
+								0.6666666666666666,
+								0,
+								0.8333333333333334,
+								0
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 310345009599432,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 25
+			}
+		],
+		"subfolders": []
+	}
+}

@@ -184,7 +184,9 @@
 			"spawn_portal",
 			"Sprite5",
 			"Text3",
-			"Sprite6"
+			"Sprite6",
+			"dragon_2",
+			"bone_fragments"
 		],
 		"subfolders": [
 			{
@@ -276,7 +278,9 @@
 			"Quit Game Sauce",
 			"goat_",
 			"goat_boom_",
-			"goat_fireball"
+			"goat_fireball",
+			"dragon_2_",
+			"dragon_projectile"
 		],
 		"subfolders": []
 	},
