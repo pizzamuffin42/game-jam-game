@@ -65,48 +65,6 @@
 					}
 				},
 				{
-					"type": "Text",
-					"properties": {
-						"text": "Score",
-						"enable-bbcode": true,
-						"font": "Webdings",
-						"size": 12,
-						"line-height": 0,
-						"bold": false,
-						"italic": false,
-						"color": [
-							0.4980392156862745,
-							0.5372549019607843,
-							0.6666666666666666,
-							1
-						],
-						"horizontal-alignment": "left",
-						"vertical-alignment": "top",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left"
-					},
-					"uid": 34,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": -2.239465953597204,
-						"y": 286.2217154543262,
-						"width": 86.36363636363626,
-						"height": 30,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Text2",
 					"properties": {
 						"text": "0",
@@ -122,7 +80,7 @@
 							0.6666666666666666,
 							1
 						],
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "top",
 						"wrapping": "word",
 						"initially-visible": true,
@@ -132,8 +90,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 84.03855183498919,
-						"y": 287.6345507408962,
+						"x": 277.7896237123437,
+						"y": 219.4404668524474,
 						"width": 86.36363636363626,
 						"height": 30,
 						"originX": 0,
@@ -196,6 +154,48 @@
 						"height": -320,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Text3",
+					"properties": {
+						"text": "last level reached:",
+						"enable-bbcode": true,
+						"font": "Arial",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.4980392156862745,
+							0.5372549019607843,
+							0.6666666666666666,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "top",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 41,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 221.69709581564155,
+						"y": 197.6021699934145,
+						"width": 200,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

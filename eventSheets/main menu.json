@@ -5,7 +5,7 @@
 			"eventType": "variable",
 			"name": "high_score",
 			"type": "number",
-			"initialValue": "1",
+			"initialValue": "0",
 			"comment": "",
 			"isStatic": false,
 			"isConstant": false,

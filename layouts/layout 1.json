@@ -626,74 +626,9 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 39,
-					"instanceVariables": {
-						"health": 50,
-						"shooting_rate": 0.7,
-						"bullet_speed": 400,
-						"invincible": false,
-						"in_sight": true,
-						"can_shoot": true
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": false,
-								"tags": ""
-							}
-						},
-						"Pathfinding": {
-							"properties": {
-								"cell-size": 16,
-								"cell-border": -1,
-								"obstacles": "solids",
-								"max-speed": 100,
-								"acceleration": 3000,
-								"deceleration": 3000,
-								"rotate-speed": 2000,
-								"rotate-object": false,
-								"diagonals": true,
-								"enabled": true
-							}
-						},
-						"LineOfSight": {
-							"properties": {
-								"obstacles": "solids",
-								"range": 100,
-								"cone-of-view": 360,
-								"use-collision-cells": true
-							}
-						}
-					},
-					"world": {
-						"x": 312.9210328534531,
-						"y": 183.6996033800635,
-						"width": 32,
-						"height": 32,
-						"originX": 0.53125,
-						"originY": 1,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "goat",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "jump",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 40,
 					"instanceVariables": {
-						"health": 50,
+						"health": 25,
 						"shooting_rate": 0.7,
 						"bullet_speed": 400,
 						"invincible": false,

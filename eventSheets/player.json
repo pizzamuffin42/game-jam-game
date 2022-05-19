@@ -1351,10 +1351,10 @@
 				{
 					"id": "set-instvar-value",
 					"objectClass": "player",
-					"sid": 570577160000720,
+					"sid": 787935280685857,
 					"parameters": {
 						"instance-variable": "special_ability_cooldown",
-						"value": "8"
+						"value": "4"
 					}
 				}
 			],
@@ -1462,10 +1462,10 @@
 				{
 					"id": "add-to-instvar",
 					"objectClass": "player",
-					"sid": 854450909507381,
+					"sid": 713433762828677,
 					"parameters": {
 						"instance-variable": "health",
-						"value": "1"
+						"value": "2"
 					}
 				}
 			],
@@ -1691,9 +1691,9 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 514175217284392,
+							"sid": 987022718234980,
 							"parameters": {
-								"seconds": "3.5"
+								"seconds": "1.5"
 							}
 						},
 						{
@@ -2197,7 +2197,8 @@
 					"sid": 313285141242444
 				}
 			],
-			"sid": 768052611273495
+			"sid": 768052611273495,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -2220,6 +2221,33 @@
 				}
 			],
 			"sid": 230207786194275
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "player",
+					"sid": 173966297788626,
+					"parameters": {
+						"instance-variable": "health",
+						"comparison": 4,
+						"value": "8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-instvar-value",
+					"objectClass": "player",
+					"sid": 463919977952826,
+					"parameters": {
+						"instance-variable": "health",
+						"value": "8"
+					}
+				}
+			],
+			"sid": 359711338444677
 		}
 	],
 	"sid": 463042977011712

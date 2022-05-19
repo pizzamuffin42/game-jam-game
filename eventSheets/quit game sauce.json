@@ -92,9 +92,9 @@
 				{
 					"id": "set-text",
 					"objectClass": "Text2",
-					"sid": 138270855374539,
+					"sid": 809373891519559,
 					"parameters": {
-						"text": "str(high_score)"
+						"text": "str(layouts)"
 					}
 				}
 			],
