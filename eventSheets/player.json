@@ -465,24 +465,32 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-click",
+					"id": "mouse-button-is-down",
 					"objectClass": "Mouse",
-					"sid": 229925011355442,
+					"sid": 462293392484769,
 					"parameters": {
-						"mouse-button": "left",
-						"click-type": "clicked"
+						"mouse-button": "left"
 					}
 				},
 				{
 					"id": "is-boolean-instance-variable-set",
 					"objectClass": "player",
-					"sid": 522164452432055,
+					"sid": 320920672028703,
 					"parameters": {
 						"instance-variable": "can_Shoot"
 					}
 				}
 			],
 			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 519395069297713,
+					"parameters": {
+						"instance-variable": "can_Shoot",
+						"value": "false"
+					}
+				},
 				{
 					"id": "create-object-by-name",
 					"objectClass": "System",
@@ -553,33 +561,43 @@
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 232072857881545,
-					"parameters": {
-						"instance-variable": "can_Shoot",
-						"value": "false"
-					}
-				},
-				{
 					"id": "wait",
 					"objectClass": "System",
 					"sid": 717139473667890,
 					"parameters": {
 						"seconds": "0.3"
 					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 997156270679483,
-					"parameters": {
-						"instance-variable": "can_Shoot",
-						"value": "true"
-					}
 				}
 			],
-			"sid": 458315019781276
+			"sid": 458315019781276,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "player",
+							"sid": 368642468110136,
+							"parameters": {
+								"instance-variable": "dashing"
+							},
+							"isInverted": true
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 752761869517896,
+							"parameters": {
+								"instance-variable": "can_Shoot",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 770103710249287
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -616,7 +634,7 @@
 				{
 					"id": "on-key-pressed",
 					"objectClass": "Keyboard",
-					"sid": 446111434433803,
+					"sid": 963110978520506,
 					"parameters": {
 						"key": 32
 					}
@@ -1699,9 +1717,276 @@
 						{
 							"id": "wait",
 							"objectClass": "System",
-							"sid": 987022718234980,
+							"sid": 236239749258517,
 							"parameters": {
-								"seconds": "1.5"
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 634999429719332,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 641614910030010,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 301171338774634,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 818224431270209,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 747332168553193,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 319842314651570,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 377819317646589,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 912074133382144,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 727020951952778,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 908547988334690,
+							"parameters": {
+								"seconds": "0.13"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 435673972072169,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 645250539562266,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 302560608939330,
+							"parameters": {
+								"blend-mode": "normal"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 569644145015270,
+							"parameters": {
+								"color": "rgbEx(100, 0, 0)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 743590651496126,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 704409024138399,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 360727383679022,
+							"parameters": {
+								"blend-mode": "additive"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 111816306386887,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 106037429710777,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 632845948748592,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 603159987503970,
+							"parameters": {
+								"blend-mode": "normal"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 305083509678769,
+							"parameters": {
+								"color": "rgbEx(100, 0, 0)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 473086860314085,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 646975143896348,
+							"parameters": {
+								"seconds": ".15"
+							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 291283669724106,
+							"parameters": {
+								"blend-mode": "additive"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 724385867300639,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 140409977313111,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 396798667905420,
+							"parameters": {
+								"seconds": "0.15"
+							}
+						},
+						{
+							"id": "set-blend-mode",
+							"objectClass": "player",
+							"sid": 916855138840968,
+							"parameters": {
+								"blend-mode": "normal"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 916400681866509,
+							"parameters": {
+								"color": "rgbEx(100, 0, 0)"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "player",
+							"sid": 241893350757008,
+							"parameters": {
+								"instance-variable": "invincible",
+								"value": "true"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 438205739400280,
+							"parameters": {
+								"seconds": ".15"
 							}
 						},
 						{
@@ -1727,6 +2012,14 @@
 							"sid": 802521901267651,
 							"parameters": {
 								"blend-mode": "normal"
+							}
+						},
+						{
+							"id": "set-default-color",
+							"objectClass": "player",
+							"sid": 695269142943328,
+							"parameters": {
+								"color": "rgbEx(100, 100, 100)"
 							}
 						}
 					],
@@ -2339,10 +2632,26 @@
 					"id": "destroy",
 					"objectClass": "enemies",
 					"sid": 313285141242444
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 470880426195530,
+					"parameters": {
+						"seconds": "2"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 948923971210843,
+					"parameters": {
+						"variable": "layouts",
+						"value": "layouts+159"
+					}
 				}
 			],
-			"sid": 768052611273495,
-			"disabled": true
+			"sid": 768052611273495
 		},
 		{
 			"eventType": "block",
@@ -2392,6 +2701,31 @@
 				}
 			],
 			"sid": 359711338444677
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 654337137628618,
+					"parameters": {
+						"key": 49
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 414944031987144,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 563143650545861
 		}
 	],
 	"sid": 463042977011712

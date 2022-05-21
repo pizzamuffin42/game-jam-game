@@ -242,191 +242,229 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "has-los-to-object",
-					"objectClass": "enemy",
-					"sid": 678427838945997,
-					"behaviorType": "LineOfSight",
-					"parameters": {
-						"object": "player",
-						"image-point": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "wait",
+					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 503071753387805,
-					"parameters": {
-						"seconds": "0.3"
-					}
-				},
-				{
-					"id": "stop",
-					"objectClass": "enemy",
-					"sid": 762834892060759,
-					"behaviorType": "Pathfinding"
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "enemy",
-					"sid": 111014943332867,
-					"behaviorType": "Pathfinding",
-					"parameters": {
-						"speed": "0"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 114730005258238,
-					"parameters": {
-						"instance-variable": "in_sight",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 596400175511825
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "enemy",
-					"sid": 972046370781529,
-					"parameters": {
-						"instance-variable": "in_sight"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "enemy",
-					"sid": 573478954507131,
-					"parameters": {
-						"instance-variable": "can_shoot"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 832612602028540,
-					"parameters": {
-						"object-to-create": "enemy_bullet",
-						"layer": "player.LayerName",
-						"x": "enemy.X",
-						"y": "enemy.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "enemy_bullet",
-					"sid": 664721187767017,
+					"sid": 295373614905710,
 					"parameters": {
 						"object": "enemy",
-						"image-point-optional": "1"
-					}
-				},
-				{
-					"id": "rotate-toward-position",
-					"objectClass": "enemy_bullet",
-					"sid": 110909755153421,
-					"parameters": {
-						"degrees": "360",
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "enemy_bullet",
-					"sid": 432594246168954,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "enemies.bullet_speed"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "enemy_bullet",
-					"sid": 444015246990010,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "enemy_bullet.Angle"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 434285220546585,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "enemy",
-					"sid": 883146737198032,
-					"parameters": {
-						"animation": "\"throw\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 247336590263824,
-					"parameters": {
-						"seconds": "enemies.shooting_rate"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "enemy",
-					"sid": 154679107152959,
-					"parameters": {
-						"animation": "\"idle\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 318571536001990,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "true"
+						"expression": "0",
+						"order": "ascending"
 					}
 				}
 			],
-			"sid": 617061832452798
+			"actions": [],
+			"sid": 485230973213445,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "has-los-to-object",
+							"objectClass": "enemy",
+							"sid": 303213847046051,
+							"behaviorType": "LineOfSight",
+							"parameters": {
+								"object": "player",
+								"image-point": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 808191793233129,
+							"parameters": {
+								"seconds": "0.3"
+							}
+						},
+						{
+							"id": "stop",
+							"objectClass": "enemy",
+							"sid": 972081664194552,
+							"behaviorType": "Pathfinding"
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "enemy",
+							"sid": 550864686907841,
+							"behaviorType": "Pathfinding",
+							"parameters": {
+								"speed": "0"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemy",
+							"sid": 406982838376044,
+							"parameters": {
+								"instance-variable": "in_sight",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 534909746846441
+				}
+			]
 		},
 		{
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "else",
+					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 488879168759173
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "enemy",
-					"sid": 524259915564736,
+					"sid": 971129661147801,
 					"parameters": {
-						"instance-variable": "in_sight",
-						"value": "false"
+						"object": "enemy",
+						"expression": "0",
+						"order": "ascending"
 					}
 				}
 			],
-			"sid": 859962210720169
+			"actions": [],
+			"sid": 617061832452798,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemy",
+							"sid": 198538364194339,
+							"parameters": {
+								"instance-variable": "in_sight"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "enemy",
+							"sid": 179801407442303,
+							"parameters": {
+								"instance-variable": "can_shoot"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 856651743374637,
+							"parameters": {
+								"object-to-create": "enemy_bullet",
+								"layer": "player.LayerName",
+								"x": "enemy.X",
+								"y": "enemy.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "enemy_bullet",
+							"sid": 726601733812214,
+							"parameters": {
+								"object": "enemy",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "enemy_bullet",
+							"sid": 204581295399318,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "enemy_bullet",
+							"sid": 821365558922580,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "enemies.bullet_speed"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "enemy_bullet",
+							"sid": 125225412682768,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "enemy_bullet.Angle"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemy",
+							"sid": 882161745962230,
+							"parameters": {
+								"instance-variable": "can_shoot",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy",
+							"sid": 909383648856675,
+							"parameters": {
+								"animation": "\"throw\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 339042680984869,
+							"parameters": {
+								"seconds": "enemies.shooting_rate"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "enemy",
+							"sid": 778182833779104,
+							"parameters": {
+								"animation": "\"idle\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemy",
+							"sid": 145061356147665,
+							"parameters": {
+								"instance-variable": "can_shoot",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 282904973634371
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 308516432747375
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "enemy",
+							"sid": 482373816399422,
+							"parameters": {
+								"instance-variable": "in_sight",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 868754999163550
+				}
+			]
 		},
 		{
 			"eventType": "block",
@@ -434,9 +472,19 @@
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",
-					"sid": 207424937053976,
+					"sid": 208453281637136,
 					"parameters": {
 						"interval-seconds": "0.3"
+					}
+				},
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 234473426262847,
+					"parameters": {
+						"object": "enemy",
+						"expression": "0",
+						"order": "ascending"
 					}
 				},
 				{
@@ -587,6 +635,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 583967376074024,
+					"parameters": {
+						"object": "enemy",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
+				{
 					"id": "compare-speed",
 					"objectClass": "enemy",
 					"sid": 349982103672969,
@@ -613,6 +671,16 @@
 		{
 			"eventType": "block",
 			"conditions": [
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 711441981237349,
+					"parameters": {
+						"object": "enemy",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",

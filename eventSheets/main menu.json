@@ -33,6 +33,26 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "high_score4",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 970007764708527
+		},
+		{
+			"eventType": "variable",
+			"name": "high_score5",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 112012262253952
+		},
+		{
+			"eventType": "variable",
 			"name": "difficulty",
 			"type": "number",
 			"initialValue": "2",
@@ -143,6 +163,70 @@
 						}
 					],
 					"sid": 122227893168543
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 112629296195392
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 740490856570428,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Quit_Text",
+							"sid": 485997152217709,
+							"parameters": {
+								"animation": "\"4\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 914068255527165
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 171302660363324
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 865102189278865,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "Quit_Text",
+							"sid": 645526447086588,
+							"parameters": {
+								"animation": "\"0.5\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 717236519779368
 				}
 			]
 		},
@@ -370,6 +454,104 @@
 						}
 					],
 					"sid": 969097743717505
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 743077661018863
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 664006871446259,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "4"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 787172243070657,
+							"parameters": {
+								"variable": "high_score4",
+								"value": "max(layouts,high_score4)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 420055368069313,
+							"parameters": {
+								"text": "high_score4"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 706783650157019,
+							"parameters": {
+								"variable": "layouts",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 645017636303936
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 562142741435513
+						},
+						{
+							"id": "compare-eventvar",
+							"objectClass": "System",
+							"sid": 985791709618531,
+							"parameters": {
+								"variable": "difficulty",
+								"comparison": 0,
+								"value": "0.5"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 161662714542302,
+							"parameters": {
+								"variable": "high_score5",
+								"value": "max(layouts,high_score5)"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Text2",
+							"sid": 916644920812968,
+							"parameters": {
+								"text": "high_score5"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 354571549887155,
+							"parameters": {
+								"variable": "layouts",
+								"value": "0"
+							}
+						}
+					],
+					"sid": 415620688320405
 				}
 			]
 		},
@@ -387,15 +569,6 @@
 				}
 			],
 			"actions": [
-				{
-					"id": "set-eventvar-value",
-					"objectClass": "System",
-					"sid": 530749516749447,
-					"parameters": {
-						"variable": "layouts",
-						"value": "0"
-					}
-				},
 				{
 					"id": "set-cursor-from-sprite",
 					"objectClass": "Mouse",
@@ -423,10 +596,10 @@
 						{
 							"id": "set-eventvar-value",
 							"objectClass": "System",
-							"sid": 742173140643403,
+							"sid": 690144964755114,
 							"parameters": {
 								"variable": "difficulty",
-								"value": "difficulty+1"
+								"value": "floor(difficulty+1)"
 							}
 						}
 					],
@@ -438,11 +611,11 @@
 								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 460270348275057,
+									"sid": 912261598483960,
 									"parameters": {
 										"variable": "difficulty",
 										"comparison": 4,
-										"value": "3"
+										"value": "4"
 									}
 								}
 							],
@@ -450,10 +623,10 @@
 								{
 									"id": "set-eventvar-value",
 									"objectClass": "System",
-									"sid": 836844980954155,
+									"sid": 477065107994738,
 									"parameters": {
 										"variable": "difficulty",
-										"value": "1"
+										"value": "0.5"
 									}
 								}
 							],
@@ -770,6 +943,68 @@
 				}
 			],
 			"sid": 453425598178768
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 402524471583595
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 518155801758985,
+					"parameters": {
+						"variable": "difficulty",
+						"comparison": 0,
+						"value": "4"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 237597028586360,
+					"parameters": {
+						"text": "high_score4"
+					}
+				}
+			],
+			"sid": 960657759584873
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "else",
+					"objectClass": "System",
+					"sid": 747082198570294
+				},
+				{
+					"id": "compare-eventvar",
+					"objectClass": "System",
+					"sid": 265436011560346,
+					"parameters": {
+						"variable": "difficulty",
+						"comparison": 0,
+						"value": "0.5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-text",
+					"objectClass": "Text2",
+					"sid": 610739768711944,
+					"parameters": {
+						"text": "high_score5"
+					}
+				}
+			],
+			"sid": 603858022653542
 		}
 	],
 	"sid": 311289948218140

@@ -242,6 +242,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 765696163257764,
+					"parameters": {
+						"object": "dragon_2",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
+				{
 					"id": "has-los-to-object",
 					"objectClass": "dragon_2",
 					"sid": 468145900280146,
@@ -292,141 +302,160 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "dragon_2",
-					"sid": 109227480560333,
-					"parameters": {
-						"instance-variable": "in_sight"
-					}
-				},
-				{
-					"id": "is-boolean-instance-variable-set",
-					"objectClass": "dragon_2",
-					"sid": 742210905682078,
-					"parameters": {
-						"instance-variable": "can_shoot"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
+					"id": "for-each-ordered",
 					"objectClass": "System",
-					"sid": 377675429701729,
-					"parameters": {
-						"object-to-create": "dragon_fire",
-						"layer": "player.LayerName",
-						"x": "dragon_2.X",
-						"y": "dragon_2.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "dragon_fire",
-					"sid": 985033536662804,
+					"sid": 792367433838532,
 					"parameters": {
 						"object": "dragon_2",
-						"image-point-optional": "1"
-					}
-				},
-				{
-					"id": "rotate-toward-position",
-					"objectClass": "dragon_fire",
-					"sid": 507611658834504,
-					"parameters": {
-						"degrees": "360",
-						"x": "player.X",
-						"y": "player.Y"
-					}
-				},
-				{
-					"id": "set-speed",
-					"objectClass": "dragon_fire",
-					"sid": 542386247030653,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"speed": "enemies.bullet_speed"
-					}
-				},
-				{
-					"id": "set-angle-of-motion",
-					"objectClass": "dragon_fire",
-					"sid": 347771371727450,
-					"behaviorType": "Bullet",
-					"parameters": {
-						"angle": "dragon_fire.Angle"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "dragon_2",
-					"sid": 127452269497952,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "false"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "dragon_2",
-					"sid": 508524861824662,
-					"parameters": {
-						"animation": "\"throw\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "wait",
-					"objectClass": "System",
-					"sid": 998057974776430,
-					"parameters": {
-						"seconds": "enemies.shooting_rate"
-					}
-				},
-				{
-					"id": "set-animation",
-					"objectClass": "dragon_2",
-					"sid": 340925403917509,
-					"parameters": {
-						"animation": "\"run\"",
-						"from": "beginning"
-					}
-				},
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "dragon_2",
-					"sid": 777922187272260,
-					"parameters": {
-						"instance-variable": "can_shoot",
-						"value": "true"
+						"expression": "0",
+						"order": "ascending"
 					}
 				}
 			],
-			"sid": 289305208156415
-		},
-		{
-			"eventType": "block",
-			"conditions": [
+			"actions": [],
+			"sid": 289305208156415,
+			"children": [
 				{
-					"id": "else",
-					"objectClass": "System",
-					"sid": 539423486816389
-				}
-			],
-			"actions": [
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "dragon_2",
+							"sid": 500496231171434,
+							"parameters": {
+								"instance-variable": "in_sight"
+							}
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "dragon_2",
+							"sid": 944106740723341,
+							"parameters": {
+								"instance-variable": "can_shoot"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 262299201963054,
+							"parameters": {
+								"object-to-create": "dragon_fire",
+								"layer": "player.LayerName",
+								"x": "dragon_2.X",
+								"y": "dragon_2.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-position-to-another-object",
+							"objectClass": "dragon_fire",
+							"sid": 433837356924869,
+							"parameters": {
+								"object": "dragon_2",
+								"image-point-optional": "1"
+							}
+						},
+						{
+							"id": "rotate-toward-position",
+							"objectClass": "dragon_fire",
+							"sid": 938366178388866,
+							"parameters": {
+								"degrees": "360",
+								"x": "player.X",
+								"y": "player.Y"
+							}
+						},
+						{
+							"id": "set-speed",
+							"objectClass": "dragon_fire",
+							"sid": 205268583668550,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"speed": "enemies.bullet_speed"
+							}
+						},
+						{
+							"id": "set-angle-of-motion",
+							"objectClass": "dragon_fire",
+							"sid": 721058636258917,
+							"behaviorType": "Bullet",
+							"parameters": {
+								"angle": "dragon_fire.Angle"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "dragon_2",
+							"sid": 104002790579404,
+							"parameters": {
+								"instance-variable": "can_shoot",
+								"value": "false"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "dragon_2",
+							"sid": 742931685866338,
+							"parameters": {
+								"animation": "\"throw\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 721825270058965,
+							"parameters": {
+								"seconds": "enemies.shooting_rate"
+							}
+						},
+						{
+							"id": "set-animation",
+							"objectClass": "dragon_2",
+							"sid": 915904105092452,
+							"parameters": {
+								"animation": "\"run\"",
+								"from": "beginning"
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "dragon_2",
+							"sid": 841249866499087,
+							"parameters": {
+								"instance-variable": "can_shoot",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 773076558203473
+				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "dragon_2",
-					"sid": 259427168027934,
-					"parameters": {
-						"instance-variable": "in_sight",
-						"value": "false"
-					}
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 459283945867430
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "dragon_2",
+							"sid": 150872444555464,
+							"parameters": {
+								"instance-variable": "in_sight",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 750681300630806
 				}
-			],
-			"sid": 576143766145470
+			]
 		},
 		{
 			"eventType": "block",
@@ -437,6 +466,16 @@
 					"sid": 208319181689977,
 					"parameters": {
 						"interval-seconds": "0.3"
+					}
+				},
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 409496405966652,
+					"parameters": {
+						"object": "dragon_2",
+						"expression": "0",
+						"order": "ascending"
 					}
 				},
 				{
@@ -587,6 +626,16 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 922296977587423,
+					"parameters": {
+						"object": "dragon_2",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
+				{
 					"id": "compare-speed",
 					"objectClass": "dragon_2",
 					"sid": 959443034815367,
@@ -613,6 +662,16 @@
 		{
 			"eventType": "block",
 			"conditions": [
+				{
+					"id": "for-each-ordered",
+					"objectClass": "System",
+					"sid": 527670630006381,
+					"parameters": {
+						"object": "dragon_2",
+						"expression": "0",
+						"order": "ascending"
+					}
+				},
 				{
 					"id": "every-x-seconds",
 					"objectClass": "System",

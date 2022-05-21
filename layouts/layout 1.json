@@ -173,7 +173,7 @@
 						},
 						"LineOfSight": {
 							"properties": {
-								"obstacles": "solids",
+								"obstacles": "custom",
 								"range": 10000,
 								"cone-of-view": 360,
 								"use-collision-cells": true
@@ -186,8 +186,8 @@
 						}
 					},
 					"world": {
-						"x": 460.8255140788025,
-						"y": 257.29887867813636,
+						"x": 454.0399521848427,
+						"y": 122.43583603568584,
 						"width": 32,
 						"height": 32,
 						"originX": 0.484,
@@ -424,7 +424,7 @@
 						},
 						"LineOfSight": {
 							"properties": {
-								"obstacles": "solids",
+								"obstacles": "custom",
 								"range": 150,
 								"cone-of-view": 360,
 								"use-collision-cells": true
@@ -723,7 +723,7 @@
 						},
 						"LineOfSight": {
 							"properties": {
-								"obstacles": "solids",
+								"obstacles": "custom",
 								"range": 10000,
 								"cone-of-view": 360,
 								"use-collision-cells": true

@@ -617,9 +617,9 @@
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 363423844441163,
+					"sid": 601857704841194,
 					"parameters": {
-						"seconds": "1.9"
+						"seconds": "1.99"
 					}
 				}
 			],
@@ -755,6 +755,78 @@
 					"sid": 705947732687683,
 					"parameters": {
 						"visibility": "visible"
+					}
+				},
+				{
+					"id": "clear-obstacles",
+					"objectClass": "enemy",
+					"sid": 966822846721296,
+					"behaviorType": "LineOfSight"
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 775547158861790,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy",
+					"sid": 780445347815501,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "clear-obstacles",
+					"objectClass": "dragon_2",
+					"sid": 206541821683021,
+					"behaviorType": "LineOfSight"
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "dragon_2",
+					"sid": 666834374832199,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "dragon_2",
+					"sid": 570545131941171,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
+					}
+				},
+				{
+					"id": "clear-obstacles",
+					"objectClass": "enemy_grenade",
+					"sid": 332030862082829,
+					"behaviorType": "LineOfSight"
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 866682394660446,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "wall"
+					}
+				},
+				{
+					"id": "add-obstacle",
+					"objectClass": "enemy_grenade",
+					"sid": 118763379699185,
+					"behaviorType": "LineOfSight",
+					"parameters": {
+						"obstacle": "TM_floorWallPlaceholder"
 					}
 				}
 			],
@@ -919,6 +991,36 @@
 				}
 			],
 			"sid": 132421942308625
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "player",
+					"sid": 443503974937869
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 949734161609435,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 686808315308191,
+					"parameters": {
+						"instance-variable": "wait",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 802431786539650
 		}
 	],
 	"sid": 470365633724210
