@@ -577,6 +577,8 @@
 						"shooting_rate": 2,
 						"bullet_speed": 300,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -1135,8 +1137,41 @@
 			"global": false
 		},
 		{
+			"name": "shadows",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 910063978387148,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "destination-atop",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "ui",
-			"overriden": 0,
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [
 				{

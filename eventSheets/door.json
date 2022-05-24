@@ -209,7 +209,31 @@
 									"sid": 555813425551995
 								}
 							],
-							"sid": 342631663466819
+							"sid": 342631663466819,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "for-each",
+											"objectClass": "System",
+											"sid": 291675842683947,
+											"parameters": {
+												"object": "light"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "light",
+											"sid": 616128525745424
+										}
+									],
+									"sid": 423265947436586,
+									"disabled": true
+								}
+							]
 						}
 					]
 				},
@@ -278,17 +302,65 @@
 						"variable": "hp",
 						"value": "player.health"
 					}
-				},
-				{
-					"id": "go-to-layout-by-name",
-					"objectClass": "System",
-					"sid": 201167373245593,
-					"parameters": {
-						"layout": "choose(\"Room Yum\",\"Room You\",\"Room Ree\",\"medievalRoom1\",\"medievalRoom2\",\"medievalRoom3\",\"medievalRoom4\",\"medievalRoom6\",\"medievalRoom7\",\"medievalRoom8\",\"medievalRoom9\",\"medievalroom33232\")"
-					}
 				}
 			],
-			"sid": 333499154902583
+			"sid": 333499154902583,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 266871793154961,
+							"parameters": {
+								"object": "light"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "light",
+							"sid": 751252752534965,
+							"parameters": {
+								"layer": "\"Player\""
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "light",
+							"sid": 927139621795070,
+							"disabled": true
+						}
+					],
+					"sid": 507456275666949
+				},
+				{
+					"eventType": "block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 902121501831433,
+							"disabled": true,
+							"parameters": {
+								"layout": "choose(\"Room Yum\",\"Room You\",\"Room Ree\",\"medievalRoom1\",\"medievalRoom2\",\"medievalRoom3\",\"medievalRoom4\",\"medievalRoom6\",\"medievalRoom7\",\"medievalRoom8\",\"medievalRoom9\",\"medievalroom33232\")"
+							}
+						},
+						{
+							"id": "go-to-layout-by-name",
+							"objectClass": "System",
+							"sid": 860898170025618,
+							"parameters": {
+								"layout": "choose(\"medievalRoom2\",\"medievalRoom3\")"
+							}
+						}
+					],
+					"sid": 460785745531773
+				}
+			]
 		}
 	],
 	"sid": 753157940460362

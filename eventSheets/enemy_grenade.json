@@ -14,47 +14,19 @@
 					"sid": 211024335789009
 				}
 			],
-			"actions": [],
-			"sid": 765881663315573,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "shadow",
-							"sid": 965857317714026,
-							"parameters": {
-								"which": "nearest",
-								"x": "enemy_grenade.X",
-								"y": "enemy_grenade.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "shadow",
-							"sid": 233874088288543,
-							"parameters": {
-								"object": "enemy_grenade",
-								"image-point-optional": "0"
-							}
-						},
-						{
-							"id": "rotate-toward-position",
-							"objectClass": "enemy_grenade",
-							"sid": 119157821454444,
-							"parameters": {
-								"degrees": "360",
-								"x": "player.X",
-								"y": "player.Y"
-							}
-						}
-					],
-					"sid": 416164121890325
+					"id": "rotate-toward-position",
+					"objectClass": "enemy_grenade",
+					"sid": 535409111290692,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
 				}
-			]
+			],
+			"sid": 765881663315573
 		},
 		{
 			"eventType": "block",
@@ -194,53 +166,6 @@
 					"parameters": {
 						"x": "player.X",
 						"y": "player.Y"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 612911430042357,
-					"parameters": {
-						"object-to-create": "shadow",
-						"layer": "player.LayerName",
-						"x": "enemy_grenade.X",
-						"y": "enemy_grenade.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "shadow",
-					"sid": 615249226229421,
-					"parameters": {
-						"object": "enemy_grenade",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "shadow",
-					"sid": 242847393217751,
-					"parameters": {
-						"width": "player.Width",
-						"height": "player.Height"
-					}
-				},
-				{
-					"id": "set-z-elevation",
-					"objectClass": "shadow",
-					"sid": 770148542275978,
-					"parameters": {
-						"z": "-0.3"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "shadow",
-					"sid": 473981527208457,
-					"parameters": {
-						"opacity": "10"
 					}
 				}
 			],
@@ -621,24 +546,9 @@
 					"id": "on-destroyed",
 					"objectClass": "enemy_grenade",
 					"sid": 225824820274750
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 439413040665112,
-					"parameters": {
-						"which": "nearest",
-						"x": "enemy_grenade.X",
-						"y": "enemy_grenade.Y"
-					}
 				}
 			],
 			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 942977770452067
-				},
 				{
 					"id": "create-object",
 					"objectClass": "System",

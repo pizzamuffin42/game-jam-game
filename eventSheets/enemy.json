@@ -10,47 +10,19 @@
 					"sid": 414691353227640
 				}
 			],
-			"actions": [],
-			"sid": 789203513934646,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "shadow",
-							"sid": 694643071636457,
-							"parameters": {
-								"which": "nearest",
-								"x": "enemy.X",
-								"y": "enemy.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "shadow",
-							"sid": 455832049725450,
-							"parameters": {
-								"object": "enemy",
-								"image-point-optional": "0"
-							}
-						},
-						{
-							"id": "rotate-toward-position",
-							"objectClass": "enemy",
-							"sid": 589211685498333,
-							"parameters": {
-								"degrees": "360",
-								"x": "player.X",
-								"y": "player.Y"
-							}
-						}
-					],
-					"sid": 644810669119964
+					"id": "rotate-toward-position",
+					"objectClass": "enemy",
+					"sid": 262758142066070,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
 				}
-			]
+			],
+			"sid": 789203513934646
 		},
 		{
 			"eventType": "block",
@@ -516,46 +488,7 @@
 					"sid": 708092622967881
 				}
 			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 402539644207742,
-					"parameters": {
-						"object-to-create": "shadow",
-						"layer": "player.LayerName",
-						"x": "enemy.X",
-						"y": "enemy.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "shadow",
-					"sid": 619605020556067,
-					"parameters": {
-						"width": "player.Width",
-						"height": "player.Height"
-					}
-				},
-				{
-					"id": "set-z-elevation",
-					"objectClass": "shadow",
-					"sid": 681168282327799,
-					"parameters": {
-						"z": "-0.3"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "shadow",
-					"sid": 756881401082986,
-					"parameters": {
-						"opacity": "10"
-					}
-				}
-			],
+			"actions": [],
 			"sid": 165143316175102
 		},
 		{
@@ -565,24 +498,9 @@
 					"id": "on-destroyed",
 					"objectClass": "enemy",
 					"sid": 895154158566135
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 133301661375324,
-					"parameters": {
-						"which": "nearest",
-						"x": "enemy.X",
-						"y": "enemy.Y"
-					}
 				}
 			],
 			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 838619331593473
-				},
 				{
 					"id": "create-object",
 					"objectClass": "System",

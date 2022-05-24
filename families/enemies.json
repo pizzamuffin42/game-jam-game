@@ -26,6 +26,18 @@
 			"type": "boolean",
 			"desc": "",
 			"sid": 392581601899178
+		},
+		{
+			"name": "shadow_id",
+			"type": "number",
+			"desc": "",
+			"sid": 395406246889581
+		},
+		{
+			"name": "light_id",
+			"type": "number",
+			"desc": "",
+			"sid": 408506403922918
 		}
 	],
 	"behaviorTypes": [],

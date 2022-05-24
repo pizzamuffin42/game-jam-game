@@ -10,47 +10,19 @@
 					"sid": 251503831968676
 				}
 			],
-			"actions": [],
-			"sid": 830154452253692,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "shadow",
-							"sid": 522977032486827,
-							"parameters": {
-								"which": "nearest",
-								"x": "goat.X",
-								"y": "goat.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "shadow",
-							"sid": 386703494536839,
-							"parameters": {
-								"object": "goat",
-								"image-point-optional": "0"
-							}
-						},
-						{
-							"id": "rotate-toward-position",
-							"objectClass": "goat",
-							"sid": 742629818161148,
-							"parameters": {
-								"degrees": "360",
-								"x": "player.X",
-								"y": "player.Y"
-							}
-						}
-					],
-					"sid": 287461974157459
+					"id": "rotate-toward-position",
+					"objectClass": "goat",
+					"sid": 681153332194796,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
 				}
-			]
+			],
+			"sid": 830154452253692
 		},
 		{
 			"eventType": "block",
@@ -382,70 +354,9 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-created",
-					"objectClass": "goat",
-					"sid": 418773056622672
-				}
-			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 797431942632335,
-					"parameters": {
-						"object-to-create": "shadow",
-						"layer": "player.LayerName",
-						"x": "goat.X",
-						"y": "goat.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "shadow",
-					"sid": 674948272865104,
-					"parameters": {
-						"width": "player.Width",
-						"height": "player.Height"
-					}
-				},
-				{
-					"id": "set-z-elevation",
-					"objectClass": "shadow",
-					"sid": 281346678253752,
-					"parameters": {
-						"z": "-0.3"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "shadow",
-					"sid": 923290146550623,
-					"parameters": {
-						"opacity": "10"
-					}
-				}
-			],
-			"sid": 490755145698101
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-destroyed",
 					"objectClass": "goat",
 					"sid": 368627299458902
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 140227468025724,
-					"parameters": {
-						"which": "nearest",
-						"x": "goat.X",
-						"y": "goat.Y"
-					}
 				}
 			],
 			"actions": [
@@ -459,11 +370,6 @@
 						"volume": "0",
 						"tag-optional": "\"\""
 					}
-				},
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 405220626101071
 				},
 				{
 					"id": "create-object",

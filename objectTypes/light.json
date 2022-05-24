@@ -1,21 +1,21 @@
 {
-	"name": "shadow",
+	"name": "light",
 	"plugin-id": "Sprite",
-	"sid": 160868893370466,
-	"isGlobal": false,
+	"sid": 794117951963943,
+	"isGlobal": true,
 	"instanceVariables": [
 		{
-			"name": "used",
-			"type": "number",
+			"name": "light",
+			"type": "string",
 			"desc": "",
-			"sid": 104583710979849
+			"sid": 146653930703469
 		}
 	],
 	"behaviorTypes": [
 		{
 			"behaviorId": "Pin",
 			"name": "Pin",
-			"sid": 869909724640122
+			"sid": 703133034313992
 		}
 	],
 	"effectTypes": [],
@@ -24,19 +24,31 @@
 			{
 				"frames": [
 					{
-						"width": 250,
-						"height": 250,
+						"width": 400,
+						"height": 400,
 						"originX": 0.5,
-						"originY": 0.636,
+						"originY": 0.5,
 						"originalSource": "",
 						"exportFormat": "png",
 						"exportQuality": 0.8,
-						"imageSpriteId": 9281371,
+						"imageSpriteId": 7206069,
+						"collisionPoly": {
+							"points": [
+								0.1875,
+								0.1875,
+								0.8125,
+								0.1875,
+								0.8125,
+								0.8125,
+								0.1875,
+								0.8125
+							]
+						},
 						"useCollisionPoly": true,
 						"duration": 1
 					}
 				],
-				"sid": 581522716143872,
+				"sid": 433726799485388,
 				"name": "Animation 1",
 				"isLooping": false,
 				"isPingPong": false,

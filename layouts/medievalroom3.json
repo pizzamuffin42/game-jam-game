@@ -1140,6 +1140,80 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "light",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 47,
+					"instanceVariables": {
+						"light": ""
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 130.4815631609434,
+						"y": 249.22990410339656,
+						"width": 31.942921087876357,
+						"height": 43.16610957821126,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "light",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 48,
+					"instanceVariables": {
+						"light": ""
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": 167.6223906756622,
+						"y": 249.22990808952187,
+						"width": 31.655147024021606,
+						"height": 43.74165770592081,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 771577052034941,
@@ -1171,8 +1245,41 @@
 			"global": false
 		},
 		{
+			"name": "shadows",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 406245704002039,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "destination-atop",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "ui",
-			"overriden": 0,
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [
 				{

@@ -147,6 +147,8 @@
 						"shooting_rate": 1,
 						"bullet_speed": 400,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -327,6 +329,8 @@
 						"shooting_rate": 1,
 						"bullet_speed": 400,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true,
 						"can_move": true
@@ -398,6 +402,8 @@
 						"shooting_rate": 2,
 						"bullet_speed": 300,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -503,6 +509,8 @@
 						"shooting_rate": 1,
 						"bullet_speed": 400,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true,
 						"can_move": true
@@ -632,6 +640,8 @@
 						"shooting_rate": 0.7,
 						"bullet_speed": 400,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": true,
 						"can_shoot": true
 					},
@@ -697,6 +707,8 @@
 						"shooting_rate": 1,
 						"bullet_speed": 500,
 						"invincible": false,
+						"shadow_id": 0,
+						"light_id": 0,
 						"in_sight": false,
 						"can_shoot": true
 					},
@@ -751,6 +763,43 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "light",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 44,
+					"instanceVariables": {
+						"light": ""
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": -200,
+						"y": -200,
+						"width": 0,
+						"height": 0,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
 			"sid": 439867088941878,
@@ -782,8 +831,108 @@
 			"global": false
 		},
 		{
-			"name": "ui",
+			"name": "shadows",
 			"overriden": 0,
+			"subLayers": [],
+			"instances": [
+				{
+					"type": "darkness",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 43,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 339,
+						"y": 243,
+						"width": 1088.186679640287,
+						"height": 850.2372581526677,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "shadow",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 45,
+					"instanceVariables": {
+						"used": 0
+					},
+					"behaviors": {
+						"Pin": {
+							"properties": {
+								"destroy": true
+							}
+						}
+					},
+					"world": {
+						"x": -494,
+						"y": -402,
+						"width": 250,
+						"height": 250,
+						"originX": 0.5,
+						"originY": 0.636,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				}
+			],
+			"sid": 484951146267163,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "destination-atop",
+			"zElevation": 0,
+			"global": true
+		},
+		{
+			"name": "ui",
+			"overriden": 1,
 			"subLayers": [],
 			"instances": [
 				{

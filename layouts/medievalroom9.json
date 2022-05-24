@@ -1442,6 +1442,39 @@
 			"global": false
 		},
 		{
+			"name": "shadows",
+			"overriden": 1,
+			"subLayers": [],
+			"instances": [],
+			"sid": 651756532665136,
+			"effectTypes": [],
+			"isInitiallyVisible": true,
+			"isInitiallyInteractive": true,
+			"color": [
+				1,
+				1,
+				1,
+				1
+			],
+			"backgroundColor": [
+				0.3686274509803922,
+				0.3686274509803922,
+				0.3686274509803922,
+				1
+			],
+			"isTransparent": true,
+			"parallaxX": 1,
+			"parallaxY": 1,
+			"scaleRate": 1,
+			"forceOwnTexture": false,
+			"renderingMode": "3d",
+			"drawOrder": "z-order",
+			"useRenderCells": false,
+			"blendMode": "destination-atop",
+			"zElevation": 0,
+			"global": false
+		},
+		{
 			"name": "ui",
 			"overriden": 0,
 			"subLayers": [],
@@ -1758,7 +1791,7 @@
 			"useRenderCells": false,
 			"blendMode": "normal",
 			"zElevation": 0,
-			"global": false
+			"global": true
 		}
 	],
 	"sid": 806399933905125,

@@ -10,47 +10,19 @@
 					"sid": 824990897014884
 				}
 			],
-			"actions": [],
-			"sid": 860840812634219,
-			"children": [
+			"actions": [
 				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "shadow",
-							"sid": 227331834532884,
-							"parameters": {
-								"which": "nearest",
-								"x": "plant_monster.X",
-								"y": "plant_monster.Y"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "shadow",
-							"sid": 273750186824536,
-							"parameters": {
-								"object": "plant_monster",
-								"image-point-optional": "0"
-							}
-						},
-						{
-							"id": "rotate-toward-position",
-							"objectClass": "plant_monster",
-							"sid": 663212987401197,
-							"parameters": {
-								"degrees": "360",
-								"x": "player.X",
-								"y": "player.Y"
-							}
-						}
-					],
-					"sid": 552655272227168
+					"id": "rotate-toward-position",
+					"objectClass": "plant_monster",
+					"sid": 596046135727512,
+					"parameters": {
+						"degrees": "360",
+						"x": "player.X",
+						"y": "player.Y"
+					}
 				}
-			]
+			],
+			"sid": 860840812634219
 		},
 		{
 			"eventType": "block",
@@ -97,44 +69,6 @@
 					"parameters": {
 						"x": "player.X",
 						"y": "player.Y"
-					}
-				},
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 535292017496156,
-					"parameters": {
-						"object-to-create": "shadow",
-						"layer": "player.LayerName",
-						"x": "plant_monster.X",
-						"y": "plant_monster.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "shadow",
-					"sid": 824280926948949,
-					"parameters": {
-						"width": "player.Width",
-						"height": "player.Height"
-					}
-				},
-				{
-					"id": "set-z-elevation",
-					"objectClass": "shadow",
-					"sid": 167337412218129,
-					"parameters": {
-						"z": "-0.3"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "shadow",
-					"sid": 346306366716378,
-					"parameters": {
-						"opacity": "10"
 					}
 				}
 			],
@@ -316,24 +250,9 @@
 					"id": "on-destroyed",
 					"objectClass": "plant_monster",
 					"sid": 159663786077835
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 201522245349255,
-					"parameters": {
-						"which": "nearest",
-						"x": "plant_monster.X",
-						"y": "plant_monster.Y"
-					}
 				}
 			],
 			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 362742853977969
-				},
 				{
 					"id": "create-object",
 					"objectClass": "System",

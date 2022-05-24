@@ -133,6 +133,14 @@
 			"author": "Scirra",
 			"version": "r293.3",
 			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Pin",
+			"name": "Pin",
+			"author": "Scirra",
+			"version": "r293.3",
+			"bundled": false
 		}
 	],
 	"uniqueId": "lukl710ujon",
@@ -186,7 +194,10 @@
 			"Text3",
 			"Sprite6",
 			"dragon_2",
-			"bone_fragments"
+			"bone_fragments",
+			"darkness",
+			"light",
+			"light_fade_out"
 		],
 		"subfolders": [
 			{

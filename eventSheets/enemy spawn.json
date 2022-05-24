@@ -107,6 +107,73 @@
 			"eventType": "block",
 			"conditions": [
 				{
+					"id": "on-created",
+					"objectClass": "player",
+					"sid": 630870024859832
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 375703674199651,
+					"parameters": {
+						"object-to-create": "light",
+						"layer": "darkness.LayerName",
+						"x": "player.X",
+						"y": "player.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "light",
+					"sid": 645996126332946,
+					"parameters": {
+						"width": "200",
+						"height": "200"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "light",
+					"sid": 973571235902636,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "player",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 652075342174211,
+					"parameters": {
+						"seconds": "0.3"
+					}
+				},
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 906890121644722,
+					"parameters": {
+						"instance-variable": "wait",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 136539700271823
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
 					"id": "on-collision-with-another-object",
 					"objectClass": "enemies",
 					"sid": 470145189595264,
@@ -828,6 +895,96 @@
 					"parameters": {
 						"obstacle": "TM_floorWallPlaceholder"
 					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 180514689482174,
+					"parameters": {
+						"object-to-create": "shadow",
+						"layer": "player.LayerName",
+						"x": "enemies.X",
+						"y": "enemies.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "shadow",
+					"sid": 591943622605405,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "enemies",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "shadow",
+					"sid": 278346759005319,
+					"parameters": {
+						"width": "player.Width",
+						"height": "player.Height"
+					}
+				},
+				{
+					"id": "set-z-elevation",
+					"objectClass": "shadow",
+					"sid": 380189305325815,
+					"parameters": {
+						"z": "-0.3"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "shadow",
+					"sid": 961476678525877,
+					"parameters": {
+						"opacity": "10"
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 361132718050892,
+					"parameters": {
+						"object-to-create": "light",
+						"layer": "darkness.LayerName",
+						"x": "enemies.X",
+						"y": "enemies.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "light",
+					"sid": 139056377884808,
+					"parameters": {
+						"width": "200",
+						"height": "200"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "light",
+					"sid": 204372534312308,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "enemies",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
 				}
 			],
 			"sid": 143961738139205
@@ -890,137 +1047,351 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 924880290783352
-				},
-				{
-					"id": "for-each-ordered",
-					"objectClass": "System",
-					"sid": 429027018156320,
-					"parameters": {
-						"object": "enemies",
-						"expression": "0",
-						"order": "ascending"
-					}
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 591226735770022,
-					"parameters": {
-						"which": "nearest",
-						"x": "enemies.X",
-						"y": "enemies.Y"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-position-to-another-object",
-					"objectClass": "shadow",
-					"sid": 614128660491389,
-					"parameters": {
-						"object": "enemies",
-						"image-point-optional": "0"
-					}
-				},
-				{
-					"id": "set-instvar-value",
-					"objectClass": "shadow",
-					"sid": 911122572405076,
-					"parameters": {
-						"instance-variable": "used",
-						"value": "3"
-					}
-				}
-			],
-			"sid": 923704996301486
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "every-tick",
-					"objectClass": "System",
-					"sid": 997515284086026
-				},
-				{
-					"id": "for-each-ordered",
-					"objectClass": "System",
-					"sid": 391494913248900,
-					"parameters": {
-						"object": "shadow",
-						"expression": "0",
-						"order": "ascending"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "subtract-from-instvar",
-					"objectClass": "shadow",
-					"sid": 178942232089370,
-					"parameters": {
-						"instance-variable": "used",
-						"value": "-1"
-					}
-				}
-			],
-			"sid": 364384770571276
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "compare-instance-variable",
-					"objectClass": "shadow",
-					"sid": 639968205681090,
-					"parameters": {
-						"instance-variable": "used",
-						"comparison": 2,
-						"value": "0"
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 918772584811648
-				}
-			],
-			"sid": 132421942308625
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
 					"id": "on-created",
-					"objectClass": "player",
-					"sid": 443503974937869
+					"objectClass": "light",
+					"sid": 568936211631064
 				}
 			],
 			"actions": [
 				{
 					"id": "wait",
 					"objectClass": "System",
-					"sid": 949734161609435,
+					"sid": 247981462761510,
+					"disabled": true,
 					"parameters": {
-						"seconds": "0.3"
+						"seconds": "0.005"
 					}
 				},
 				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 686808315308191,
+					"id": "set-opacity",
+					"objectClass": "light",
+					"sid": 134924870564376,
 					"parameters": {
-						"instance-variable": "wait",
-						"value": "true"
+						"opacity": "0"
 					}
 				}
 			],
-			"sid": 802431786539650
+			"sid": 375219070529137,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-layer",
+							"objectClass": "light",
+							"sid": 152248479524777,
+							"parameters": {
+								"layer": "\"Player\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-z-elevation",
+							"objectClass": "light",
+							"sid": 725317371935407,
+							"disabled": true,
+							"parameters": {
+								"z": "0"
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "light",
+							"sid": 194629441608689,
+							"parameters": {
+								"instance-variable": "light",
+								"value": "LayoutName"
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "light",
+							"sid": 463483406801678,
+							"parameters": {
+								"layer": "\"shadows\""
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "light",
+							"sid": 806786159661428,
+							"parameters": {
+								"z": "0"
+							}
+						}
+					],
+					"sid": 601658649276569
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-x",
+							"objectClass": "light",
+							"sid": 805648427724040,
+							"parameters": {
+								"comparison": 0,
+								"x-co-ordinate": "0"
+							}
+						},
+						{
+							"id": "compare-y",
+							"objectClass": "light",
+							"sid": 899031931285250,
+							"parameters": {
+								"comparison": 0,
+								"y-co-ordinate": "0"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "light",
+							"sid": 303949708041490
+						}
+					],
+					"sid": 523061222039086
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 170658479996526
+				}
+			],
+			"actions": [
+				{
+					"id": "wait",
+					"objectClass": "System",
+					"sid": 614869546499511,
+					"disabled": true,
+					"parameters": {
+						"seconds": "0.005"
+					}
+				}
+			],
+			"sid": 419333246630677,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-on-layer",
+							"objectClass": "light",
+							"sid": 251203811806864,
+							"parameters": {
+								"layer": "\"Player\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "move-to-layer",
+							"objectClass": "light",
+							"sid": 405704066729743,
+							"disabled": true,
+							"parameters": {
+								"layer": "\"shadows\""
+							}
+						},
+						{
+							"id": "move-to-layer",
+							"objectClass": "light",
+							"sid": 788715250545470,
+							"parameters": {
+								"layer": "\"shadows\""
+							}
+						},
+						{
+							"id": "set-z-elevation",
+							"objectClass": "light",
+							"sid": 626798680802196,
+							"parameters": {
+								"z": "-1000"
+							}
+						}
+					],
+					"sid": 549111282657524,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "light",
+									"sid": 857682903387178,
+									"parameters": {
+										"instance-variable": "light",
+										"comparison": 0,
+										"value": "LayoutName"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-z-elevation",
+									"objectClass": "light",
+									"sid": 346045198270553,
+									"parameters": {
+										"z": "0"
+									}
+								}
+							],
+							"sid": 138519530067180
+						}
+					]
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 993295541067949
+				}
+			],
+			"actions": [
+				{
+					"id": "set-opacity",
+					"objectClass": "light",
+					"sid": 702999201501655,
+					"parameters": {
+						"opacity": "light.Opacity+1"
+					}
+				},
+				{
+					"id": "set-opacity",
+					"objectClass": "light_fade_out",
+					"sid": 957889841365053,
+					"parameters": {
+						"opacity": "light_fade_out.Opacity-1"
+					}
+				}
+			],
+			"sid": 299890733324664
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "light",
+					"sid": 665363352272745
+				},
+				{
+					"id": "compare-x",
+					"objectClass": "light",
+					"sid": 630531148176274,
+					"parameters": {
+						"comparison": 0,
+						"x-co-ordinate": "0"
+					},
+					"isInverted": true
+				},
+				{
+					"id": "compare-y",
+					"objectClass": "light",
+					"sid": 229589461177920,
+					"parameters": {
+						"comparison": 0,
+						"y-co-ordinate": "0"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 543112379115335,
+					"parameters": {
+						"object-to-create": "light_fade_out",
+						"layer": "light.LayerName",
+						"x": "light.X",
+						"y": "light.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-width",
+					"objectClass": "light_fade_out",
+					"sid": 983492169003998,
+					"parameters": {
+						"width": "light.Width"
+					}
+				},
+				{
+					"id": "set-height",
+					"objectClass": "light_fade_out",
+					"sid": 366007151762556,
+					"parameters": {
+						"height": "light.height"
+					}
+				}
+			],
+			"sid": 836300695852019
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 295978636311524,
+					"parameters": {
+						"key": 80
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation-frame",
+					"objectClass": "darkness",
+					"sid": 445540919088959,
+					"parameters": {
+						"frame-number": "(darkness.AnimationFrame+1)"
+					}
+				}
+			],
+			"sid": 129285991852309,
+			"disabled": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-animation-frame",
+							"objectClass": "darkness",
+							"sid": 674377785541465,
+							"parameters": {
+								"comparison": 5,
+								"number": "darkness.AnimationFrameCount-1"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation-frame",
+							"objectClass": "darkness",
+							"sid": 128708524009467,
+							"parameters": {
+								"frame-number": "0"
+							}
+						}
+					],
+					"sid": 265853200979093,
+					"disabled": true
+				}
+			]
 		}
 	],
 	"sid": 470365633724210

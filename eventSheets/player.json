@@ -2651,7 +2651,34 @@
 					}
 				}
 			],
-			"sid": 768052611273495
+			"sid": 768052611273495,
+			"disabled": true
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Keyboard",
+					"sid": 384262837309554,
+					"parameters": {
+						"key": 49
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-instvar",
+					"objectClass": "player",
+					"sid": 138262711455472,
+					"parameters": {
+						"instance-variable": "invincible",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 492976296488428,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -2701,31 +2728,6 @@
 				}
 			],
 			"sid": 359711338444677
-		},
-		{
-			"eventType": "block",
-			"conditions": [
-				{
-					"id": "on-key-pressed",
-					"objectClass": "Keyboard",
-					"sid": 654337137628618,
-					"parameters": {
-						"key": 49
-					}
-				}
-			],
-			"actions": [
-				{
-					"id": "set-boolean-instvar",
-					"objectClass": "player",
-					"sid": 414944031987144,
-					"parameters": {
-						"instance-variable": "invincible",
-						"value": "true"
-					}
-				}
-			],
-			"sid": 563143650545861
 		}
 	],
 	"sid": 463042977011712

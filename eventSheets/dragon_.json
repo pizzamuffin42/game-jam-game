@@ -15,28 +15,8 @@
 			"children": [
 				{
 					"eventType": "block",
-					"conditions": [
-						{
-							"id": "pick-nearestfurthest",
-							"objectClass": "shadow",
-							"sid": 407000544960625,
-							"parameters": {
-								"which": "nearest",
-								"x": "dragon.X",
-								"y": "dragon.Y"
-							}
-						}
-					],
+					"conditions": [],
 					"actions": [
-						{
-							"id": "set-position-to-another-object",
-							"objectClass": "shadow",
-							"sid": 269129876572628,
-							"parameters": {
-								"object": "dragon",
-								"image-point-optional": "2"
-							}
-						},
 						{
 							"id": "rotate-toward-position",
 							"objectClass": "dragon",
@@ -433,47 +413,9 @@
 					"sid": 172035533211056
 				}
 			],
-			"actions": [
-				{
-					"id": "create-object",
-					"objectClass": "System",
-					"sid": 514980601867669,
-					"parameters": {
-						"object-to-create": "shadow",
-						"layer": "player.LayerName",
-						"x": "player.X",
-						"y": "player.Y",
-						"create-hierarchy": false,
-						"template-name": "\"\""
-					}
-				},
-				{
-					"id": "set-size",
-					"objectClass": "shadow",
-					"sid": 252828240459683,
-					"parameters": {
-						"width": "player.Width",
-						"height": "player.Height"
-					}
-				},
-				{
-					"id": "set-z-elevation",
-					"objectClass": "shadow",
-					"sid": 231981223837954,
-					"parameters": {
-						"z": "-0.3"
-					}
-				},
-				{
-					"id": "set-opacity",
-					"objectClass": "shadow",
-					"sid": 116796692425044,
-					"parameters": {
-						"opacity": "10"
-					}
-				}
-			],
-			"sid": 331854736576306
+			"actions": [],
+			"sid": 331854736576306,
+			"disabled": true
 		},
 		{
 			"eventType": "block",
@@ -482,25 +424,9 @@
 					"id": "on-destroyed",
 					"objectClass": "dragon",
 					"sid": 458380897801371
-				},
-				{
-					"id": "pick-nearestfurthest",
-					"objectClass": "shadow",
-					"sid": 670527115595586,
-					"parameters": {
-						"which": "nearest",
-						"x": "dragon.X",
-						"y": "dragon.Y"
-					}
 				}
 			],
-			"actions": [
-				{
-					"id": "destroy",
-					"objectClass": "shadow",
-					"sid": 677666196306449
-				}
-			],
+			"actions": [],
 			"sid": 466574977978217
 		},
 		{
