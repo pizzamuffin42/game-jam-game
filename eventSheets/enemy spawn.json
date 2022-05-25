@@ -1392,6 +1392,56 @@
 					"disabled": true
 				}
 			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "pickups",
+					"sid": 737575810611457
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 468919126468340,
+					"parameters": {
+						"object-to-create": "light",
+						"layer": "darkness.LayerName",
+						"x": "pickups.X",
+						"y": "pickups.Y",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "set-size",
+					"objectClass": "light",
+					"sid": 755806535205271,
+					"parameters": {
+						"width": "100",
+						"height": "100"
+					}
+				},
+				{
+					"id": "pin-to-object-properties",
+					"objectClass": "light",
+					"sid": 547356969705434,
+					"behaviorType": "Pin",
+					"parameters": {
+						"pin-to": "pickups",
+						"x": true,
+						"y": true,
+						"angle": true,
+						"width-type": "no",
+						"height-type": "no",
+						"z": false
+					}
+				}
+			],
+			"sid": 571055638883190
 		}
 	],
 	"sid": 470365633724210
